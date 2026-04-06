@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cljodrtdrt5hk"
-path="res://.godot/imported/_srw_free_chests.png-7d11e8824c969249af714139e30e836d.ctex"
+path="res://.godot/imported/_srw_free_chests.png-a50d51bb04c76dc51c2c01f44248cb82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character-pack-full_version/rpgmaker/VXace/characters/_srw_free_chests.png"
-dest_files=["res://.godot/imported/_srw_free_chests.png-7d11e8824c969249af714139e30e836d.ctex"]
+source_file="res://assets/characters/rpgmaker/VXace/characters/_srw_free_chests.png"
+dest_files=["res://.godot/imported/_srw_free_chests.png-a50d51bb04c76dc51c2c01f44248cb82.ctex"]
 
 [params]
 

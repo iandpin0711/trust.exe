@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://ch6cnf2uunkm"]
+
+[ext_resource type="Texture2D" uid="uid://diabxcvdpydd0" path="res://assets/backgrounds/Office/PixelOfficeAssets.png" id="1_g11cm"]
+
+[node name="Node2D" type="Node2D" unique_id=812203954]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1000430630]
+texture_filter = 1
+position = Vector2(575.99994, 69.5)
+scale = Vector2(4.4999995, 3.6578948)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 38.677795)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1054635204]
+texture_filter = 1
+position = Vector2(572.5, 163.5)
+scale = Vector2(44.346153, 2.5499997)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(83.569305, 69.760345, 26.668968, 20.837158)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=945445985]
+texture_filter = 1
+position = Vector2(572.50006, 188.5)
+scale = Vector2(44.346153, 2.5499997)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(83.569305, 69.760345, 26.668968, 20.837158)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1963717468]
+texture_filter = 1
+position = Vector2(572.50006, 213.50002)
+scale = Vector2(44.346153, 2.5499997)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(83.569305, 69.760345, 26.668968, 20.837158)
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1293383335]
+texture_filter = 1
+position = Vector2(174.75, 294.75)
+scale = Vector2(4.7465754, 4.42)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=321083472]
+texture_filter = 1
+position = Vector2(311.24997, 291.75003)
+scale = Vector2(8.4863, 4.42)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1151296817]
+texture_filter = 1
+position = Vector2(308.875, 398)
+scale = Vector2(8.414384, 4.42)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=992865869]
+texture_filter = 1
+position = Vector2(307.875, 503)
+scale = Vector2(8.414384, 4.42)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1615465716]
+texture_filter = 1
+position = Vector2(310.375, 608.00006)
+scale = Vector2(8.482877, 4.42)
+texture = ExtResource("1_g11cm")
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1838197421]
+texture_filter = 1
+position = Vector2(978.75, 294.75)
+scale = Vector2(4.7465754, 4.42)
+texture = ExtResource("1_g11cm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=719750969]
+texture_filter = 1
+position = Vector2(878, 291.75006)
+scale = Vector2(7.50685, 4.42)
+texture = ExtResource("1_g11cm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=541304882]
+texture_filter = 1
+position = Vector2(878.125, 398)
+scale = Vector2(7.510275, 4.42)
+texture = ExtResource("1_g11cm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=489327774]
+texture_filter = 1
+position = Vector2(877.625, 503)
+scale = Vector2(7.496576, 4.42)
+texture = ExtResource("1_g11cm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)
+
+[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=685540222]
+texture_filter = 1
+position = Vector2(877.625, 608.00006)
+scale = Vector2(7.496576, 4.42)
+texture = ExtResource("1_g11cm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2.7143745, 67.501076, 73.94353, 25.069168)

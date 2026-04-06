@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cypnmnioxblbs"]
+
+[ext_resource type="Texture2D" uid="uid://diabxcvdpydd0" path="res://assets/backgrounds/Office/PixelOfficeAssets.png" id="1_ua7l1"]
+
+[node name="Node2D" type="Node2D" unique_id=1034636510]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819044024]
+texture_filter = 1
+texture = ExtResource("1_ua7l1")
+region_enabled = true
+region_rect = Rect2(178.2743, 93.273674, 13.23761, 10.935425)

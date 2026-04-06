@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t61btmkxvbn0"
-path="res://.godot/imported/free_campfire.png-de5ae1d30874b36020ffc0590aeb8aec.ctex"
+path="res://.godot/imported/free_campfire.png-32a152d49f72c4875493e05bdee39680.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character-pack-full_version/sprite/free_campfire.png"
-dest_files=["res://.godot/imported/free_campfire.png-de5ae1d30874b36020ffc0590aeb8aec.ctex"]
+source_file="res://assets/characters/sprite/free_campfire.png"
+dest_files=["res://.godot/imported/free_campfire.png-32a152d49f72c4875493e05bdee39680.ctex"]
 
 [params]
 

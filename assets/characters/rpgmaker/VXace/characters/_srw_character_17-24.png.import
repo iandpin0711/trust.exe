@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jsvlbdieyrgi"
-path="res://.godot/imported/_srw_character_17-24.png-9a237fd77e09b28771e695effdf88f9e.ctex"
+path="res://.godot/imported/_srw_character_17-24.png-c38449d8da74631620c5f1194169c8f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character-pack-full_version/rpgmaker/VXace/characters/_srw_character_17-24.png"
-dest_files=["res://.godot/imported/_srw_character_17-24.png-9a237fd77e09b28771e695effdf88f9e.ctex"]
+source_file="res://assets/characters/rpgmaker/VXace/characters/_srw_character_17-24.png"
+dest_files=["res://.godot/imported/_srw_character_17-24.png-c38449d8da74631620c5f1194169c8f5.ctex"]
 
 [params]
 
