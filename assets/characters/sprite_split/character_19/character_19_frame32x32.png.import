@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b51u3tb8covp"
-path="res://.godot/imported/character_19_frame32x32.png-67690b169c076011d787a1f1c08b02c2.ctex"
+path="res://.godot/imported/character_19_frame32x32.png-9a90f555fce8fc0deb75de6960fe2b53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character-pack-full_version/sprite_split/character_19/character_19_frame32x32.png"
-dest_files=["res://.godot/imported/character_19_frame32x32.png-67690b169c076011d787a1f1c08b02c2.ctex"]
+source_file="res://assets/characters/sprite_split/character_19/character_19_frame32x32.png"
+dest_files=["res://.godot/imported/character_19_frame32x32.png-9a90f555fce8fc0deb75de6960fe2b53.ctex"]
 
 [params]
 

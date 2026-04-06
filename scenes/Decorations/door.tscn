@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dh1u8ri0c5fo8"]
+
+[ext_resource type="Texture2D" uid="uid://diabxcvdpydd0" path="res://assets/backgrounds/Office/PixelOfficeAssets.png" id="1_b37hd"]
+
+[node name="Node2D" type="Node2D" unique_id=1732453521]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=77325007]
+texture_filter = 1
+texture = ExtResource("1_b37hd")
+region_enabled = true
+region_rect = Rect2(96.71753, 119.678085, 17.932663, 31.860947)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1100349233]
+texture_filter = 1
+position = Vector2(-14, 0)
+texture = ExtResource("1_b37hd")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(96.71753, 119.678085, 17.932663, 31.860947)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch1r74iwu0ko7"
-path="res://.godot/imported/free_character_nude.png-3622b6e678f6a166bbb8c55c795f0801.ctex"
+path="res://.godot/imported/free_character_nude.png-1dbe2b09ba417e74f90df487ced45ba6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character-pack-full_version/sprite/free_character_nude.png"
-dest_files=["res://.godot/imported/free_character_nude.png-3622b6e678f6a166bbb8c55c795f0801.ctex"]
+source_file="res://assets/characters/sprite/free_character_nude.png"
+dest_files=["res://.godot/imported/free_character_nude.png-1dbe2b09ba417e74f90df487ced45ba6.ctex"]
 
 [params]
 
