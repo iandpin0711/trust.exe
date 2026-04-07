@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fdl6glrvqu7j"
-path="res://.godot/imported/Houses.png-4091a3140a9d286e753a38b9a0aad592.ctex"
+uid="uid://fnh7yqefvq3m"
+path="res://.godot/imported/db6dw1k-47c4d90d-f5b5-4b31-a06e-2c2c0dc30501-ezgif.com-gif-to-sprite-converter.png-a95e90b39480c0a597e01d528fc641ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/House/Houses.png"
-dest_files=["res://.godot/imported/Houses.png-4091a3140a9d286e753a38b9a0aad592.ctex"]
+source_file="res://assets/technology-pc/WinXp/Logo/db6dw1k-47c4d90d-f5b5-4b31-a06e-2c2c0dc30501-ezgif.com-gif-to-sprite-converter.png"
+dest_files=["res://.godot/imported/db6dw1k-47c4d90d-f5b5-4b31-a06e-2c2c0dc30501-ezgif.com-gif-to-sprite-converter.png-a95e90b39480c0a597e01d528fc641ed.ctex"]
 
 [params]
 

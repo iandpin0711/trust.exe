@@ -22,11 +22,18 @@
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt8ql"]
-size = Vector2(40, 16.33334)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
+size = Vector2(33, 14.666664)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tncm5"]
+radius = 4.800049
+height = 12.799988
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tact"]
 size = Vector2(24, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt8ql"]
+size = Vector2(40, 16.33334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rawq"]
 size = Vector2(9.6666565, 9.333345)
@@ -39,13 +46,6 @@ size = Vector2(10.333359, 8.666672)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0sg"]
 size = Vector2(10.333328, 8.6666565)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tncm5"]
-radius = 4.800049
-height = 16.000046
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
-size = Vector2(33, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tncm5"]
 size = Vector2(72, 102)
@@ -76,7 +76,7 @@ size = Vector2(215, 54)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tact"]
 radius = 17.0
-height = 56.0
+height = 48.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4rawq"]
 radius = 12.0
@@ -84,324 +84,359 @@ height = 44.0
 
 [node name="Node2D" type="Node2D" unique_id=1555842036]
 
-[node name="Node2D" parent="." unique_id=812203954 instance=ExtResource("1_hulg7")]
+[node name="Background" parent="." unique_id=812203954 instance=ExtResource("1_hulg7")]
 
-[node name="Node2D2" parent="." unique_id=163248612 instance=ExtResource("2_hinxj")]
-position = Vector2(-781, -464)
-scale = Vector2(2, 2)
+[node name="MainCharacter" parent="." unique_id=1146026713 instance=ExtResource("21_1tact")]
+z_index = 50
+position = Vector2(605, 270)
 
-[node name="Node2D3" parent="." unique_id=1330246379 instance=ExtResource("2_hinxj")]
-position = Vector2(-40, -464)
-scale = Vector2(2, 2)
+[node name="Desks" type="Node2D" parent="." unique_id=1633152779]
 
-[node name="Node2D4" parent="." unique_id=1138628202 instance=ExtResource("3_xoyss")]
-position = Vector2(-1554, -600)
-scale = Vector2(3, 3)
+[node name="Trash" parent="Desks" unique_id=1669751023 instance=ExtResource("17_4le2u")]
+position = Vector2(170, 360.99997)
+scale = Vector2(2.5, 2.5)
 
-[node name="Node2D5" parent="." unique_id=1004873487 instance=ExtResource("4_0shit")]
-position = Vector2(190.00012, 243.00006)
-scale = Vector2(3, 3)
+[node name="StaticBody2D" type="StaticBody2D" parent="Desks/Trash" unique_id=407020669]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D5" unique_id=842160745]
+[node name="Walls" type="Node2D" parent="Desks" unique_id=822616404]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D5" unique_id=696579960]
-position = Vector2(-0.33337402, 0.4999771)
-shape = SubResource("RectangleShape2D_gt8ql")
-
-[node name="Node2D7" parent="." unique_id=874092358 instance=ExtResource("5_4le2u")]
-position = Vector2(1100, 221)
-scale = Vector2(3, 3)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D7" unique_id=1284198137]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D7" unique_id=1636098261]
-position = Vector2(0, -0.16667175)
-shape = SubResource("RectangleShape2D_1tact")
-
-[node name="Node2D8" parent="." unique_id=1219976196 instance=ExtResource("6_gt8ql")]
-position = Vector2(-479, -629)
-scale = Vector2(3, 3)
-
-[node name="Node2D9" parent="." unique_id=1732453521 instance=ExtResource("7_1tact")]
-position = Vector2(623, 209)
-scale = Vector2(2, 2)
-
-[node name="Node2D6" parent="." unique_id=1823857729 instance=ExtResource("8_4rawq")]
+[node name="Wall1" parent="Desks/Walls" unique_id=1823857729 instance=ExtResource("8_4rawq")]
 position = Vector2(-1795, -662)
 scale = Vector2(4, 4)
 
-[node name="Node2D32" parent="." unique_id=1103080048 instance=ExtResource("8_4rawq")]
+[node name="Wall2" parent="Desks/Walls" unique_id=1103080048 instance=ExtResource("8_4rawq")]
 position = Vector2(-1254, -661)
 scale = Vector2(4, 4)
 
-[node name="Node2D10" parent="." unique_id=1285302128 instance=ExtResource("9_siqwn")]
+[node name="Separator1" parent="Desks/Walls" unique_id=1285302128 instance=ExtResource("9_siqwn")]
 position = Vector2(-1876, -737)
 scale = Vector2(4, 4)
 
-[node name="Sprite2D" parent="." unique_id=638223728 instance=ExtResource("10_03xqq")]
-position = Vector2(228, 395.00003)
-scale = Vector2(3, 3)
-
-[node name="Node2D11" parent="." unique_id=360138804 instance=ExtResource("8_4rawq")]
+[node name="Wall3" parent="Desks/Walls" unique_id=360138804 instance=ExtResource("8_4rawq")]
+z_index = 1
 position = Vector2(-1795, -553)
 scale = Vector2(4, 4)
 
-[node name="Node2D12" parent="." unique_id=1513304854 instance=ExtResource("9_siqwn")]
+[node name="Separator2" parent="Desks/Walls" unique_id=1513304854 instance=ExtResource("9_siqwn")]
+z_index = 1
 position = Vector2(-1876, -629)
 scale = Vector2(4, 4)
 
-[node name="Node2D40" parent="." unique_id=1936982006 instance=ExtResource("14_4pfcd")]
-position = Vector2(283, 498.00003)
-scale = Vector2(4, 3)
+[node name="Wall4" parent="Desks/Walls" unique_id=993580770 instance=ExtResource("8_4rawq")]
+z_index = 2
+position = Vector2(-1795, -449)
+scale = Vector2(4, 4)
 
-[node name="Node2D41" parent="." unique_id=2001489469 instance=ExtResource("14_4pfcd")]
-position = Vector2(283, 393.00003)
-scale = Vector2(4, 3)
+[node name="Separator3" parent="Desks/Walls" unique_id=879547318 instance=ExtResource("9_siqwn")]
+position = Vector2(-1336, -736)
+scale = Vector2(4, 4)
 
-[node name="Sprite2D2" parent="." unique_id=111194438 instance=ExtResource("10_03xqq")]
+[node name="Wall5" parent="Desks/Walls" unique_id=1309141297 instance=ExtResource("8_4rawq")]
+z_index = 1
+position = Vector2(-1255, -552)
+scale = Vector2(4, 4)
+
+[node name="Separator4" parent="Desks/Walls" unique_id=157938948 instance=ExtResource("9_siqwn")]
+z_index = 2
+position = Vector2(-1336, -628)
+scale = Vector2(4, 4)
+
+[node name="Wall6" parent="Desks/Walls" unique_id=1217577225 instance=ExtResource("8_4rawq")]
+z_index = 2
+position = Vector2(-1255, -448)
+scale = Vector2(4, 4)
+
+[node name="Chairs" type="Node2D" parent="Desks" unique_id=1614391066]
+
+[node name="Chair1" parent="Desks/Chairs" unique_id=638223728 instance=ExtResource("10_03xqq")]
+position = Vector2(228, 395.00003)
+scale = Vector2(3, 3)
+
+[node name="Chair2" parent="Desks/Chairs" unique_id=111194438 instance=ExtResource("10_03xqq")]
+z_index = 1
 position = Vector2(228, 502.00003)
 scale = Vector2(3, 3)
 
-[node name="Sprite2D3" parent="." unique_id=1749198958 instance=ExtResource("10_03xqq")]
+[node name="Chair3" parent="Desks/Chairs" unique_id=1749198958 instance=ExtResource("10_03xqq")]
+z_index = 1
 position = Vector2(420, 502)
 scale = Vector2(3, 3)
 flip_h = true
 
-[node name="Node2D13" parent="." unique_id=993580770 instance=ExtResource("8_4rawq")]
-position = Vector2(-1795, -449)
-scale = Vector2(4, 4)
-
-[node name="Node2D16" parent="." unique_id=709304952 instance=ExtResource("11_8w0sg")]
-position = Vector2(365, 394)
-scale = Vector2(4, 3)
-
-[node name="Node2D17" parent="." unique_id=1883811296 instance=ExtResource("11_8w0sg")]
-position = Vector2(365, 498.00003)
-scale = Vector2(4, 3)
-
-[node name="Node2D18" parent="." unique_id=1106219674 instance=ExtResource("12_tncm5")]
-position = Vector2(-1101, -502)
-scale = Vector2(3, 3)
-
-[node name="Node2D19" parent="." unique_id=38529358 instance=ExtResource("12_tncm5")]
-position = Vector2(-1101, -400.00003)
-scale = Vector2(3, 3)
-
-[node name="Node2D20" parent="." unique_id=392863684 instance=ExtResource("13_3v58c")]
-position = Vector2(358, 386)
-scale = Vector2(3, 3)
-
-[node name="Node2D21" parent="." unique_id=1298043450 instance=ExtResource("13_3v58c")]
-position = Vector2(358, 488)
-scale = Vector2(3, 3)
-
-[node name="Node2D22" parent="." unique_id=879547318 instance=ExtResource("9_siqwn")]
-position = Vector2(-1336, -736)
-scale = Vector2(4, 4)
-
-[node name="Sprite2D4" parent="." unique_id=1193777212 instance=ExtResource("10_03xqq")]
+[node name="Chair4" parent="Desks/Chairs" unique_id=1193777212 instance=ExtResource("10_03xqq")]
 position = Vector2(768, 396.00003)
 scale = Vector2(3, 3)
 
-[node name="Sprite2D7" parent="." unique_id=1493870410 instance=ExtResource("10_03xqq")]
+[node name="Chair5" parent="Desks/Chairs" unique_id=1493870410 instance=ExtResource("10_03xqq")]
 position = Vector2(960, 397.00003)
 scale = Vector2(3, 3)
 flip_h = true
 
-[node name="Node2D23" parent="." unique_id=1309141297 instance=ExtResource("8_4rawq")]
-position = Vector2(-1255, -552)
-scale = Vector2(4, 4)
-
-[node name="Node2D34" parent="." unique_id=882654141 instance=ExtResource("14_4pfcd")]
-position = Vector2(823, 394.00003)
-scale = Vector2(4, 3)
-
-[node name="Node2D24" parent="." unique_id=157938948 instance=ExtResource("9_siqwn")]
-position = Vector2(-1336, -628)
-scale = Vector2(4, 4)
-
-[node name="Sprite2D5" parent="." unique_id=274252316 instance=ExtResource("10_03xqq")]
+[node name="Chair6" parent="Desks/Chairs" unique_id=274252316 instance=ExtResource("10_03xqq")]
+z_index = 1
 position = Vector2(768, 503.00003)
 scale = Vector2(3, 3)
 
-[node name="Sprite2D6" parent="." unique_id=312464810 instance=ExtResource("10_03xqq")]
+[node name="Chair7" parent="Desks/Chairs" unique_id=312464810 instance=ExtResource("10_03xqq")]
+z_index = 1
 position = Vector2(960, 503)
 scale = Vector2(3, 3)
 flip_h = true
 
-[node name="Node2D33" parent="." unique_id=1374582431 instance=ExtResource("14_4pfcd")]
-position = Vector2(825, 499)
+[node name="Tables" type="Node2D" parent="Desks" unique_id=186642453]
+
+[node name="Table1" parent="Desks/Tables" unique_id=1936982006 instance=ExtResource("14_4pfcd")]
+z_index = 1
+position = Vector2(283, 498)
 scale = Vector2(4, 3)
 
-[node name="Node2D25" parent="." unique_id=1217577225 instance=ExtResource("8_4rawq")]
-position = Vector2(-1255, -448)
-scale = Vector2(4, 4)
+[node name="Table2" parent="Desks/Tables" unique_id=2001489469 instance=ExtResource("14_4pfcd")]
+position = Vector2(283, 393)
+scale = Vector2(4, 3)
 
-[node name="Node2D26" parent="." unique_id=1293822277 instance=ExtResource("11_8w0sg")]
+[node name="Table3" parent="Desks/Tables" unique_id=709304952 instance=ExtResource("11_8w0sg")]
+position = Vector2(365, 394.00003)
+scale = Vector2(4, 3)
+
+[node name="Table4" parent="Desks/Tables" unique_id=1883811296 instance=ExtResource("11_8w0sg")]
+z_index = 1
+position = Vector2(365, 498)
+scale = Vector2(4, 3)
+
+[node name="Table5" parent="Desks/Tables" unique_id=882654141 instance=ExtResource("14_4pfcd")]
+position = Vector2(823, 394.00003)
+scale = Vector2(4, 3)
+
+[node name="Table6" parent="Desks/Tables" unique_id=1374582431 instance=ExtResource("14_4pfcd")]
+z_index = 1
+position = Vector2(825, 499.00006)
+scale = Vector2(4, 3)
+
+[node name="Table7" parent="Desks/Tables" unique_id=1293822277 instance=ExtResource("11_8w0sg")]
 position = Vector2(905, 395)
 scale = Vector2(4, 3)
 
-[node name="Node2D27" parent="." unique_id=386360797 instance=ExtResource("11_8w0sg")]
+[node name="Table8" parent="Desks/Tables" unique_id=386360797 instance=ExtResource("11_8w0sg")]
+z_index = 1
 position = Vector2(905, 499.00003)
 scale = Vector2(4, 3)
 
-[node name="Node2D28" parent="." unique_id=602755765 instance=ExtResource("12_tncm5")]
-position = Vector2(-561, -501)
+[node name="Computers" parent="Desks" unique_id=1106219674 instance=ExtResource("12_tncm5")]
+position = Vector2(-1101, -502)
 scale = Vector2(3, 3)
 
-[node name="Node2D29" parent="." unique_id=1844780361 instance=ExtResource("12_tncm5")]
-position = Vector2(-561, -399.00003)
-scale = Vector2(3, 3)
+[node name="Computer1" parent="Desks/Computers" unique_id=38529358 instance=ExtResource("12_tncm5")]
+z_index = 1
+position = Vector2(0, 34)
 
-[node name="Node2D30" parent="." unique_id=1332988124 instance=ExtResource("13_3v58c")]
-position = Vector2(898, 387)
-scale = Vector2(3, 3)
+[node name="Computer2Player" parent="Desks/Computers" unique_id=392863684 instance=ExtResource("13_3v58c")]
+position = Vector2(486.33334, 296)
 
-[node name="Node2D31" parent="." unique_id=1822050010 instance=ExtResource("13_3v58c")]
-position = Vector2(897, 490)
-scale = Vector2(3, 3)
+[node name="Computer3" parent="Desks/Computers" unique_id=1298043450 instance=ExtResource("13_3v58c")]
+z_index = 1
+position = Vector2(486.33334, 330)
 
-[node name="Node2D35" parent="." unique_id=1994506335 instance=ExtResource("15_ilhca")]
-position = Vector2(182, 234)
-scale = Vector2(4, 4)
+[node name="Computer4" parent="Desks/Computers" unique_id=602755765 instance=ExtResource("12_tncm5")]
+position = Vector2(180, 0.3333435)
 
-[node name="Node2D36" parent="." unique_id=300924862 instance=ExtResource("16_qnjnv")]
-position = Vector2(552, 225)
-scale = Vector2(3, 3)
+[node name="Computer5" parent="Desks/Computers" unique_id=1844780361 instance=ExtResource("12_tncm5")]
+z_index = 1
+position = Vector2(180, 34.33333)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D36" unique_id=1867674486]
+[node name="Computer6" parent="Desks/Computers" unique_id=1332988124 instance=ExtResource("13_3v58c")]
+position = Vector2(666.3334, 296.33334)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D36" unique_id=1350295877]
-position = Vector2(0.16667175, 5.0000153)
-shape = SubResource("RectangleShape2D_4rawq")
+[node name="Computer7" parent="Desks/Computers" unique_id=1822050010 instance=ExtResource("13_3v58c")]
+z_index = 1
+position = Vector2(666, 330.6667)
 
-[node name="Node2D37" parent="." unique_id=495451467 instance=ExtResource("16_qnjnv")]
-position = Vector2(664, 226)
-scale = Vector2(3, 3)
+[node name="Calendars" type="Node2D" parent="Desks" unique_id=1280954858]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D37" unique_id=1428853138]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D37" unique_id=45845662]
-position = Vector2(0.33332825, 4.833336)
-shape = SubResource("RectangleShape2D_siqwn")
-
-[node name="Node2D38" parent="." unique_id=1963073934 instance=ExtResource("16_qnjnv")]
-position = Vector2(864, 582)
-scale = Vector2(3, 3)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D38" unique_id=49221364]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D38" unique_id=207181561]
-position = Vector2(0.16668701, 5.3333435)
-shape = SubResource("RectangleShape2D_03xqq")
-
-[node name="Node2D39" parent="." unique_id=1469996340 instance=ExtResource("16_qnjnv")]
-position = Vector2(323, 586)
-scale = Vector2(3, 3)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D39" unique_id=1609354315]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D39" unique_id=1806420075]
-position = Vector2(0.16666412, 5.3333282)
-shape = SubResource("RectangleShape2D_8w0sg")
-
-[node name="Node2D14" parent="." unique_id=2032578080 instance=ExtResource("17_4le2u")]
-position = Vector2(1008.9999, 248.99994)
-scale = Vector2(2.5, 2.5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D14" unique_id=1550647268]
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D14" unique_id=753453091]
-shape = SubResource("CapsuleShape2D_tncm5")
-
-[node name="Node2D45" parent="." unique_id=1669751023 instance=ExtResource("17_4le2u")]
-position = Vector2(170, 360.99997)
-scale = Vector2(2.5, 2.5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D45" unique_id=407020669]
-
-[node name="Node2D15" parent="." unique_id=1465582673 instance=ExtResource("18_gt8ql")]
-position = Vector2(935.00006, 242)
-scale = Vector2(3, 3)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D15" unique_id=1017109434]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D15" unique_id=362830]
-position = Vector2(-0.16668701, 0)
-shape = SubResource("RectangleShape2D_4pfcd")
-
-[node name="Node2D42" parent="." unique_id=366128868 instance=ExtResource("19_1tact")]
-texture_filter = 1
-position = Vector2(857, 195)
-scale = Vector2(3, 3)
-
-[node name="Node2D43" parent="." unique_id=1915092997 instance=ExtResource("19_1tact")]
+[node name="Calendar1" parent="Desks/Calendars" unique_id=1915092997 instance=ExtResource("19_1tact")]
 texture_filter = 1
 position = Vector2(406.00006, 347)
 scale = Vector2(3, 3)
 
-[node name="Node2D44" parent="." unique_id=707550637 instance=ExtResource("19_1tact")]
+[node name="Calendar2" parent="Desks/Calendars" unique_id=707550637 instance=ExtResource("19_1tact")]
+z_index = 1
 texture_filter = 1
 position = Vector2(791, 455)
 scale = Vector2(3, 3)
 
-[node name="Node2D46" parent="." unique_id=1034636510 instance=ExtResource("20_gt8ql")]
-position = Vector2(490, 193)
+[node name="Entrance" type="Node2D" parent="." unique_id=73389638]
+
+[node name="RightSide" type="Node2D" parent="Entrance" unique_id=17858486]
+
+[node name="Sofa" parent="Entrance/RightSide" unique_id=1465582673 instance=ExtResource("18_gt8ql")]
+position = Vector2(935.00006, 242)
 scale = Vector2(3, 3)
 
-[node name="Node2D47" parent="." unique_id=2054078168 instance=ExtResource("20_gt8ql")]
-position = Vector2(722, 193.00002)
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/RightSide/Sofa" unique_id=1017109434]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/RightSide/Sofa" unique_id=362830]
+position = Vector2(-0.16668701, -0.66667175)
+shape = SubResource("RectangleShape2D_4pfcd")
+
+[node name="Calendar1" parent="Entrance/RightSide" unique_id=366128868 instance=ExtResource("19_1tact")]
+texture_filter = 1
+position = Vector2(857, 195)
 scale = Vector2(3, 3)
 
-[node name="Node2D48" parent="." unique_id=997616837 instance=ExtResource("13_3v58c")]
+[node name="Trash" parent="Entrance/RightSide" unique_id=2032578080 instance=ExtResource("17_4le2u")]
+position = Vector2(1008.9999, 248.99994)
+scale = Vector2(2.5, 2.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/RightSide/Trash" unique_id=1550647268]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/RightSide/Trash" unique_id=753453091]
+position = Vector2(0, 3.0517578e-05)
+shape = SubResource("CapsuleShape2D_tncm5")
+
+[node name="Window" parent="Entrance/RightSide" unique_id=1330246379 instance=ExtResource("2_hinxj")]
+position = Vector2(-40, -464)
+scale = Vector2(2, 2)
+
+[node name="Water" parent="Entrance/RightSide" unique_id=1219976196 instance=ExtResource("6_gt8ql")]
+position = Vector2(-479, -628)
+scale = Vector2(3, 3)
+
+[node name="Library" parent="Entrance/RightSide" unique_id=874092358 instance=ExtResource("5_4le2u")]
+position = Vector2(1100, 221)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/RightSide/Library" unique_id=1284198137]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/RightSide/Library" unique_id=1636098261]
+position = Vector2(0, -0.16670227)
+shape = SubResource("RectangleShape2D_1tact")
+
+[node name="LeftSide" type="Node2D" parent="Entrance" unique_id=425764855]
+
+[node name="Window" parent="Entrance/LeftSide" unique_id=163248612 instance=ExtResource("2_hinxj")]
+position = Vector2(-781, -464)
+scale = Vector2(2, 2)
+
+[node name="table" parent="Entrance/LeftSide" unique_id=1004873487 instance=ExtResource("4_0shit")]
+position = Vector2(190.00012, 245.00008)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/LeftSide/table" unique_id=842160745]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/LeftSide/table" unique_id=696579960]
+position = Vector2(-0.33337402, 0.16664124)
+shape = SubResource("RectangleShape2D_gt8ql")
+
+[node name="Computer" parent="Entrance/LeftSide" unique_id=997616837 instance=ExtResource("13_3v58c")]
 position = Vector2(224, 230)
 scale = Vector2(2.5, 2.5)
 
-[node name="MainCharacter" parent="." unique_id=1146026713 instance=ExtResource("21_1tact")]
-position = Vector2(605, 270)
+[node name="Scanner" parent="Entrance/LeftSide" unique_id=1994506335 instance=ExtResource("15_ilhca")]
+position = Vector2(182, 234)
+scale = Vector2(4, 4)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1249903083]
+[node name="VendinMachine" parent="Entrance/LeftSide" unique_id=1138628202 instance=ExtResource("3_xoyss")]
+position = Vector2(-1554, -600)
+scale = Vector2(3, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=566170751]
-position = Vector2(82, 223)
+[node name="Flag2" parent="Entrance" unique_id=1034636510 instance=ExtResource("20_gt8ql")]
+position = Vector2(490, 193)
+scale = Vector2(3, 3)
+
+[node name="Flag1" parent="Entrance" unique_id=2054078168 instance=ExtResource("20_gt8ql")]
+position = Vector2(722, 193.00002)
+scale = Vector2(3, 3)
+
+[node name="Door" parent="Entrance" unique_id=1732453521 instance=ExtResource("7_1tact")]
+position = Vector2(623, 209)
+scale = Vector2(2, 2)
+
+[node name="Plant1" parent="Entrance" unique_id=300924862 instance=ExtResource("16_qnjnv")]
+z_index = 5
+position = Vector2(552, 225)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/Plant1" unique_id=1867674486]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/Plant1" unique_id=1350295877]
+position = Vector2(0.16667175, 5.0000153)
+shape = SubResource("RectangleShape2D_4rawq")
+
+[node name="Plant2" parent="Entrance" unique_id=495451467 instance=ExtResource("16_qnjnv")]
+z_index = 5
+position = Vector2(664, 226)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entrance/Plant2" unique_id=1428853138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/Plant2" unique_id=45845662]
+position = Vector2(0.33332825, 4.833336)
+shape = SubResource("RectangleShape2D_siqwn")
+
+[node name="Plant" parent="." unique_id=1963073934 instance=ExtResource("16_qnjnv")]
+z_index = 3
+position = Vector2(864, 582)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plant" unique_id=49221364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant" unique_id=207181561]
+position = Vector2(0.16668701, 5.3333435)
+shape = SubResource("RectangleShape2D_03xqq")
+
+[node name="Plant2" parent="." unique_id=1469996340 instance=ExtResource("16_qnjnv")]
+z_index = 3
+position = Vector2(323, 586)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plant2" unique_id=1609354315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant2" unique_id=1806420075]
+position = Vector2(0.16666412, 5.3333282)
+shape = SubResource("RectangleShape2D_8w0sg")
+
+[node name="Collisions" type="StaticBody2D" parent="." unique_id=1249903083]
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions" unique_id=566170751]
+position = Vector2(82, 221)
 shape = SubResource("RectangleShape2D_tncm5")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1399529034]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions" unique_id=1399529034]
 position = Vector2(329.5, 338.5)
 shape = SubResource("RectangleShape2D_3v58c")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1914581780]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions" unique_id=1914581780]
 position = Vector2(870.25, 452)
 shape = SubResource("RectangleShape2D_ilhca")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1362111322]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions" unique_id=1362111322]
 position = Vector2(329.5, 505)
 shape = SubResource("RectangleShape2D_qnjnv")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1099065502]
-position = Vector2(1, 237)
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Collisions" unique_id=1099065502]
+position = Vector2(1, 233)
 shape = SubResource("SegmentShape2D_c183j")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=895286558]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Collisions" unique_id=895286558]
 shape = SubResource("SegmentShape2D_km1ed")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=1441378206]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Collisions" unique_id=1441378206]
 position = Vector2(0, 658)
 shape = SubResource("SegmentShape2D_rnmyv")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=425693763]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Collisions" unique_id=425693763]
 position = Vector2(1151, 0)
 shape = SubResource("SegmentShape2D_l4852")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1206333303]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Collisions" unique_id=1206333303]
 position = Vector2(292.5, 393)
 shape = SubResource("RectangleShape2D_c183j")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=1208707854]
-position = Vector2(1039, 240)
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Collisions" unique_id=1208707854]
+position = Vector2(1039, 241)
 shape = SubResource("CapsuleShape2D_1tact")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=284842366]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions" unique_id=284842366]
 position = Vector2(170, 361)
 shape = SubResource("CapsuleShape2D_4rawq")
