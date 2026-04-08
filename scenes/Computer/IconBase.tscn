@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bji88bkupmlob"]
+
+[ext_resource type="Script" uid="uid://d4h1gag2gy7on" path="res://scripts/icon.gd" id="1_dkb0e"]
+[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="2_yjls1"]
+
+[node name="Icon" type="Button" unique_id=1059612207]
+custom_minimum_size = Vector2(80, 100)
+offset_right = 80.0
+offset_bottom = 100.0
+flat = true
+script = ExtResource("1_dkb0e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=734189107]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1021028931]
+layout_mode = 2
+size_flags_horizontal = 4
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1520449829]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yjls1")
+horizontal_alignment = 1
