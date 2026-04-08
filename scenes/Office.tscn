@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
 [ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/detectPlayer.gd" id="22_4rawq"]
+[ext_resource type="Script" uid="uid://bh7dml7637i3o" path="res://scripts/textbox.gd" id="23_siqwn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -460,6 +461,22 @@ script = ExtResource("22_4rawq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1692281130]
 position = Vector2(38.5, -2)
 shape = SubResource("RectangleShape2D_q4t1w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=201938433]
+script = ExtResource("23_siqwn")
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1372905821]
+offset_left = 305.0
+offset_top = 266.0
+offset_right = 539.0
+offset_bottom = 306.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=336036236]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 11.0
+offset_right = 175.0
+offset_bottom = 34.0
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
