@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b8riu3jnm05tc"]
 
+[ext_resource type="Script" uid="uid://bmtsbts15r1hj" path="res://scripts/contact.gd" id="1_1f7qi"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_w4jiv"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_1f7qi"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="3_n8swj"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="4_5etjd"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_jucq4"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_i647j"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/window_function.gd" id="8_n8swj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_w4jiv")
@@ -79,9 +81,76 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("1_w4jiv")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="Contact" type="Node2D" unique_id=857654890]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8swj"]
+bg_color = Color(0.71010244, 0.79447937, 0.9596699, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.21176471, 0.5058824, 0.83137256, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i647j"]
+bg_color = Color(0.3632142, 0.56791174, 0.970138, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jucq4"]
+bg_color = Color(0.14117648, 0.3647059, 0.84313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f7qi"]
+bg_color = Color(0.73404855, 0.7284158, 0.6417511, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.21257058, 0.5070306, 0.8318918, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5etjd"]
+bg_color = Color(0.13725491, 0.36078432, 0.85882354, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(5.7756904e-07, 0.19544485, 0.54699165, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4r0yu"]
+bg_color = Color(0.33761862, 0.54398644, 0.96910864, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(5.7756904e-07, 0.19544485, 0.54699165, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35wju"]
+bg_color = Color(0.077361204, 0.24947903, 0.63584036, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(5.7756904e-07, 0.19544485, 0.54699165, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3saye"]
+atlas = ExtResource("4_5etjd")
+region = Rect2(319.33252, 165.33322, 32.666687, 24)
+
+[node name="Contact" type="Control" unique_id=1981532415]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1f7qi")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
+layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 652.0
 
@@ -132,6 +201,7 @@ texture = SubResource("AtlasTexture_gg7wb")
 
 [node name="Label" type="Label" parent="." unique_id=33567180]
 texture_filter = 1
+layout_mode = 0
 offset_left = 43.0
 offset_top = 614.0
 offset_right = 103.0
@@ -193,6 +263,7 @@ theme_override_fonts/font = ExtResource("5_jucq4")
 script = ExtResource("6_i647j")
 
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
+script = ExtResource("8_n8swj")
 
 [node name="Sprite2D" type="Sprite2D" parent="WindowBar" unique_id=2010802655]
 position = Vector2(578, 12)
@@ -227,6 +298,7 @@ texture_pressed = SubResource("AtlasTexture_uifyf")
 texture_hover = SubResource("AtlasTexture_4un80")
 
 [node name="WindowLabel" type="Label" parent="." unique_id=669523475]
+layout_mode = 0
 offset_left = 32.0
 offset_right = 166.0
 offset_bottom = 23.0
@@ -237,3 +309,76 @@ vertical_alignment = 1
 position = Vector2(15.25, 12.5)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1651921289]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 41.0
+offset_right = 1131.0
+offset_bottom = 593.0
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer" unique_id=1217068246]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/v_separation = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_n8swj")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_i647j")
+theme_override_styles/selected = SubResource("StyleBoxFlat_jucq4")
+
+[node name="ProfilePanel" type="Panel" parent="HBoxContainer" unique_id=313801561]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1f7qi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ProfilePanel" unique_id=922099636]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 28.0
+offset_right = 871.0
+offset_bottom = 526.0
+theme_override_constants/separation = 31
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=601052138]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="SituationLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=557961538]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="DescriptionLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=1155846358]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+
+[node name="VulnerabilityLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=761532296]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+
+[node name="DifficultyLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=1506534230]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="HintLabel" type="Label" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=1039360640]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+
+[node name="CallButton" type="Button" parent="HBoxContainer/ProfilePanel/VBoxContainer" unique_id=1945681445]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5etjd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4r0yu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_35wju")
+text = "    Call         "
+icon = SubResource("AtlasTexture_3saye")
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="WindowBar" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="WindowBar/TextureButton2" to="WindowBar" method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="WindowBar/TextureButton3" to="WindowBar" method="_on_texture_button_3_pressed"]
+[connection signal="item_selected" from="HBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
