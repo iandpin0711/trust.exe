@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
+[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/detectPlayer.gd" id="22_4rawq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -72,7 +73,7 @@ b = Vector2(1151, 0)
 b = Vector2(0, 660)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c183j"]
-size = Vector2(144, 54)
+size = Vector2(144, 55)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tact"]
 radius = 17.0
@@ -82,8 +83,11 @@ height = 48.0
 radius = 12.0
 height = 44.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdfjb"]
+size = Vector2(70, 57)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q4t1w"]
-size = Vector2(71, 55)
+size = Vector2(75, 55)
 
 [node name="Node2D" type="Node2D" unique_id=1555842036]
 
@@ -433,7 +437,7 @@ position = Vector2(1151, 0)
 shape = SubResource("SegmentShape2D_l4852")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Collisions" unique_id=1206333303]
-position = Vector2(257, 393)
+position = Vector2(257, 392.5)
 shape = SubResource("RectangleShape2D_c183j")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Collisions" unique_id=1208707854]
@@ -444,10 +448,18 @@ shape = SubResource("CapsuleShape2D_1tact")
 position = Vector2(170, 361)
 shape = SubResource("CapsuleShape2D_4rawq")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Collisions" unique_id=1005929898]
+position = Vector2(364, 393.5)
+shape = SubResource("RectangleShape2D_kdfjb")
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1033403114]
 position = Vector2(398, 394)
 disable_mode = 1
+script = ExtResource("22_4rawq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1692281130]
-position = Vector2(364.5, 392.5)
+position = Vector2(38.5, -2)
 shape = SubResource("RectangleShape2D_q4t1w")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
