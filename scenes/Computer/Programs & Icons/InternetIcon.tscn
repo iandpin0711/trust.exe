@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_6n4ga"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_b8ha6"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_2ljrg"]
+[ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="7_ch8fa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_uh6tm")
@@ -21,7 +22,7 @@ region = Rect2(496.57813, 69.69997, 95.801025, 31.791283)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5vfd"]
 atlas = ExtResource("3_1tsn3")
-region = Rect2(158.89726, -0.77915955, 33.35022, 30.809258)
+region = Rect2(576.1506, 638.59326, 31.686768, 33.950134)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg7wb"]
 atlas = ExtResource("1_uh6tm")
@@ -82,8 +83,10 @@ region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
-offset_right = 1154.0
-offset_bottom = 652.0
+offset_left = 405.0
+offset_top = 293.0
+offset_right = 734.0
+offset_bottom = 378.0
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
@@ -121,8 +124,8 @@ scale = Vector2(0.057708874, 1.0799997)
 texture = ExtResource("2_ch8fa")
 
 [node name="Icon" type="Sprite2D" parent="GreenZoneBottonBar" unique_id=393601509]
-position = Vector2(-17.850998, -3.5999756)
-scale = Vector2(0.044371367, 0.7)
+position = Vector2(-18.238588, -1.1999764)
+scale = Vector2(0.038, 0.6)
 texture = SubResource("AtlasTexture_s5vfd")
 
 [node name="WhiteLine" type="Sprite2D" parent="GreenZoneBottonBar/Icon" unique_id=1529882593]
@@ -193,47 +196,65 @@ theme_override_fonts/font = ExtResource("5_b8ha6")
 script = ExtResource("6_2ljrg")
 
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
+position = Vector2(0, 268)
 
 [node name="Sprite2D" type="Sprite2D" parent="WindowBar" unique_id=2010802655]
-position = Vector2(578, 12)
-scale = Vector2(23.160002, 1)
+position = Vector2(569.5, 12)
+scale = Vector2(6.58, 1)
 texture = SubResource("AtlasTexture_5etjd")
 
 [node name="TextureButton" type="TextureButton" parent="WindowBar" unique_id=1047254224]
-offset_left = 1131.0
+offset_left = 708.0
 offset_top = 2.0
-offset_right = 1152.0
+offset_right = 729.0
 offset_bottom = 23.0
 texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
 
 [node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
-offset_left = 1108.0
+offset_left = 685.0
 offset_top = 2.0
-offset_right = 1129.0
+offset_right = 706.0
 offset_bottom = 23.0
 texture_normal = SubResource("AtlasTexture_n8swj")
 texture_pressed = SubResource("AtlasTexture_p66qp")
 texture_hover = SubResource("AtlasTexture_yhhkc")
 
 [node name="TextureButton3" type="TextureButton" parent="WindowBar" unique_id=633222835]
-offset_left = 1084.0
+offset_left = 661.0
 offset_top = 1.0
-offset_right = 1105.0
+offset_right = 682.0
 offset_bottom = 24.0
 texture_normal = SubResource("AtlasTexture_1f7qi")
 texture_pressed = SubResource("AtlasTexture_uifyf")
 texture_hover = SubResource("AtlasTexture_4un80")
 
 [node name="WindowLabel" type="Label" parent="." unique_id=669523475]
-offset_left = 32.0
-offset_right = 166.0
-offset_bottom = 23.0
-text = "Contacts"
+offset_left = 435.84848
+offset_top = 268.0
+offset_right = 569.8485
+offset_bottom = 291.0
+text = "Internet"
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=450616332]
-position = Vector2(15.25, 12.5)
+position = Vector2(419.09848, 280.5)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=932800878]
+position = Vector2(447, 336)
+texture = ExtResource("7_ch8fa")
+region_enabled = true
+region_rect = Rect2(143.1229, 911.99475, 47.998, 47.667236)
+
+[node name="InfoText" type="Label" parent="." unique_id=105710054]
+offset_left = 481.0
+offset_top = 323.0
+offset_right = 521.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_b8ha6")
+text = "You are connected to internet"
