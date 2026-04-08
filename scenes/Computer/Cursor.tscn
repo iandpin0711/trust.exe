@@ -49,11 +49,12 @@ animations = [{
 [node name="Cursor" type="CharacterBody2D" unique_id=1404510570]
 z_index = 4096
 scale = Vector2(1.475692, 1.475692)
+collision_layer = 2
 script = ExtResource("1_x37x6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1489251612]
 sprite_frames = SubResource("SpriteFrames_7efby")
-animation = &"idle"
+animation = &"select"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486365065]
 position = Vector2(-1, 4)
