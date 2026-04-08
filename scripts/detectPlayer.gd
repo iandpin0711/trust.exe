@@ -1,10 +1,10 @@
 extends Area2D
-@onready var textbox = $"../CanvasLayer"
+@onready var textbox = $"../Textbox"
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
 		body.in_zone = true
-		textbox.show_text("Press E to use the computer.")
+		textbox.show_text("Press E to interact with the computer.")
 
 func _on_body_exited(body):
 	if body is CharacterBody2D:
