@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_i647j"]
 [ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/window_function.gd" id="8_n8swj"]
 
+[sub_resource type="Theme" id="Theme_n8swj"]
+default_font = ExtResource("5_jucq4")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_w4jiv")
 region = Rect2(496.17645, 36.79135, 98.39087, 32.575043)
@@ -147,6 +150,7 @@ region = Rect2(319.33252, 165.33322, 32.666687, 24)
 [node name="Contact" type="Control" unique_id=1981532415]
 layout_mode = 3
 anchors_preset = 0
+theme = SubResource("Theme_n8swj")
 script = ExtResource("1_1f7qi")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
