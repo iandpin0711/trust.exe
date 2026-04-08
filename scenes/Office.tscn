@@ -72,7 +72,7 @@ b = Vector2(1151, 0)
 b = Vector2(0, 660)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c183j"]
-size = Vector2(215, 54)
+size = Vector2(144, 54)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tact"]
 radius = 17.0
@@ -81,6 +81,9 @@ height = 48.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4rawq"]
 radius = 12.0
 height = 44.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4t1w"]
+size = Vector2(71, 55)
 
 [node name="Node2D" type="Node2D" unique_id=1555842036]
 
@@ -430,7 +433,7 @@ position = Vector2(1151, 0)
 shape = SubResource("SegmentShape2D_l4852")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Collisions" unique_id=1206333303]
-position = Vector2(292.5, 393)
+position = Vector2(257, 393)
 shape = SubResource("RectangleShape2D_c183j")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Collisions" unique_id=1208707854]
@@ -440,3 +443,11 @@ shape = SubResource("CapsuleShape2D_1tact")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions" unique_id=284842366]
 position = Vector2(170, 361)
 shape = SubResource("CapsuleShape2D_4rawq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1033403114]
+position = Vector2(398, 394)
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1692281130]
+position = Vector2(364.5, 392.5)
+shape = SubResource("RectangleShape2D_q4t1w")

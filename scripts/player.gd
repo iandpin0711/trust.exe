@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
+var in_zone = false
 
 func _physics_process(delta):
 	var direction = Vector2(
@@ -23,3 +24,6 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("idle")
 		
 	move_and_slide()
+func _input(event):
+	if event.is_action_pressed("interact") and in_zone:
+		get_tree().change_scene_to_file("res://scenes/Computer/WindowsLoading.tscn")
