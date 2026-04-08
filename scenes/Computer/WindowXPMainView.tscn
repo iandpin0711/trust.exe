@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="5_pwvbt"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="6_8y6gp"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="7_hxwe7"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="8_mwgog"]
+[ext_resource type="Script" path="res://scripts/clock_label.gd" id="8_mwgog"]
 [ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="9_t27n7"]
 [ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="10_kbp4j"]
 

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://clbsy363bylc7"]
+
+[ext_resource type="Script" uid="uid://vdk4ppbkhns" path="res://scripts/Cursor.gd" id="1_x37x6"]
+[ext_resource type="Texture2D" uid="uid://dys30d3iijhxh" path="res://assets/technology-pc/WinXp/Cursor/default_arrow.png" id="2_e7wlk"]
+[ext_resource type="Texture2D" uid="uid://omh5x2ekxw01" path="res://assets/technology-pc/WinXp/Cursor/hourgla3_st.png" id="3_auchj"]
+[ext_resource type="Texture2D" uid="uid://cn25i3hak1trv" path="res://assets/technology-pc/WinXp/Cursor/default_link.png" id="4_3luu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8pig"]
+atlas = ExtResource("2_e7wlk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmfxb"]
+atlas = ExtResource("3_auchj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5vae"]
+atlas = ExtResource("4_3luu6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7efby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8pig")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmfxb")
+}],
+"loop": true,
+"name": &"loading",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5vae")
+}],
+"loop": true,
+"name": &"select",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hfo8j"]
+
+[node name="Cursor" type="CharacterBody2D" unique_id=1404510570]
+z_index = 4096
+scale = Vector2(1.475692, 1.475692)
+script = ExtResource("1_x37x6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1489251612]
+sprite_frames = SubResource("SpriteFrames_7efby")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1486365065]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_hfo8j")
