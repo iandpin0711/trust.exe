@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brl2ur74xmnqf"
-path="res://.godot/imported/character_9-16.png-94cd998e118a762d19f202a60f99e702.ctex"
+uid="uid://dm2sq233dku3o"
+path="res://.godot/imported/knob.png-15ff6f96a5ff9af8652d0899ddc5f04c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/sprite/character_9-16.png"
-dest_files=["res://.godot/imported/character_9-16.png-94cd998e118a762d19f202a60f99e702.ctex"]
+source_file="res://assets/technology-pc/WinXp/Frame/knob.png"
+dest_files=["res://.godot/imported/knob.png-15ff6f96a5ff9af8652d0899ddc5f04c.ctex"]
 
 [params]
 
