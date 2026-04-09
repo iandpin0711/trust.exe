@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_dv0l5"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_gksmx"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_n8fwt"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/window_function.gd" id="7_gajp2"]
 [ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="7_n12o5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
@@ -81,6 +82,7 @@ atlas = ExtResource("1_unuv4")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
+script = ExtResource("7_gajp2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
 offset_left = 429.0
@@ -203,7 +205,7 @@ position = Vector2(604, 86)
 scale = Vector2(6.9999995, 1)
 texture = SubResource("AtlasTexture_5etjd")
 
-[node name="TextureButton" type="TextureButton" parent="WindowBar" unique_id=1047254224]
+[node name="Button" type="TextureButton" parent="WindowBar" unique_id=1047254224]
 offset_left = 754.0
 offset_top = 76.0
 offset_right = 775.0
@@ -212,7 +214,7 @@ texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
 
-[node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
+[node name="Button2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
 offset_left = 731.0
 offset_top = 76.0
 offset_right = 752.0
@@ -221,7 +223,7 @@ texture_normal = SubResource("AtlasTexture_n8swj")
 texture_pressed = SubResource("AtlasTexture_p66qp")
 texture_hover = SubResource("AtlasTexture_yhhkc")
 
-[node name="TextureButton3" type="TextureButton" parent="WindowBar" unique_id=633222835]
+[node name="Button3" type="TextureButton" parent="WindowBar" unique_id=633222835]
 offset_left = 707.0
 offset_top = 75.0
 offset_right = 728.0
@@ -257,3 +259,6 @@ offset_bottom = 349.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_gksmx")
 text = "Your PC is updated to the last version"
+
+[connection signal="pressed" from="WindowBar/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="WindowBar/Button3" to="." method="_on_button_3_pressed"]
