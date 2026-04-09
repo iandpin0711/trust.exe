@@ -1,5 +1,11 @@
 extends Control
 
+const DialogueSystemP = preload("res://scenes/DialogueSystem.tscn")
+
+@export var dialogue_matilde: Array[DE]
+@export var dialogue_ricardo: Array[DE]
+@export var dialogue_julian: Array[DE]
+
 # References
 @onready var contact_list = $HBoxContainer/ItemList
 @onready var lbl_name = $HBoxContainer/ProfilePanel/VBoxContainer/NameLabel
@@ -66,3 +72,21 @@ func _on_item_list_item_selected(index: int):
 	lbl_vulnerability.text = profile["vulnerability"]
 	lbl_difficulty.text = profile["difficulty"]
 	lbl_hint.text = profile["hint"]
+
+func _on_call_button_pressed():
+	if not current_selected_contact:
+		return
+
+	var new_dialogue = DialogueSystemP.instantiate()
+
+	match current_selected_contact["name"]:
+		"Matilde":
+			new_dialogue.dialogue = dialogue_matilde
+			
+		"Ricardo":
+			new_dialogue.dialogue = dialogue_ricardo
+			
+		"Don Julián":
+			new_dialogue.dialogue = dialogue_julian
+
+	add_child(new_dialogue)

@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://4ibp27eag7k8" path="res://scenes/Computer/Programs & Icons/Browser.tscn" id="13_va5y0"]
 [ext_resource type="PackedScene" uid="uid://bca1h5ywcpt1e" path="res://scenes/Computer/Programs & Icons/Games.tscn" id="14_aj47l"]
 [ext_resource type="PackedScene" uid="uid://e23oc2j0evhl" path="res://scenes/Computer/Programs & Icons/Wallpapers.tscn" id="15_q1aat"]
-[ext_resource type="PackedScene" uid="uid://b8riu3jnm05tc" path="res://scenes/Computer/Programs & Icons/Contact.tscn" id="16_vvvyb"]
+[ext_resource type="PackedScene" uid="uid://bbgiosko7cd56" path="res://scenes/Computer/Contact.tscn" id="16_rcsfp"]
 [ext_resource type="PackedScene" uid="uid://dmno8x1d4b7ws" path="res://scenes/Computer/Programs & Icons/Calls.tscn" id="17_rcsfp"]
 [ext_resource type="Script" uid="uid://dy5g3mperq5mx" path="res://scripts/IconArea.gd" id="18_aj47l"]
 [ext_resource type="PackedScene" uid="uid://i1jtu86a4d0h" path="res://scenes/Computer/Programs & Icons/SoundIcon.tscn" id="19_rcsfp"]
@@ -236,7 +236,7 @@ target_scene = ExtResource("15_q1aat")
 [node name="Contacts" parent="CursorAreas" unique_id=1802405165 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 471)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("16_vvvyb")
+target_scene = ExtResource("16_rcsfp")
 
 [node name="Calls" parent="CursorAreas" unique_id=168316240 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 562)
