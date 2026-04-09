@@ -17,6 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://e23oc2j0evhl" path="res://scenes/Computer/Programs & Icons/Wallpapers.tscn" id="15_q1aat"]
 [ext_resource type="PackedScene" uid="uid://b8riu3jnm05tc" path="res://scenes/Computer/Programs & Icons/Contact.tscn" id="16_vvvyb"]
 [ext_resource type="PackedScene" uid="uid://dmno8x1d4b7ws" path="res://scenes/Computer/Programs & Icons/Calls.tscn" id="17_rcsfp"]
+[ext_resource type="Script" uid="uid://dy5g3mperq5mx" path="res://scripts/IconArea.gd" id="18_aj47l"]
+[ext_resource type="PackedScene" uid="uid://i1jtu86a4d0h" path="res://scenes/Computer/Programs & Icons/SoundIcon.tscn" id="19_rcsfp"]
+[ext_resource type="PackedScene" uid="uid://n7yia8nxdqbw" path="res://scenes/Computer/Programs & Icons/InfoIcon.tscn" id="20_y5npb"]
+[ext_resource type="PackedScene" uid="uid://y3a73hg08dov" path="res://scenes/Computer/Programs & Icons/InternetIcon.tscn" id="21_vc2cr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxfxs"]
 atlas = ExtResource("3_t27n7")
@@ -246,11 +250,17 @@ scale = Vector2(7.3576145, 1.5862054)
 [node name="Volume" parent="CursorAreas" unique_id=1051617910 instance=ExtResource("12_8y6gp")]
 position = Vector2(1010, 632)
 scale = Vector2(1.3984209, 1.3953217)
+script = ExtResource("18_aj47l")
+target_scene = ExtResource("19_rcsfp")
 
 [node name="Info" parent="CursorAreas" unique_id=682815610 instance=ExtResource("12_8y6gp")]
 position = Vector2(1044, 632)
 scale = Vector2(1.3984209, 1.3953217)
+script = ExtResource("18_aj47l")
+target_scene = ExtResource("20_y5npb")
 
 [node name="Internet" parent="CursorAreas" unique_id=813203171 instance=ExtResource("12_8y6gp")]
 position = Vector2(1081, 632)
 scale = Vector2(1.3984209, 1.3953217)
+script = ExtResource("18_aj47l")
+target_scene = ExtResource("21_vc2cr")

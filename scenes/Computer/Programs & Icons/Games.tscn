@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bca1h5ywcpt1e"]
 
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_ud7gy"]
+[ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_vly74"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_lpa0d"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="3_awk8o"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_oe11b"]
@@ -80,6 +81,8 @@ atlas = ExtResource("1_ud7gy")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
+
+[node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_vly74")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
 offset_right = 1154.0
