@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://i1jtu86a4d0h"]
+
+[ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_e2pqt"]
+[ext_resource type="Texture2D" uid="uid://wrxaqf2dln2f" path="res://assets/technology-pc/WinXp/Frame/back.png" id="1_l43a7"]
+[ext_resource type="Script" uid="uid://d28sof2u7iyjo" path="res://scripts/Sound_Slider.gd" id="1_whph2"]
+[ext_resource type="AudioStream" uid="uid://bl1il3fnn4dcx" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Ding.wav" id="2_e2pqt"]
+[ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="3_l43a7"]
+[ext_resource type="Texture2D" uid="uid://dm2sq233dku3o" path="res://assets/technology-pc/WinXp/Frame/knob.png" id="3_ml85l"]
+[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_t875y"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_esu40"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t875y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km30f"]
+atlas = ExtResource("3_l43a7")
+region = Rect2(32.13768, 33.08717, 32.17434, 30.259197)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjf26"]
+atlas = ExtResource("3_l43a7")
+region = Rect2(255.58942, 672.23596, 31.863129, 32.118042)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbs3a"]
+atlas = ExtResource("3_l43a7")
+region = Rect2(576.4327, 639.29584, 31.655151, 32.309204)
+
+[node name="BaseWindow" type="Node2D" unique_id=857654890]
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1488025012]
+offset_left = 986.0
+offset_top = 450.0
+offset_right = 1029.0
+offset_bottom = 616.0
+texture = ExtResource("1_l43a7")
+script = ExtResource("1_whph2")
+
+[node name="HSlider" type="VSlider" parent="ColorRect" unique_id=519093042]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 160.0
+theme_override_icons/grabber = ExtResource("3_ml85l")
+theme_override_icons/grabber_highlight = ExtResource("3_ml85l")
+theme_override_icons/grabber_disabled = ExtResource("3_ml85l")
+theme_override_styles/slider = SubResource("StyleBoxFlat_t875y")
+max_value = 10.0
+step = 0.5
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="ColorRect" unique_id=1624896546]
+stream = ExtResource("2_e2pqt")
+
+[node name="BlueZoneBottonBar" type="Node2D" parent="." unique_id=1790007130]
+
+[node name="UiTheme" type="Sprite2D" parent="BlueZoneBottonBar" unique_id=1200527089]
+position = Vector2(1069, 631)
+scale = Vector2(2.5937505, 1.2142854)
+texture = ExtResource("1_e2pqt")
+region_enabled = true
+region_rect = Rect2(152.56757, 422.73477, 64.65314, 28.50299)
+
+[node name="TextureButton" type="TextureButton" parent="BlueZoneBottonBar" unique_id=739239669]
+offset_left = 996.0
+offset_top = 619.0
+offset_right = 1023.0
+offset_bottom = 643.0
+texture_normal = SubResource("AtlasTexture_km30f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="BlueZoneBottonBar" unique_id=119119850]
+offset_left = 1031.0
+offset_top = 619.0
+offset_right = 1058.0
+offset_bottom = 645.0
+texture_normal = SubResource("AtlasTexture_mjf26")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="BlueZoneBottonBar" unique_id=1485762480]
+offset_left = 1067.0
+offset_top = 617.0
+offset_right = 1097.0
+offset_bottom = 646.0
+texture_normal = SubResource("AtlasTexture_hbs3a")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClockLabel" type="Label" parent="BlueZoneBottonBar" unique_id=736202381]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1106.0
+offset_top = 620.0
+offset_right = 1146.0
+offset_bottom = 643.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_t875y")
+script = ExtResource("6_esu40")
+
+[node name="WindowLabel" type="Label" parent="." unique_id=669523475]
+offset_left = 32.0
+offset_right = 166.0
+offset_bottom = 23.0
+vertical_alignment = 1
+
+[connection signal="drag_ended" from="ColorRect/HSlider" to="ColorRect" method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="ColorRect/HSlider" to="ColorRect" method="_on_h_slider_value_changed"]

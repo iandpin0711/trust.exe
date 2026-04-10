@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ikyfr1updu1h"]
+
+[ext_resource type="Script" uid="uid://cigpba77bsusu" path="res://scripts/TrustProgressBar.gd" id="1_c8lkl"]
+[ext_resource type="Texture2D" uid="uid://l077qbtg6wi7" path="res://assets/TrustMeter/Trust0%.png" id="2_cnttd"]
+[ext_resource type="Texture2D" uid="uid://cgok71431wk87" path="res://assets/TrustMeter/Trust100%.png" id="3_n6jnc"]
+[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="4_8pvcp"]
+
+[sub_resource type="Gradient" id="Gradient_c8lkl"]
+offsets = PackedFloat32Array(0, 0.33715597, 0.98394495)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.47058824, 0, 1, 2.6471912e-06, 0.67824197, 0.20730683, 1)
+
+[node name="Control" type="Control" unique_id=1508144303]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c8lkl")
+color_gradient = SubResource("Gradient_c8lkl")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1403051357]
+layout_mode = 1
+offset_left = 667.0
+offset_top = -73.0
+offset_right = 1140.0
+offset_bottom = 238.0
+value = 25.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_cnttd")
+texture_progress = ExtResource("3_n6jnc")
+
+[node name="TrustMeterText" type="Label" parent="." unique_id=1569127967]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 96.0
+offset_right = 890.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("4_8pvcp")
+theme_override_font_sizes/font_size = 24
+text = "Trust Meter: "
+
+[node name="TrustPercent" type="Label" parent="." unique_id=1578625275]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 97.0
+offset_right = 928.0
+offset_bottom = 131.0
+theme_override_fonts/font = ExtResource("4_8pvcp")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1

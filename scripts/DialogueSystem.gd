@@ -9,22 +9,21 @@ var dialogue: Array[DE]
 var current_dialogue_item: int = 0
 var next_item: bool = true
 
-var player_node: CharacterBody2D
+var player_node: CharacterBody2D = null
 
 func _ready():
 	visible = false
 	$HBoxContainer/VBoxContainer/button_container.visible = false
 	
-	for i in get_tree().get_nodes_in_group("player"):
-		player_node = i
+	var players = get_tree().get_nodes_in_group("player")
+	if players.size() > 0:
+		player_node = players[0]
+		player_node.can_move = false
 
 func _process(delta):
 	if current_dialogue_item == dialogue.size():
-		if !player_node:
-			for i in get_tree().get_nodes_in_group("player"):
-				player_node = i
-			return
-		player_node.can_move = true
+		if player_node:
+			player_node.can_move = true
 		queue_free()
 		return
 	
@@ -130,49 +129,51 @@ func _text_resource(i: DialogueText):
 		var camera_tween: Tween = create_tween().set_trans(Tween.TRANS_SINE)
 		camera_tween.tween_property(camera, "global_position", i.camera_position, i.camera_transition_time)
 
-		if !i.speaker_img:
-			$HBoxContainer/SpeakerParent.visible = false
-		else:
-			$HBoxContainer/SpeakerParent.visible = true
-			SpeakerSprite.texture = i.speaker_img
-			SpeakerSprite.hframes = i.speaker_img_Hframes
-			SpeakerSprite.frame = 0
+	if !i.speaker_img:
+		$HBoxContainer/SpeakerParent.visible = false
+	else:
+		$HBoxContainer/SpeakerParent.visible = true
+		SpeakerSprite.texture = i.speaker_img
+		SpeakerSprite.hframes = i.speaker_img_Hframes
+		SpeakerSprite.frame = 0
+	
+	DialogueLabel.visible_characters = 0
+	DialogueLabel.text = i.text
+	
+	var text_without_square_brackets: String = _text_without_square_brackets(i.text)
+	var total_characters: int = text_without_square_brackets.length()
+	var character_timer: float = 0.0
+	
+	while DialogueLabel.visible_characters < total_characters:
+		if Input.is_action_just_pressed("ui_cancel"):
+			DialogueLabel.visible_characters = total_characters
+			break
 		
-		DialogueLabel.visible_characters = 0
-		DialogueLabel.text = i.text
+		character_timer += get_process_delta_time()
+		if character_timer >= (1.0 / i.text_speed) or text_without_square_brackets[DialogueLabel.visible_characters] == " ":
+			var character: String = text_without_square_brackets[DialogueLabel.visible_characters]
+			DialogueLabel.visible_characters += 1
+			if character != " ":
+				$AudioStreamPlayer.pitch_scale = randf_range(i.text_volume_pitch_min, i.text_volume_pitch_max)
+				$AudioStreamPlayer.play()
+				if i.speaker_img_Hframes != 1:
+					if SpeakerSprite.frame < i.speaker_img_Hframes - 1:
+						SpeakerSprite.frame += 1
+					else:
+						SpeakerSprite.frame = 0
+			character_timer = 0.0
 		
-		var text_without_square_brackets: String = _text_without_square_brackets(i.text)
-		var total_characters: int = text_without_square_brackets.length()
-		var character_timer: float = 0.0
+		await get_tree().process_frame
 		
-		while DialogueLabel.visible_characters < total_characters:
-			if Input.is_action_just_pressed("ui_cancel"):
-				DialogueLabel.visible_characters = total_characters
+	SpeakerSprite.frame = min(i.speaker_img_rest_frame, i.speaker_img_Hframes-1)
+	
+	while true:
+		await get_tree().process_frame
+		if DialogueLabel.visible_characters == total_characters:
+			if Input.is_action_just_pressed("ui_accept"):
+				current_dialogue_item += 1
+				next_item = true
 				break
-			
-			character_timer += get_process_delta_time()
-			if character_timer >= (1.0 / i.text_speed) or text_without_square_brackets[DialogueLabel.visible_characters] == " ":
-				var character: String = text_without_square_brackets[DialogueLabel.visible_characters]
-				DialogueLabel.visible_characters += 1
-				if character != " ":
-					$AudioStreamPlayer.pitch_scale = randf_range(i.text_volume_pitch_min, i.text_volume_pitch_max)
-					$AudioStreamPlayer.play()
-					if i.speaker_img_Hframes != 1:
-						if SpeakerSprite.frame < i.speaker_img_Hframes - 1:
-							SpeakerSprite.frame += 1
-						else:
-							SpeakerSprite.frame = 0
-				character_timer = 0.0
-			
-			await get_tree().process_frame
-		SpeakerSprite.frame = min(i.speaker_img_rest_frame, i.speaker_img_Hframes-1)
-		
-		while true:
-			await get_tree().process_frame
-			if DialogueLabel.visible_characters == total_characters:
-				if Input.is_action_just_pressed("ui_accept"):
-					current_dialogue_item += 1
-					next_item = true
 
 func _text_without_square_brackets(text: String):
 	var result = ""
@@ -188,6 +189,6 @@ func _text_without_square_brackets(text: String):
 			continue
 		
 		if !inside_bracket:
-			result += 1
+			result += i
 	
 	return result

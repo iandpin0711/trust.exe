@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hpdqmx7md22r"]
 
 [ext_resource type="Script" uid="uid://dgunkig1a42fb" path="res://scripts/DialogueSystem.gd" id="1_rfu8f"]
+[ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_03m4c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ywtn"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,9 +16,14 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [node name="DialogueSystem" type="Node2D" unique_id=1390820373]
+z_index = 4096
+texture_filter = 1
+position = Vector2(583, 525.00006)
+scale = Vector2(2.8010054, 2.8010054)
 script = ExtResource("1_rfu8f")
 
 [node name="Panel" type="Panel" parent="." unique_id=1099518022]
+texture_filter = 1
 offset_left = -144.0
 offset_top = -28.0
 offset_right = 144.0
@@ -25,30 +31,37 @@ offset_bottom = 28.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ywtn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=989178374]
+texture_filter = 1
 offset_left = -144.0
 offset_top = -28.0
 offset_right = 144.0
 offset_bottom = 28.0
 
 [node name="SpeakerParent" type="Control" parent="HBoxContainer" unique_id=954998240]
+texture_filter = 1
 custom_minimum_size = Vector2(56, 0)
 layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/SpeakerParent" unique_id=935781722]
+texture_filter = 1
 position = Vector2(28, 28)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1176855246]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=617470242]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_03m4c")
 bbcode_enabled = true
 scroll_active = false
 visible_characters_behavior = 1
 
 [node name="button_container" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=626935030]
+texture_filter = 1
 layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=561784255]

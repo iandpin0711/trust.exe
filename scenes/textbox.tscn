@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cad814nh8htai"]
+
+[ext_resource type="Script" uid="uid://bh7dml7637i3o" path="res://scripts/textbox.gd" id="1_nyk3b"]
+[ext_resource type="Texture2D" uid="uid://bkdxdwmkxhiix" path="res://assets/txtbox.png" id="2_3xmdk"]
+[ext_resource type="FontFile" uid="uid://cufyeslr4e0hm" path="res://assets/fonts/JetBrains_Mono/static/JetBrainsMono-Medium.ttf" id="3_g5d5p"]
+
+[node name="Textbox" type="CanvasLayer" unique_id=1726410088]
+script = ExtResource("1_nyk3b")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=967515710]
+custom_minimum_size = Vector2(300, 50)
+offset_right = 300.0
+offset_bottom = 79.0
+texture = ExtResource("2_3xmdk")
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=1427708493]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 23.0
+offset_right = 290.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_g5d5p")
+theme_override_font_sizes/font_size = 12
+text = "Press E to interact with the computer."
