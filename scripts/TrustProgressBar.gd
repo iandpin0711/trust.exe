@@ -14,4 +14,4 @@ func _process(_delta):
 		percent_label.modulate = dynamic_color
 
 func set_trust_value(value: float):
-	progress_bar.value = value
+	progress_bar.value = clamp(value, 0, 100)

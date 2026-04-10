@@ -1,98 +1,113 @@
 [gd_scene format=3 uid="uid://b8riu3jnm05tc"]
 
-[ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_drnh3"]
-[ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_w4jiv"]
-[ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_1f7qi"]
-[ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="3_n8swj"]
-[ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="4_5etjd"]
-[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_jucq4"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_i647j"]
+[ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_86jne"]
+[ext_resource type="Script" uid="uid://c2vk42ij7uh6f" path="res://scripts/contact_matilde.gd" id="1_semsy"]
+[ext_resource type="Texture2D" uid="uid://kjfja1h3ewa1" path="res://assets/technology-pc/WinXp/Wallpapers/Home.png" id="2_r5578"]
+[ext_resource type="Texture2D" uid="uid://d1y6ey8laalhr" path="res://assets/characters/Victims/548043.png" id="3_3s3xm"]
+[ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="3_lenea"]
+[ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="4_3s3xm"]
+[ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="5_semsy"]
+[ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="6_vkdwp"]
+[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="7_1qfdy"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="8_a04dk"]
+[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/TimerLabel.gd" id="10_semsy"]
+[ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="11_3s3xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(496.17645, 36.79135, 98.39087, 32.575043)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35wju"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(496.05823, 102.10449, 98.9021, 33.510956)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnqyl"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(496.57813, 69.69997, 95.801025, 31.791283)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5vfd"]
-atlas = ExtResource("4_5etjd")
+atlas = ExtResource("5_semsy")
 region = Rect2(158.89726, -0.77915955, 33.35022, 30.809258)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg7wb"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(232.55016, 398.75702, 43.395615, 4.132904)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_km30f"]
-atlas = ExtResource("4_5etjd")
+atlas = ExtResource("5_semsy")
 region = Rect2(32.13768, 33.08717, 32.17434, 30.259197)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjf26"]
-atlas = ExtResource("4_5etjd")
+atlas = ExtResource("5_semsy")
 region = Rect2(255.58942, 672.23596, 31.863129, 32.118042)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbs3a"]
-atlas = ExtResource("4_5etjd")
+atlas = ExtResource("5_semsy")
 region = Rect2(576.4327, 639.29584, 31.655151, 32.309204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5etjd"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(375.11093, 519.70386, 50.074066, 26.962952)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4jiv"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(446.98572, 236.14546, 21.307495, 21.586563)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i647j"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(447.40723, 467.2594, 20.444458, 21.333313)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jucq4"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(447.11093, 445.62976, 21.333344, 21.925934)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n8swj"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(471.11093, 424.889, 21.629639, 21.333344)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p66qp"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(471.11093, 466.96307, 21.333344, 21.925934)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhhkc"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(471.70352, 446.22235, 20.740753, 21.629639)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f7qi"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(374.88895, 423.56033, 21.333344, 23.111115)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uifyf"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4un80"]
-atlas = ExtResource("1_w4jiv")
+atlas = ExtResource("3_lenea")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="Contact" type="Node2D" unique_id=857654890]
+[node name="ContactMatilde" type="Node2D" unique_id=857654890]
+script = ExtResource("1_semsy")
 
-[node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_drnh3")]
+[node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_86jne")]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
-offset_right = 1154.0
-offset_bottom = 652.0
+[node name="Background" type="Sprite2D" parent="." unique_id=982572733]
+modulate = Color(0.66492164, 0.66492164, 0.6649216, 1)
+self_modulate = Color(0.5996037, 0.5996037, 0.5996037, 1)
+position = Vector2(577.5, 318)
+scale = Vector2(1.43375, 1.0066667)
+texture = ExtResource("2_r5578")
+
+[node name="VictimIcon" type="Sprite2D" parent="." unique_id=992042185]
+texture_filter = 1
+position = Vector2(595, 316)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_3s3xm")
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
 position = Vector2(499.00003, 630.5)
 scale = Vector2(19.8, 1.2500005)
-texture = ExtResource("1_w4jiv")
+texture = ExtResource("3_lenea")
 region_enabled = true
 region_rect = Rect2(375.2, 518.8, 50.399994, 28)
 
@@ -121,7 +136,7 @@ stretch_mode = 0
 texture_filter = 1
 position = Vector2(-23.912567, 3.0517578e-05)
 scale = Vector2(0.057708874, 1.0799997)
-texture = ExtResource("2_1f7qi")
+texture = ExtResource("4_3s3xm")
 
 [node name="Icon" type="Sprite2D" parent="GreenZoneBottonBar" unique_id=393601509]
 position = Vector2(-17.850998, -3.5999756)
@@ -133,13 +148,13 @@ position = Vector2(-0.3100071, 19.999908)
 scale = Vector2(0.862196, 1.4285672)
 texture = SubResource("AtlasTexture_gg7wb")
 
-[node name="Label" type="Label" parent="." unique_id=33567180]
+[node name="Start" type="Label" parent="." unique_id=33567180]
 texture_filter = 1
 offset_left = 43.0
 offset_top = 614.0
 offset_right = 103.0
 offset_bottom = 649.0
-theme_override_fonts/font = ExtResource("3_n8swj")
+theme_override_fonts/font = ExtResource("6_vkdwp")
 theme_override_font_sizes/font_size = 27
 text = "start"
 horizontal_alignment = 1
@@ -149,7 +164,7 @@ horizontal_alignment = 1
 [node name="UiTheme" type="Sprite2D" parent="BlueZoneBottonBar" unique_id=1200527089]
 position = Vector2(1069, 631)
 scale = Vector2(2.5937505, 1.2142854)
-texture = ExtResource("1_w4jiv")
+texture = ExtResource("3_lenea")
 region_enabled = true
 region_rect = Rect2(152.56757, 422.73477, 64.65314, 28.50299)
 
@@ -192,8 +207,8 @@ offset_right = 1146.0
 offset_bottom = 643.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("5_jucq4")
-script = ExtResource("6_i647j")
+theme_override_fonts/font = ExtResource("7_1qfdy")
+script = ExtResource("8_a04dk")
 
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
 
@@ -233,10 +248,32 @@ texture_hover = SubResource("AtlasTexture_4un80")
 offset_left = 32.0
 offset_right = 166.0
 offset_bottom = 23.0
-text = "Contacts"
+text = "Contacts - Talking with Matilde"
 vertical_alignment = 1
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=450616332]
 position = Vector2(15.25, 12.5)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="VictimName" type="Label" parent="." unique_id=712033895]
+offset_left = 518.0
+offset_top = 169.0
+offset_right = 664.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 40
+text = "Matilde"
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1547521074]
+offset_left = 539.0
+offset_top = 223.0
+offset_right = 651.0
+offset_bottom = 246.0
+horizontal_alignment = 1
+script = ExtResource("10_semsy")
+
+[node name="ProgressBar" parent="." unique_id=1508144303 instance=ExtResource("11_3s3xm")]
+offset_left = -316.0
+offset_top = 13.0
+offset_right = -316.0
+offset_bottom = 13.0
