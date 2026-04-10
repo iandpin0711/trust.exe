@@ -1,10 +1,8 @@
 extends Control
 
-const DialogueSystemP = preload("res://scenes/DialogueSystem.tscn")
-
-@export var dialogue_matilde: Array[DE]
-@export var dialogue_ricardo: Array[DE]
-@export var dialogue_julian: Array[DE]
+const ContactMatilde = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMatilde.tscn")
+const ContactJulian = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMrJulian.tscn")
+const ContactRicardo = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactRicardo.tscn")
 
 # References
 @onready var contact_list = $HBoxContainer/ItemList
@@ -74,19 +72,12 @@ func _on_item_list_item_selected(index: int):
 	lbl_hint.text = profile["hint"]
 
 func _on_call_button_pressed():
-	if not current_selected_contact:
-		return
-
-	var new_dialogue = DialogueSystemP.instantiate()
-
 	match current_selected_contact["name"]:
 		"Matilde":
-			new_dialogue.dialogue = dialogue_matilde
+			get_tree().change_scene_to_packed(ContactMatilde)
 			
 		"Ricardo":
-			new_dialogue.dialogue = dialogue_ricardo
+			get_tree().change_scene_to_packed(ContactRicardo)
 			
 		"Don Julián":
-			new_dialogue.dialogue = dialogue_julian
-
-	add_child(new_dialogue)
+			get_tree().change_scene_to_packed(ContactJulian)
