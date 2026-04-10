@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddmxnpi2f4ryr"]
 
-[ext_resource type="Script" uid="uid://bnkknv3i6ie34" path="res://scenes/Computer/Programs & Icons/ContactCalls/contact_ricardo.gd" id="1_k2yky"]
+[ext_resource type="Script" uid="uid://baoifw0pjhvo7" path="res://scripts/contact_mr_julian.gd" id="1_k2yky"]
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="2_wyged"]
 [ext_resource type="Texture2D" uid="uid://cnq7nea8mgcuv" path="res://assets/technology-pc/WinXp/Wallpapers/Ripple.png" id="3_k2yky"]
 [ext_resource type="Texture2D" uid="uid://4vsmg465f1hl" path="res://assets/characters/Victims/BankMan.png" id="4_k2yky"]
@@ -85,7 +85,7 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("5_fn58u")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="ContactRicardo" type="Node2D" unique_id=857654890]
+[node name="ContactMrJulian" type="Node2D" unique_id=857654890]
 script = ExtResource("1_k2yky")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("2_wyged")]
