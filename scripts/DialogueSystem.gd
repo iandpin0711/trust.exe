@@ -31,14 +31,7 @@ func _process(delta):
 		next_item = false
 		var i = dialogue[current_dialogue_item]
 		
-		if i is DialogueFunction:
-			if i.hide_dialogue_box:
-				visible = false
-			else:
-				visible = true
-			_function_resource(i)
-		
-		elif i is DialogueChoice:
+		if i is DialogueChoice:
 			visible = true
 			_choice_resource(i)
 		
@@ -49,26 +42,6 @@ func _process(delta):
 		else:
 			current_dialogue_item += 1
 			next_item = true
-
-func _function_resource(i: DialogueFunction):
-	var target_node = get_node(i.target_path)
-	if target_node.has_method(i.function_name):
-		if i.function_arguments.size() == 0:
-			target_node.call(i.function_name)
-		else:
-			target_node.callv(i.function_name, i.function_arguments)
-	
-	if i.wait_for_signal_to_continue:
-		var signal_name = i.wait_for_signal_to_continue
-		if target_node.has_signal(signal_name):
-			var signal_state = { "done": false }
-			var callable = func(_args): signal_state.done = true
-			target_node.connect(signal_name, callable, CONNECT_ONE_SHOT)
-			while not signal_state.done:
-				await get_tree().process_frame
-	
-	current_dialogue_item += 1
-	next_item = true
 
 func _choice_resource(i: DialogueChoice):
 	DialogueLabel.text = i.text
@@ -85,38 +58,15 @@ func _choice_resource(i: DialogueChoice):
 	for item in i.choice_text.size():
 		var DialogueButtonVar = DialogueButtonPreload.instantiate()
 		DialogueButtonVar.text = i.choice_text[item]
+		DialogueButtonVar.pressed.connect(_choice_button_pressed)
 		
-		var function_resource: DialogueFunction = i.choice_function_call[item]
-		if function_resource:
-			DialogueButtonVar.connect("pressed",
-			Callable(get_node(function_resource.target_path), function_resource.function_name).bindv(function_resource.function_arguments), 
-			CONNECT_ONE_SHOT)
-			if function_resource.hide_dialogue_box:
-				DialogueButtonVar.connect("pressed", hide, CONNECT_ONE_SHOT)
-			
-			DialogueButtonVar.connect("pressed",
-			_choice_button_pressed.bind(get_node(function_resource.target_path), function_resource.wait_for_signal_to_continue),
-			CONNECT_ONE_SHOT)
-			
-		else:
-			DialogueButtonVar.connect("pressed", _choice_button_pressed.bind(null, ""), CONNECT_ONE_SHOT)
-			
 		$HBoxContainer/VBoxContainer/button_container.add_child(DialogueButtonVar)
 	$HBoxContainer/VBoxContainer/button_container.get_child(0).grab_focus()
 
-func _choice_button_pressed(target_node: Node, wait_for_signal_to_continue: String):
+func _choice_button_pressed():
 	$HBoxContainer/VBoxContainer/button_container.visible = false
 	for i in $HBoxContainer/VBoxContainer/button_container.get_children():
 		i.queue_free()
-	
-	if wait_for_signal_to_continue:
-		var signal_name = wait_for_signal_to_continue
-		if target_node.has_signal(signal_name):
-			var signal_state = { "done": false }
-			var callable = func(_args): signal_state.done = true
-			target_node.connect(signal_name, callable, CONNECT_ONE_SHOT)
-			while not signal_state.done:
-				await get_tree().process_frame
 	
 	current_dialogue_item += 1
 	next_item = true
