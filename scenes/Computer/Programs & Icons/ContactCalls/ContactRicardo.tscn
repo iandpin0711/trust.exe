@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dsl1t533wic18"]
 
-[ext_resource type="Script" path="res://scripts/contact_ricardo.gd" id="1_4absc"]
+[ext_resource type="Script" uid="uid://bnkknv3i6ie34" path="res://scripts/contact_ricardo.gd" id="1_4absc"]
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="2_6ngvq"]
 [ext_resource type="Texture2D" uid="uid://cwr4juqpf2hmy" path="res://assets/technology-pc/WinXp/Wallpapers/Peace.png" id="3_4absc"]
 [ext_resource type="Texture2D" uid="uid://dilnmpvh62tlh" path="res://assets/characters/Victims/dad.png" id="4_6ngvq"]
