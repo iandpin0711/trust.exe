@@ -85,7 +85,7 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("3_lenea")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="ContactMatilde" type="Node2D" unique_id=857654890]
+[node name="ContactMatilde" type="Node2D" unique_id=46187545]
 script = ExtResource("1_semsy")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_86jne")]
@@ -277,3 +277,5 @@ offset_left = -316.0
 offset_top = 13.0
 offset_right = -316.0
 offset_bottom = 13.0
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="." method="_on_texture_button_pressed"]

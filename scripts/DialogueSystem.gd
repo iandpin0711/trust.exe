@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 const DialogueButtonPreload = preload("res://scenes/DialogueButton.tscn")
 

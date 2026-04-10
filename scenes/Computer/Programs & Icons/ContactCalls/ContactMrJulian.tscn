@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ddmxnpi2f4ryr"]
+[gd_scene format=3 uid="uid://ffsak4vsqwii"]
 
 [ext_resource type="Script" uid="uid://baoifw0pjhvo7" path="res://scripts/contact_mr_julian.gd" id="1_k2yky"]
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="2_wyged"]
@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="8_gjvd3"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="9_g7lbl"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="10_cplht"]
-[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/TimerLabel.gd" id="11_8a328"]
+[ext_resource type="Script" path="res://scripts/TimerLabel.gd" id="11_8a328"]
 [ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="12_egjor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
@@ -277,3 +277,5 @@ offset_left = -316.0
 offset_top = 13.0
 offset_right = -316.0
 offset_bottom = 13.0
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="." method="_on_texture_button_pressed"]

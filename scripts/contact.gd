@@ -1,9 +1,5 @@
 extends Control
 
-const ContactMatilde = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMatilde.tscn")
-const ContactJulian = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMrJulian.tscn")
-const ContactRicardo = preload("res://scenes/Computer/Programs & Icons/ContactCalls/ContactRicardo.tscn")
-
 # References
 @onready var contact_list = $HBoxContainer/ItemList
 @onready var lbl_name = $HBoxContainer/ProfilePanel/VBoxContainer/NameLabel
@@ -74,10 +70,12 @@ func _on_item_list_item_selected(index: int):
 func _on_call_button_pressed():
 	match current_selected_contact["name"]:
 		"Matilde":
-			get_tree().change_scene_to_packed(ContactMatilde)
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMatilde.tscn")
+			
 			
 		"Ricardo":
-			get_tree().change_scene_to_packed(ContactRicardo)
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactRicardo.tscn")
+			
 			
 		"Don Julián":
-			get_tree().change_scene_to_packed(ContactJulian)
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMrJulian.tscn")
