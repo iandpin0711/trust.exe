@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bju1f43wfu8r1"]
 
+[ext_resource type="FontFile" uid="uid://vt2prk0ma77b" path="res://assets/fonts/minecraftia/Minecraftia-Regular.ttf" id="1_ko1hc"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5iuls"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ko1hc"]
@@ -16,6 +18,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(0, 0.9490196, 0.9490196, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.9490196, 0.9490196, 1)
 theme_override_colors/font_hover_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("1_ko1hc")
+theme_override_font_sizes/font_size = 8
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5iuls")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ko1hc")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_tk5iy")

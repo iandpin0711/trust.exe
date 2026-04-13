@@ -113,12 +113,17 @@ func _text_resource(i: DialogueText):
 						SpeakerSprite.frame = 0
 			character_timer = 0.0
 		
+		if not is_inside_tree():
+			return
 		await get_tree().process_frame
 		
 	SpeakerSprite.frame = min(i.speaker_img_rest_frame, i.speaker_img_Hframes-1)
 	
 	while true:
+		if not is_inside_tree():
+			return
 		await get_tree().process_frame
+		
 		if DialogueLabel.visible_characters == total_characters:
 			if Input.is_action_just_pressed("ui_accept"):
 				current_dialogue_item += 1

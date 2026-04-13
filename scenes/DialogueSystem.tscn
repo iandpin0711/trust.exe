@@ -55,11 +55,13 @@ size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_03m4c")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "Holaaaaaa"
+text = "
+"
 scroll_active = false
 visible_characters_behavior = 1
 
 [node name="button_container" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=626935030]
+texture_filter = 1
 layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=561784255]
