@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hpdqmx7md22r"]
 
 [ext_resource type="Script" uid="uid://dgunkig1a42fb" path="res://scripts/DialogueSystem.gd" id="1_rfu8f"]
-[ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_03m4c"]
+[ext_resource type="FontFile" uid="uid://vt2prk0ma77b" path="res://assets/fonts/minecraftia/Minecraftia-Regular.ttf" id="2_03m4c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ywtn"]
 bg_color = Color(0, 0, 0, 1)
@@ -19,7 +19,7 @@ expand_margin_bottom = 2.0
 z_index = 4096
 layout_mode = 3
 anchors_preset = 0
-scale = Vector2(2.4200215, 2.4200215)
+scale = Vector2(2.8280644, 2.8280644)
 script = ExtResource("1_rfu8f")
 
 [node name="Panel" type="Panel" parent="." unique_id=1099518022]
@@ -52,7 +52,9 @@ texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_03m4c")
+theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
+text = "Holaaaaaa"
 scroll_active = false
 visible_characters_behavior = 1
 
