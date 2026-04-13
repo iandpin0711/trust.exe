@@ -36,12 +36,13 @@ offset_right = 144.0
 offset_bottom = 56.0
 
 [node name="SpeakerParent" type="Control" parent="HBoxContainer" unique_id=954998240]
-custom_minimum_size = Vector2(56, 0)
+custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/SpeakerParent" unique_id=935781722]
 texture_filter = 1
 position = Vector2(28, 28)
+scale = Vector2(0.1, 0.1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1176855246]
 layout_mode = 2
