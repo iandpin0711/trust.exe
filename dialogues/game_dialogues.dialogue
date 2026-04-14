@@ -1,0 +1,17 @@
+~ nivel_1
+Personaje: Hola... ¿qué tal?
+- ¡Te ves genial! [if true]
+    #do GameState.update_trust(20)
+    Personaje: ¡Oh, gracias! Me has alegrado el día.
+- Hola.
+    #do GameState.update_trust(5)
+    Personaje: Hola... supongo.
+- Hueles raro.
+    #do GameState.update_trust(-20)
+    Personaje: ¡Qué grosero!
+=> END
+
+~ nivel_2
+Personaje: Seguimos hablando...
+# Aquí pones el contenido del nivel 2
+=> END
