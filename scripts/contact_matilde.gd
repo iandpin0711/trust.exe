@@ -5,7 +5,7 @@ extends Node2D
 @onready var timer_label = $TimerLabel 
 
 func _ready():
-	trust_meter.set_trust_value(50.0)
+	trust_meter.set_trust_value(40.0)
 	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/matilde_dialogue.dialogue"), "start")
 	
 

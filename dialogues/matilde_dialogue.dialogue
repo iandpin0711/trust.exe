@@ -1,12 +1,12 @@
 ~ start
 Personaje: Hola... ¿qué tal?
 - ¡Te ves genial! [if true]
-    #do GameState.update_trust(20)
+    do GlobalData.update_trust(20)
     Personaje: ¡Oh, gracias! Me has alegrado el día.
 - Hola.
-    #do GameState.update_trust(5)
+    do GlobalData.update_trust(5)
     Personaje: Hola... supongo.
 - Hueles raro.
-    #do GameState.update_trust(-20)
+    do GlobalData.update_trust(-20)
     Personaje: ¡Qué grosero!
 => END
