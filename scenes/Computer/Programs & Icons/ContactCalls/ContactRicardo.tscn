@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="8_qpv2m"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="9_fx3ti"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="10_c1bpf"]
-[ext_resource type="Script" path="res://scripts/TimerLabel.gd" id="11_pfpae"]
+[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/TimerLabel.gd" id="11_pfpae"]
 [ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="12_nd8m0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]

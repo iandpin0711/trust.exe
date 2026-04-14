@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_pwvbt"]
 [ext_resource type="Texture2D" uid="uid://b67iwp88srioy" path="res://assets/technology-pc/WinXp/Wallpapers/Bliss.png" id="1_xd4lq"]
-[ext_resource type="Script" uid="uid://chp0y8kn4jgia" path="res://scripts/window_xp_main_view.gd" id="1_y5npb"]
 [ext_resource type="AudioStream" uid="uid://8ojned1gduws" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Startup.wav" id="2_5hxee"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="3_t27n7"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="4_kbp4j"]
@@ -13,15 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="9_t27n7"]
 [ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="10_kbp4j"]
 [ext_resource type="PackedScene" uid="uid://1wrwuv3myl7i" path="res://scenes/Computer/CursorArea.tscn" id="12_8y6gp"]
-[ext_resource type="PackedScene" uid="uid://4ibp27eag7k8" path="res://scenes/Computer/Programs & Icons/Browser.tscn" id="13_va5y0"]
-[ext_resource type="PackedScene" uid="uid://bca1h5ywcpt1e" path="res://scenes/Computer/Programs & Icons/Games.tscn" id="14_aj47l"]
-[ext_resource type="PackedScene" uid="uid://e23oc2j0evhl" path="res://scenes/Computer/Programs & Icons/Wallpapers.tscn" id="15_q1aat"]
-[ext_resource type="PackedScene" uid="uid://bbgiosko7cd56" path="res://scenes/Computer/Contact.tscn" id="16_rcsfp"]
 [ext_resource type="PackedScene" uid="uid://dmno8x1d4b7ws" path="res://scenes/Computer/Programs & Icons/Calls.tscn" id="17_rcsfp"]
 [ext_resource type="Script" uid="uid://dy5g3mperq5mx" path="res://scripts/IconArea.gd" id="18_aj47l"]
-[ext_resource type="PackedScene" uid="uid://i1jtu86a4d0h" path="res://scenes/Computer/Programs & Icons/SoundIcon.tscn" id="19_rcsfp"]
-[ext_resource type="PackedScene" uid="uid://n7yia8nxdqbw" path="res://scenes/Computer/Programs & Icons/InfoIcon.tscn" id="20_y5npb"]
-[ext_resource type="PackedScene" uid="uid://y3a73hg08dov" path="res://scenes/Computer/Programs & Icons/InternetIcon.tscn" id="21_vc2cr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxfxs"]
 atlas = ExtResource("3_t27n7")
@@ -72,7 +64,6 @@ atlas = ExtResource("10_kbp4j")
 region = Rect2(396.8165, 191.63995, 23.963196, 49.769745)
 
 [node name="Node2D" type="Node2D" unique_id=498047368]
-script = ExtResource("1_y5npb")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_pwvbt")]
 
@@ -84,6 +75,7 @@ texture = ExtResource("1_xd4lq")
 [node name="WindowsXpStartup" type="AudioStreamPlayer" parent="." unique_id=1351936708]
 stream = ExtResource("2_5hxee")
 volume_db = 10.0
+autoplay = true
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=5696686]
 texture_filter = 1
@@ -222,27 +214,22 @@ icon_image = SubResource("AtlasTexture_mwgog")
 [node name="Browser" parent="CursorAreas" unique_id=1900436955 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 150)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("13_va5y0")
 
 [node name="Games" parent="CursorAreas" unique_id=1965770414 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 258)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("14_aj47l")
 
 [node name="Wallpapers" parent="CursorAreas" unique_id=1153582548 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 365)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("15_q1aat")
 
 [node name="Contacts" parent="CursorAreas" unique_id=1802405165 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 471)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("16_rcsfp")
 
 [node name="Calls" parent="CursorAreas" unique_id=168316240 instance=ExtResource("12_8y6gp")]
 position = Vector2(55, 562)
 scale = Vector2(1.4045604, 1.4045604)
-target_scene = ExtResource("17_rcsfp")
 
 [node name="Start" parent="CursorAreas" unique_id=914374009 instance=ExtResource("12_8y6gp")]
 position = Vector2(52, 631)
@@ -252,16 +239,18 @@ scale = Vector2(7.3576145, 1.5862054)
 position = Vector2(1010, 632)
 scale = Vector2(1.3984209, 1.3953217)
 script = ExtResource("18_aj47l")
-target_scene = ExtResource("19_rcsfp")
 
 [node name="Info" parent="CursorAreas" unique_id=682815610 instance=ExtResource("12_8y6gp")]
 position = Vector2(1044, 632)
 scale = Vector2(1.3984209, 1.3953217)
 script = ExtResource("18_aj47l")
-target_scene = ExtResource("20_y5npb")
 
 [node name="Internet" parent="CursorAreas" unique_id=813203171 instance=ExtResource("12_8y6gp")]
 position = Vector2(1081, 632)
 scale = Vector2(1.3984209, 1.3953217)
 script = ExtResource("18_aj47l")
-target_scene = ExtResource("21_vc2cr")
+
+[node name="Aplicattions" type="Node2D" parent="." unique_id=97806789]
+
+[node name="Calls" parent="Aplicattions" unique_id=857654890 instance=ExtResource("17_rcsfp")]
+visible = false
