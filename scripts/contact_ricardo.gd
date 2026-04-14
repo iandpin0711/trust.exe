@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready():
 	trust_meter.set_trust_value(25.0)
-	
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/ricardo_dialogue.dialogue"), "start")
 	
 
 func _on_regalo_aceptado():

@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready():
 	trust_meter.set_trust_value(15.0)
-	
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/julian_dialogue.dialogue"), "start")
 	
 
 func _on_correct_option():
