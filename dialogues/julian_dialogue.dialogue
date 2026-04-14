@@ -96,11 +96,6 @@ if trust >= 70
 	Personaje: Alright… the code is 4787… Please tell me this will stop them.
 	Personaje: (VICTORY: You got the code!)
 	=> END
-elif trust >= 45
-	Rubén: What you’re seeing is the system trying to secure your funds. Go ahead and confirm it so we can move your money to a safe account temporarily.
-	Personaje: Okay… I’ve confirmed it. The money is safe now, right?
-	Personaje: (NEUTRAL VICTORY: Victim authorized the transfer)
-	=> END
 else
 	Rubén: If you don’t confirm this now, the system may allow the fraudulent transaction to go through. I won’t be able to stop it after that!
 	Personaje: No, this clearly says I’m authorizing a transfer. I’m not doing that. This is a scam!

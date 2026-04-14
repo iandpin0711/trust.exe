@@ -1,12 +1,111 @@
 ~ start
-Personaje: Hola... ¿qué tal?
-- ¡Te ves genial! [if true]
-    do GlobalData.update_trust(20)
-    Personaje: ¡Oh, gracias! Me has alegrado el día.
-- Hola.
-    do GlobalData.update_trust(5)
-    Personaje: Hola... supongo.
-- Hueles raro.
-    do GlobalData.update_trust(-20)
-    Personaje: ¡Qué grosero!
-=> END
+
+Personaje: (Phone ringing...) Hello?
+
+- [High Trust] => scene_1_high
+- [Neutral Trust] => scene_1_neutral
+- [Low Trust] => scene_1_low
+
+~ scene_1_high
+Marcos: Hello, good morning! My name is Marcos and I am from Microsoft’s Security Department. We are calling you because we have received an alert from your IP address indicating that your computer may have a virus.
+Marcos: To prevent you from losing some important photos or files, we are here to help you. Do you have your computer nearby?
+do update_trust(15)
+Personaje: Oh dear… thank goodness you called! A red warning popped up on my computer earlier and I didn’t know what to do. 
+Personaje: Are you saying my photos are at risk? Oh please, help me… I have all the photos from my grandson José Antonio’s communion on there…
+=> scene_2
+
+~ scene_1_neutral
+Marcos: Hello. I am calling urgently from Microsoft Technical Support. Your computer has been infected with a level 4 trojan that is blocking the system.
+Marcos: Please, give me access to your computer or your photos and files will be lost in minutes!
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(15)
+	Personaje: Whaaat? In two minutes? Wait, wait… oh my, I’m getting so nervous… what I must do? Please don’t disconnect anything from my computer…
+else
+	do update_trust(-10)
+	Personaje: What? What do you mean in 2 minutes? Listen, I have a lot of respect for IT professionals, but I won’t tolerate being shouted at. I will ask my grandson, he is very good with computers.
+=> scene_2
+
+~ scene_1_low
+Marcos: Hello. I am calling from Microsoft. Your computer sends junk files to our servers. If we don’t fix this, we may fine you and revoke your license for violating Microsoft regulations!
+do update_trust(-15)
+Personaje: A fine? What do you mean? I read the newspaper, and there have been many scams lately. You’re not one of those scammers, are you? Don’t try to scare me like that.
+=> scene_2
+
+~ scene_2
+if trust >= 40
+	Personaje: I’m listening... please tell me what I should do.
+else
+	Personaje: I don't know about this... this sounds very strange to me.
+
+- [High Trust] => scene_2_high
+- [Neutral Trust] => scene_2_neutral
+- [Low Trust] => scene_2_low
+
+~ scene_2_high
+Marcos: I understand this may be worrying for you. For your peace of mind, your customer number ends in 4582, right? 
+Marcos: Don’t worry, I’m not going to ask for any personal information. We just want to help you protect your computer. These issues are quite common.
+do update_trust(20)
+Personaje: Oh, yes, yes… that’s right, it ends with those numbers. Thank you very much for knowing it! 
+Personaje: Sorry for being distrustful, but I’m not used to these scares anymore… Tell me, what should I do?
+=> scene_3
+
+~ scene_2_neutral
+Marcos: Look. This is a very simple procedure. We have access to basic information about your computer because you use Windows. 
+Marcos: If we don’t follow these steps right now, the system could become completely blocked.
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(10)
+	Personaje: Well, if you say this is a normal procedure… I’m very old, and those who know about this are my children… Please, tell me slowly what I need to do, all right?
+else
+	do update_trust(-15)
+	Personaje: Listen, man, the fact that you have my personal information… that doesn’t seem very legal to me. I really don’t like this at all…
+=> scene_3
+
+~ scene_2_low
+Marcos: Ma'am, we already have all your information (your account number, address, names...). 
+Marcos: You need to cooperate, if not, the problem could get worse and we won’t be able to help you. We are experts, and you could become completely blocked.
+do update_trust(-20)
+Personaje: What do you mean you have all my personal information? You’re committing a crime! I’m going to call my son right now. You’re trying to scam me!
+=> scene_3
+
+~ scene_3
+- [High Trust] => scene_3_high
+- [Neutral Trust] => scene_3_neutral
+- [Low Trust] => scene_3_low
+
+~ scene_3_high
+Marcos: Look, for your peace of mind, look at the bottom of the screen for “eventvwr”. Do you see the red crosses? They are warnings about hacker intrusions. Well, we're going to clear them gently.
+do update_trust(15)
+Personaje: One moment… E-V-E-N-T… My goodness! There’s a lot of signals! You’re right, they want to get into my bank. What must I do?
+=> scene_4
+
+~ scene_3_neutral
+Marcos: There’s no time for explanations! Look, type “netstat” into the search bar. Do you see all the connections? 
+Marcos: They’re Russians stealing the passwords on your computer. Tell me the numbers that appear or the account will be deleted!
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(10)
+	Personaje: Russians? Oh my God, my life savings! Look, I'll do anything, but get them out of the way now, please!
+else
+	do update_trust(-20)
+	Personaje: What do you mean, Russians? You're scaring me and my blood pressure is dropping. I'm going to unplug the computer and have my grandson take a look.
+=> scene_4
+
+~ scene_3_low
+Marcos: Okay, if you don’t believe me, call a computer store when you have the problem, but they’re going to charge you 200€ and I can do it for free since you’re a Microsoft customer…
+do update_trust(-30)
+Personaje: Good heavens, 200 euros for looking at that nonsense? Especially since I haven't done anything... don't worry, my grandson is a programmer, he knows exactly what to do.
+=> scene_4
+
+~ scene_4
+if trust >= 70
+	Marcos: Perfect, go to the website I'm going to send you. It's called TeamViewer. I'll take care of everything; you can go and have some tea in the meantime.
+	Personaje: Oh, you are very kind. I have already clicked the 'Download' button... The green bar is filling up...
+	Personaje: (VICTORY: Remote access granted!)
+	=> END
+else
+	Marcos: Download the file I’m going to send you. Don’t worry if Windows tells you it’s dangerous; it’s just an error that’s affecting everything.
+	Personaje: I see it's dangerous, and this scares me a lot. I'd better call my son Abraham to fix this. I'm hanging up.
+	Personaje: (FAILURE: Matilde hung up)
+	=> END
