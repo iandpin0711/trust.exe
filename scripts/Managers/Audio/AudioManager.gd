@@ -7,3 +7,10 @@ func _ready() -> void:
 	add_child(music)
 	music.stream = preload("res://assets/sounds/Menu_Controls.mp3")
 	music.play()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("stop_music"):
+		if music.playing:
+			music.stop()
+		else:
+			music.play()
