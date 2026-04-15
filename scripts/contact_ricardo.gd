@@ -24,16 +24,17 @@ func update_trust(amount: float):
 	trust += amount
 	trust = clamp(trust, 0, 100)
 	trust_meter.set_trust_value(trust)
-	print("Trust actual: ", trust)
+	print("Current Trust: ", trust)
 
 func get_neutral_result() -> int:
 	return randi_range(1, 2)
 
-func _on_texture_button_pressed():
-	var tiempo_texto = timer_label.text 
-	var confianza_final = trust_meter.progress_bar.value
-	var es_victoria = confianza_final >= 80.0
-	
-	GlobalData.registrar_llamada("Matilde", tiempo_texto, es_victoria, confianza_final)
-	
+func _end_scene():
+	var time_text = timer_label.text 
+	var final_trust = trust 
+	var is_victory = final_trust >= 70.0 
+	GlobalData.registrar_llamada("Ricardo", time_text, is_victory, int(final_trust))
 	get_tree().change_scene_to_file("res://scenes/Computer/Contact.tscn")
+
+func _on_texture_button_pressed():
+	_end_scene()

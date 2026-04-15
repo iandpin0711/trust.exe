@@ -1,9 +1,16 @@
 ~ start
+
 Ricardo: (Phone ringing...) Hello?
 
-- [High Trust] => scene_1_high
-- [Neutral Trust] => scene_1_neutral
-- [Low Trust] => scene_1_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Broken phone => scene_1_high
+	- Car accident => scene_1_neutral
+	- Money request => scene_1_low
+else
+	- Car accident => scene_1_neutral
+	- Money request => scene_1_low
+	- Broken phone => scene_1_high
 
 ~ scene_1_high
 do update_trust(30)
@@ -14,13 +21,13 @@ Ricardo: Son! Thank God you told me, I was getting worried. You sound a bit stra
 ~ scene_1_neutral
 set dice_roll = get_neutral_result()
 if dice_roll == 1
-    do update_trust(15)
-    Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
-    Ricardo: What? Oh my God, Raúl… where are you? Are you okay? Calm down, tell me, what do you need? You’re going to give me a heart attack.
+	do update_trust(15)
+	Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
+	Ricardo: What? Oh my God, Raúl… where are you? Are you okay? Calm down, tell me, what do you need? You’re going to give me a heart attack.
 else
-    do update_trust(-10)
-    Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
-    Ricardo: What do you mean an accident? I called you 10 minutes ago on the landline and you were at your grandma’s. Who are you and why are you pretending to be my son?
+	do update_trust(-10)
+	Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
+	Ricardo: What do you mean an accident? I called you 10 minutes ago on the landline and you were at your grandma’s. Who are you and why are you pretending to be my son?
 => scene_2
 
 ~ scene_1_low
@@ -31,13 +38,19 @@ Ricardo: What son? My son is here sleeping. Go try to scam someone else, thief!
 
 ~ scene_2
 if trust >= 40
-    Ricardo: Don't worry, son, we'll sort this out together. Just tell me what you need me to do, I'm here for you.
+	Ricardo: Don't worry, son, we'll sort this out together. Just tell me what you need me to do, I'm here for you.
 else
-    Ricardo: Look, I want to help, but this whole thing is very strange... I'm starting to get a really bad feeling about this.
+	Ricardo: Look, I want to help, but this whole thing is very strange... I'm starting to get a really bad feeling about this.
 
-- [High Trust] => scene_2_high
-- [Neutral Trust] => scene_2_neutral
-- [Low Trust] => scene_2_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Tow truck => scene_2_high
+	- Police pressure => scene_2_neutral
+	- Bail money => scene_2_low
+else
+	- Bail money => scene_2_low
+	- Police pressure => scene_2_neutral
+	- Tow truck => scene_2_high
 
 ~ scene_2_high
 do update_trust(20)
@@ -48,13 +61,13 @@ Ricardo: Of course, son, no problem. 150 euros is nothing if you’re okay. I’
 ~ scene_2_neutral
 set dice_roll = get_neutral_result()
 if dice_roll == 1
-    do update_trust(10)
-    Rubén: Dad, the other driver is threatening to call the police, and it’s 400 euros. Please, send me the Bizum before this gets worse!
-    Ricardo: No, no, don’t wait for the police. I’m sending 400 euros right now. I can barely see with these nerves… send… done!
+	do update_trust(10)
+	Rubén: Dad, the other driver is threatening to call the police, and it’s 400 euros. Please, send me the Bizum before this gets worse!
+	Ricardo: No, no, don’t wait for the police. I’m sending 400 euros right now. I can barely see with these nerves… send… done!
 else
-    do update_trust(-15)
-    Rubén: Dad, the other driver is threatening to call the police, and it’s 400 euros. Please, send me the Bizum before this gets worse!
-    Ricardo: 400 euros for a crash? That’s covered by insurance, son, we have full coverage. Don’t worry, I’ll call the police. Where are you exactly?
+	do update_trust(-15)
+	Rubén: Dad, the other driver is threatening to call the police, and it’s 400 euros. Please, send me the Bizum before this gets worse!
+	Ricardo: 400 euros for a crash? That’s covered by insurance, son, we have full coverage. Don’t worry, I’ll call the police. Where are you exactly?
 => scene_3
 
 ~ scene_2_low
@@ -64,9 +77,15 @@ Ricardo: 1000 euros? And without any proof? I’m not a bank, Raúl. You need to
 => scene_3
 
 ~ scene_3
-- [High Trust] => scene_3_high
-- [Neutral Trust] => scene_3_neutral
-- [Low Trust] => scene_3_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Hurry up => scene_3_high
+	- Getting worse => scene_3_neutral
+	- No questions => scene_3_low
+else
+	- No questions => scene_3_low
+	- Getting worse => scene_3_neutral
+	- Hurry up => scene_3_high
 
 ~ scene_3_high
 do update_trust(15)
@@ -77,13 +96,13 @@ Ricardo: Okay, okay, calm down. I’m sending it right now, don’t worry. Stay 
 ~ scene_3_neutral
 set dice_roll = get_neutral_result()
 if dice_roll == 1
-    do update_trust(10)
-    Rubén: Dad, I’m serious, this is getting out of control. The other driver is shouting and saying he’s calling the police right now. If you don’t send it, this is going to get much worse.
-    Ricardo: Oh God… okay, I’m sending it now. Just stay safe, please. Tell me when everything is okay.
+	do update_trust(10)
+	Rubén: Dad, I’m serious, this is getting out of control. The other driver is shouting and saying he’s calling the police right now. If you don’t send it, this is going to get much worse.
+	Ricardo: Oh God… okay, I’m sending it now. Just stay safe, please. Tell me when everything is okay.
 else
-    do update_trust(-20)
-    Rubén: Dad, I’m serious, this is getting out of control. The other driver is shouting and saying he’s calling the police right now. If you don’t send it, this is going to get much worse.
-    Ricardo: Don’t talk to me like that. If this is really you, answer me something only you would know.
+	do update_trust(-20)
+	Rubén: Dad, I’m serious, this is getting out of control. The other driver is shouting and saying he’s calling the police right now. If you don’t send it, this is going to get much worse.
+	Ricardo: Don’t talk to me like that. If this is really you, answer me something only you would know.
 => scene_4
 
 ~ scene_3_low
@@ -94,12 +113,14 @@ Ricardo: This is getting very suspicious. I’m going to call your actual phone 
 
 ~ scene_4
 if trust >= 70
-    Rubén: Dad, I got it, thank you so much. You really saved me. I’ll call you later when everything is sorted, okay? Love you.
-    Ricardo: Okay, son, take care. Call me as soon as you can, please. I’m still worried.
-    Ricardo: (VICTORY: The scammer got the money)
-    => END
+	Rubén: Dad, I got it, thank you so much. You really saved me. I’ll call you later when everything is sorted, okay? Love you.
+	Ricardo: Okay, son, take care. Call me as soon as you can, please. I’m still worried.
+	Ricardo: (VICTORY)
+	do _end_scene()
+	=> END
 else
-    Rubén: Look, if you don't send it now I'm going to be in big trouble with the police. Please!
-    Ricardo: No, wait. This doesn’t feel right. I’m calling your mother right now to see what's happening.
-    Ricardo: (FAILURE: Ricardo hung up)
-    => END
+	Rubén: Look, if you don't send it now I'm going to be in big trouble with the police. Please!
+	Ricardo: No, wait. This doesn’t feel right. I’m calling your mother right now to see what's happening.
+	Ricardo: (FAILURE)
+	do _end_scene()
+	=> END
