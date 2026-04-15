@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://d2spnsskaofhq"]
 
 [ext_resource type="Texture2D" uid="uid://bo0h6p5etva14" path="res://assets/Ui/screen.png" id="1_ilm80"]
-[ext_resource type="Script" uid="uid://b7ixh3e0tthsr" path="res://scripts/UI/Win.gd" id="1_wug1m"]
+[ext_resource type="Script" uid="uid://b7ixh3e0tthsr" path="res://scripts/UI/win.gd" id="1_wug1m"]
 [ext_resource type="FontFile" uid="uid://cdcv2ndq6ecnl" path="res://assets/fonts/JetBrains_Mono/static/JetBrainsMono-Bold.ttf" id="2_4ct6c"]
 [ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="3_svfav"]
+[ext_resource type="AudioStream" uid="uid://dxhmb01wxdf17" path="res://assets/sounds/win.mp3" id="5_fhq28"]
+[ext_resource type="AudioStream" uid="uid://b4wo01cviety0" path="res://assets/sounds/Click1.mp3" id="6_us4r6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wug1m"]
 bg_color = Color(0.05490196, 0.14901961, 0.15686275, 1)
@@ -130,6 +132,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wug1m")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fhq28")
 theme_override_styles/hover = SubResource("StyleBoxFlat_us4r6")
 text = "MAIN MENU"
+
+[node name="WinSound" type="AudioStreamPlayer" parent="." unique_id=2037208787]
+stream = ExtResource("5_fhq28")
+volume_db = -10.0
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=100298990]
+stream = ExtResource("6_us4r6")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

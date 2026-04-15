@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dc6xmxhukkxda" path="res://assets/Ui/btn_normal.png" id="4_lpubu"]
 [ext_resource type="Texture2D" uid="uid://w2p5evbcpfbf" path="res://assets/Ui/btn_click.png" id="5_lt2xq"]
 [ext_resource type="Texture2D" uid="uid://dl2hbemcikt8t" path="res://assets/Ui/btn_hover.png" id="6_1p5nq"]
+[ext_resource type="AudioStream" uid="uid://b4wo01cviety0" path="res://assets/sounds/Click1.mp3" id="8_qkcq1"]
 
 [sub_resource type="Theme" id="Theme_62e2m"]
 Label/font_sizes/font_size = 28
@@ -164,5 +165,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 22
 text = "EXIT"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1039612890]
+stream = ExtResource("8_qkcq1")
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

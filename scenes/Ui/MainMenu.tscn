@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bv4mtm65wmlpc" path="res://scripts/UI/MainMenu.gd" id="1_5plkx"]
 [ext_resource type="Texture2D" uid="uid://cjhwlm0kfe7ws" path="res://assets/Ui/menu.png" id="2_5plkx"]
 [ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_hf0bx"]
+[ext_resource type="AudioStream" uid="uid://b4wo01cviety0" path="res://assets/sounds/Click1.mp3" id="4_5plkx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80b6k"]
 bg_color = Color(0.05490196, 0.14901961, 0.15686275, 1)
@@ -105,7 +106,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hf0bx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5plkx")
 text = "EXIT"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=200579583]
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=200579583]
+stream = ExtResource("4_5plkx")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
