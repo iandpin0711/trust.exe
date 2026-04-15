@@ -1,12 +1,44 @@
 ~ start
-Personaje: Hola... ¿qué tal?
-- ¡Te ves genial! [if true]
+Ricardo: (Phone ringing...) Hello?
+	
+~ first_scene
+- High trust [if true]
     #do GameState.update_trust(20)
-    Personaje: ¡Oh, gracias! Me has alegrado el día.
-- Hola.
+	Rubén: Hey, dad… it’s me. Don’t worry, I dropped my phone and it’s not working, the screen is broken. I’m texting you from a friend’s phone.
+    Ricardo: Son! Thank God you told me, I was getting worried. You sound a bit strange… is everything okay? I was about to call your number.
+
+- Neutral.
     #do GameState.update_trust(5)
-    Personaje: Hola... supongo.
-- Hueles raro.
+	Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
+	set dice_roll = get_neutral_result()
+	if dice_roll == 1:
+		Ricardo: What? Oh my God, Raúl… where are you? Are you okay? Calm down, tell me, what do you need? You’re going to give me a heart attack.
+	else:
+		Ricardo: What do you mean an accident? I called you 10 minutes ago on the landline and you were at your grandma’s. Who are you and why are you pretending to be my son?
+		
+- Low trust.
     #do GameState.update_trust(-20)
-    Personaje: ¡Qué grosero!
+	Rubén: Hi, I’m your son. I need you to send me 320 euros to this new number because I lost my card and I can’t pay for dinner.
+    Ricardo: What son? My son is here sleeping. Go try to scam someone else, thief!
+=> END
+
+~ second_scene
+- High trust [if true]
+    #do GameState.update_trust(20)
+	Rubén: Hey, dad… it’s me. Don’t worry, I dropped my phone and it’s not working, the screen is broken. I’m texting you from a friend’s phone.
+    Ricardo: Son! Thank God you told me, I was getting worried. You sound a bit strange… is everything okay? I was about to call your number.
+
+- Neutral.
+    #do GameState.update_trust(5)
+	Rubén: Dad! I just had a car accident and the other driver got really aggressive. My phone isn’t working and I’m stuck in the middle of the road. Please help me!
+	set dice_roll = get_neutral_result()
+	if dice_roll == 1:
+		Ricardo: What? Oh my God, Raúl… where are you? Are you okay? Calm down, tell me, what do you need? You’re going to give me a heart attack.
+	else:
+		Ricardo: What do you mean an accident? I called you 10 minutes ago on the landline and you were at your grandma’s. Who are you and why are you pretending to be my son?
+		
+- Low trust.
+    #do GameState.update_trust(-20)
+	Rubén: Hi, I’m your son. I need you to send me 320 euros to this new number because I lost my card and I can’t pay for dinner.
+    Ricardo: What son? My son is here sleeping. Go try to scam someone else, thief!
 => END

@@ -1,12 +1,16 @@
 extends Node2D
 
 @onready var trust_meter = $ProgressBar 
-@onready var timer_label = $TimerLabel 
+@onready var timer_label = $TimerLabel
+
+var dice_roll: int = 0 
 
 func _ready():
 	trust_meter.set_trust_value(25.0)
 	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/ricardo_dialogue.dialogue"), "start")
-	
+
+func get_neutral_result() -> int:
+	return randi_range(1, 2)
 
 func _on_regalo_aceptado():
 	var new_value = trust_meter.progress_bar.value + 10
