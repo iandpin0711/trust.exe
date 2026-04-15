@@ -4,7 +4,6 @@ static var current_instance = null
 
 func change_to_scene():
 	if is_instance_valid(current_instance):
-		print("Ya hay una escena abierta, ignorando clic.")
 		return
 
 	if target_scene:
