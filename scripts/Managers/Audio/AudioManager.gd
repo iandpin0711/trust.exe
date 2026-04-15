@@ -6,7 +6,7 @@ var music_scenes = ["MainMenu", "Controls"]
 func _ready() -> void:
 	music = AudioStreamPlayer.new()
 	add_child(music)
-	music.stream = preload("res://assets/sounds/Menu_Controls.mp3")
+	music.stream = preload("res://assets/sounds/MainMenu.mp3")
 	get_tree().root.connect("child_entered_tree", _on_scene_changed)
 
 func _on_scene_changed(node: Node) -> void:
@@ -19,6 +19,6 @@ func _on_scene_changed(node: Node) -> void:
 	else:
 		music.stop()
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("stop_music"):
 		music.stream_paused = not music.stream_paused
