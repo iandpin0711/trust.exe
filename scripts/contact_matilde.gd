@@ -16,8 +16,7 @@ func _ready():
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(my_dialogue_resource, dialogue_start_point)
 
-#	DialogueManager.show_example_dialogue_balloon(my_dialogue_resource, dialogue_start_point)
-	
+
 func update_trust(amount: float):
 	trust += amount
 	trust = clamp(trust, 0, 100)
@@ -27,9 +26,11 @@ func update_trust(amount: float):
 func get_neutral_result() -> int:
 	return randi_range(1, 2)
 
-func _on_texture_button_pressed():
-	var tiempo_texto = timer_label.text 
-	var confianza_final = trust_meter.progress_bar.value
-	var es_victoria = confianza_final >= 80.0
-	GlobalData.registrar_llamada("Matilde", tiempo_texto, es_victoria, confianza_final)
+func _end_scene():
+	var time_text = timer_label.text 
+	var is_victory = trust >= 80.0 
+	GlobalData.registrar_llamada("Matilde", time_text, is_victory, trust)
 	get_tree().change_scene_to_file("res://scenes/Computer/Contact.tscn")
+
+func _on_texture_button_pressed():
+	_end_scene()
