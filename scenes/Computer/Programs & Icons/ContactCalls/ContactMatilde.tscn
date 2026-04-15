@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_86jne"]
 [ext_resource type="Script" uid="uid://c2vk42ij7uh6f" path="res://scripts/contact_matilde.gd" id="1_semsy"]
 [ext_resource type="Texture2D" uid="uid://kjfja1h3ewa1" path="res://assets/technology-pc/WinXp/Wallpapers/Home.png" id="2_r5578"]
+[ext_resource type="Resource" uid="uid://gjbfwc74sgkb" path="res://dialogues/matilde_dialogue.dialogue" id="2_vkdwp"]
+[ext_resource type="PackedScene" uid="uid://bphboju0npaps" path="res://dialogues/dialogues_balloon/balloon.tscn" id="3_1qfdy"]
 [ext_resource type="Texture2D" uid="uid://d1y6ey8laalhr" path="res://assets/characters/Victims/548043.png" id="3_3s3xm"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="3_lenea"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="4_3s3xm"]
@@ -87,6 +89,8 @@ region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
 [node name="ContactMatilde" type="Node2D" unique_id=46187545]
 script = ExtResource("1_semsy")
+my_dialogue_resource = ExtResource("2_vkdwp")
+custom_balloon_scene = ExtResource("3_1qfdy")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_86jne")]
 
