@@ -1,15 +1,21 @@
 ~ start
 
-Personaje: (Phone ringing...) Hello?
+Mr. Julian: (Phone ringing...) Hello?
 
-- [High Trust] => scene_1_high
-- [Neutral Trust] => scene_1_neutral
-- [Low Trust] => scene_1_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Friendly greeting => scene_1_high
+	- Urgent warning => scene_1_neutral
+	- Serious notification => scene_1_low
+else
+	- Serious notification => scene_1_low
+	- Urgent warning => scene_1_neutral
+	- Friendly greeting => scene_1_high
 
 ~ scene_1_high
 Rubén: Hello, good morning, this is Rubén from your bank’s security department. I’m calling because we’ve detected a purchase attempt of 900 euros from your account. Can you confirm if this was you?
 do update_trust(30)
-Personaje: 900 euros?! No, not at all! We haven’t bought anything… we were just at home watching TV. Thank goodness you called… What’s going on?
+Mr. Julian: 900 euros?! No, not at all! We haven’t bought anything… we were just at home watching TV. Thank goodness you called… What’s going on?
 => scene_2
 
 ~ scene_1_neutral
@@ -17,32 +23,38 @@ Rubén: Hi, I’m calling from your bank’s fraud team. We’ve just detected s
 set dice_roll = get_neutral_result()
 if dice_roll == 1
 	do update_trust(15)
-	Personaje: From abroad? That’s impossible… Oh my God, are they trying to get into my account? What should I do?
+	Mr. Julian: From abroad? That’s impossible… Oh my God, are they trying to get into my account? What should I do?
 else
 	do update_trust(-10)
-	Personaje: From abroad? I don't know, I haven't used my card today. Are you sure?
+	Mr. Julian: From abroad? I don't know, I haven't used my card today. Are you sure?
 => scene_2
 
 ~ scene_1_low
 Rubén: Hello, I’m calling to inform you that your card has been flagged for unusual activity, including multiple high-risk transactions. We need to verify your account immediately.
 do update_trust(-15)
-Personaje: That sounds strange… I don’t usually have issues like this. Are you sure it’s my account?
+Mr. Julian: That sounds strange… I don’t usually have issues like this. Are you sure it’s my account?
 => scene_2
 
 ~ scene_2
 if trust >= 40
-	Personaje: I’m listening... please tell me how to fix this.
+	Mr. Julian: I’m listening... please tell me how to fix this.
 else
-	Personaje: I don’t know about this... I'm a bit nervous.
+	Mr. Julian: I don’t know about this... I'm a bit nervous.
 
-- [High Trust] => scene_2_high
-- [Neutral Trust] => scene_2_neutral
-- [Low Trust] => scene_2_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Reassure victim => scene_2_high
+	- Explain procedure => scene_2_neutral
+	- Pressure urgency => scene_2_low
+else
+	- Pressure urgency => scene_2_low
+	- Explain procedure => scene_2_neutral
+	- Reassure victim => scene_2_high
 
 ~ scene_2_high
 Rubén: I completely understand your concern. Let me reassure you—this is exactly why we monitor accounts 24/7. I’m here to help you secure everything before any money leaves your account.
 do update_trust(20)
-Personaje: Okay… alright, thank you for explaining. I’m a bit nervous, but I trust you. What do I need to do?
+Mr. Julian: Okay… alright, thank you for explaining. I’m a bit nervous, but I trust you. What do I need to do?
 => scene_3
 
 ~ scene_2_neutral
@@ -50,27 +62,33 @@ Rubén: These situations are more common than you’d think. The important thing
 set dice_roll = get_neutral_result()
 if dice_roll == 1
 	do update_trust(10)
-	Personaje: Okay… I don’t really understand how this works, but if you say we can stop it, let’s do it.
+	Mr. Julian: Okay… I don’t really understand how this works, but if you say we can stop it, let’s do it.
 else
 	do update_trust(-15)
-	Personaje: Verify my identity? I don't like giving details over the phone...
+	Mr. Julian: Verify my identity? I don't like giving details over the phone...
 => scene_3
 
 ~ scene_2_low
 Rubén: If we don’t act now, the system may process the transaction automatically. I know this sounds urgent, but that’s because it is.
 do update_trust(-20)
-Personaje: I’m still not entirely convinced… but if it’s to stop someone stealing my money, go on.
+Mr. Julian: I’m still not entirely convinced… but if it’s to stop someone stealing my money, go on.
 => scene_3
 
 ~ scene_3
-- [High Trust] => scene_3_high
-- [Neutral Trust] => scene_3_neutral
-- [Low Trust] => scene_3_low
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Secure verification => scene_3_high
+	- Standard notification => scene_3_neutral
+	- System requirement => scene_3_low
+else
+	- System requirement => scene_3_low
+	- Standard notification => scene_3_neutral
+	- Secure verification => scene_3_high
 
 ~ scene_3_high
 Rubén: Perfect. I’m going to send a secure verification code to your phone. This allows us to confirm it’s really you and temporarily block any suspicious access.
 do update_trust(15)
-Personaje: Yes, I just got a message… okay, I see a code here.
+Mr. Julian: Yes, I just got a message… okay, I see a code here.
 => scene_4
 
 ~ scene_3_neutral
@@ -78,26 +96,34 @@ Rubén: You should receive a notification from your bank in a few seconds. Don�
 set dice_roll = get_neutral_result()
 if dice_roll == 1
 	do update_trust(10)
-	Personaje: Alright, something just popped up on my phone… what exactly do I do with it?
+	Mr. Julian: Alright, something just popped up on my phone… what exactly do I do with it?
 else
 	do update_trust(-20)
-	Personaje: I got the notification, but it looks like a confirmation for a transfer...
+	Mr. Julian: I got the notification, but it looks like a confirmation for a transfer...
 => scene_4
 
 ~ scene_3_low
 Rubén: The system requires your confirmation to stop the activity. Without it, we won’t be able to intervene.
 do update_trust(-30)
-Personaje: Wait… this message mentions a transaction… is that normal?
+Mr. Julian: Wait… this message mentions a transaction… is that normal?
 => scene_4
 
 ~ scene_4
 if trust >= 70
 	Rubén: Yes, that’s correct. That message is part of the security protocol. Please read me the code so I can validate it and block the fraudulent transaction immediately.
-	Personaje: Alright… the code is 4787… Please tell me this will stop them.
-	Personaje: (VICTORY: You got the code!)
+	Mr. Julian: Alright… the code is 4787… Please tell me this will stop them.
+	Mr. Julian: (VICTORY)
+	do _end_scene()
+	=> END
+elif trust >= 45
+	Rubén: What you’re seeing is the system trying to secure your funds. Go ahead and confirm it so we can move your money to a safe account temporarily.
+	Mr. Julian: Okay… I’ve confirmed it. The money is safe now, right?
+	Mr. Julian: (NEUTRAL VICTORY)
+	do _end_scene()
 	=> END
 else
 	Rubén: If you don’t confirm this now, the system may allow the fraudulent transaction to go through. I won’t be able to stop it after that!
-	Personaje: No, this clearly says I’m authorizing a transfer. I’m not doing that. This is a scam!
-	Personaje: (FAILURE: Julian hung up)
+	Mr. Julian: No, this clearly says I’m authorizing a transfer. I’m not doing that. This is a scam!
+	Mr. Julian: (FAILURE)
+	do _end_scene()
 	=> END
