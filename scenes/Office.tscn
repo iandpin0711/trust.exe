@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
-[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/detectPlayer.gd" id="22_4rawq"]
+[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/DetectPlayer.gd" id="22_4rawq"]
 [ext_resource type="PackedScene" uid="uid://cad814nh8htai" path="res://scenes/textbox.tscn" id="23_siqwn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]

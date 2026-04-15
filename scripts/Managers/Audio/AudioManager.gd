@@ -7,6 +7,7 @@ func _ready() -> void:
 	music = AudioStreamPlayer.new()
 	add_child(music)
 	music.stream = preload("res://assets/sounds/MainMenu.mp3")
+	music.volume_db = -20
 	get_tree().root.connect("child_entered_tree", _on_scene_changed)
 
 func _on_scene_changed(node: Node) -> void:
