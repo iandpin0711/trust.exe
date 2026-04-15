@@ -21,6 +21,10 @@ GlobalData="*uid://buuju1r0hirra"
 DialogueManager="*uid://c3rodes2l3gxb"
 AudioManager="*uid://c8on0e1u2qhyw"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://dialogues/dialogues_balloon/balloon.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"

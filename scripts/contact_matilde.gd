@@ -1,15 +1,22 @@
 extends Node2D
 
 @onready var trust_meter = $ProgressBar 
-# Referencia al Label del tiempo (ajusta la ruta si es distinta)
 @onready var timer_label = $TimerLabel 
+
+@export var my_dialogue_resource: DialogueResource 
+@export var dialogue_start_point: String = "start"
+@export var custom_balloon_scene: PackedScene
 
 var trust: float = 50.0
 var dice_roll: int = 0 
 
 func _ready():
 	trust_meter.set_trust_value(trust)
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/matilde_dialogue.dialogue"), "start")
+	var balloon = custom_balloon_scene.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(my_dialogue_resource, dialogue_start_point)
+
+#	DialogueManager.show_example_dialogue_balloon(my_dialogue_resource, dialogue_start_point)
 	
 func update_trust(amount: float):
 	trust += amount
