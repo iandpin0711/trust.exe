@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="5_semsy"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="6_vkdwp"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="7_1qfdy"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="8_a04dk"]
-[ext_resource type="Script" path="res://scripts/TimerLabel.gd" id="10_semsy"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="8_a04dk"]
+[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/Computer/Elements/Taskbar/TimerLabel.gd" id="10_semsy"]
 [ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="11_3s3xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]

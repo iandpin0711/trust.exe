@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bji88bkupmlob"]
 
-[ext_resource type="Script" uid="uid://d4h1gag2gy7on" path="res://scripts/icon.gd" id="1_dkb0e"]
+[ext_resource type="Script" uid="uid://d4h1gag2gy7on" path="res://scripts/Computer/Elements/Desktop/icon.gd" id="1_dkb0e"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="2_yjls1"]
 
 [node name="Icon" type="Button" unique_id=1059612207]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1wrwuv3myl7i"]
 
-[ext_resource type="Script" uid="uid://b5p0q5ccioi37" path="res://scripts/CursorArea.gd" id="1_ms1s5"]
+[ext_resource type="Script" uid="uid://b5p0q5ccioi37" path="res://scripts/Computer/Elements/Cursor/CursorArea.gd" id="1_ms1s5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erjye"]
 

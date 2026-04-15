@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2spnsskaofhq"]
 
 [ext_resource type="Texture2D" uid="uid://bo0h6p5etva14" path="res://assets/Ui/screen.png" id="1_ilm80"]
-[ext_resource type="Script" uid="uid://b7ixh3e0tthsr" path="res://scripts/UI/win.gd" id="1_wug1m"]
+[ext_resource type="Script" uid="uid://b7ixh3e0tthsr" path="res://scripts/UI/Win.gd" id="1_wug1m"]
 [ext_resource type="FontFile" uid="uid://cdcv2ndq6ecnl" path="res://assets/fonts/JetBrains_Mono/static/JetBrainsMono-Bold.ttf" id="2_4ct6c"]
 [ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="3_svfav"]
 
