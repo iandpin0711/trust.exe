@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dqn18qpd1pvby"]
 
+[ext_resource type="Script" uid="uid://d3blyum4mvsxr" path="res://scripts/Office/Office.gd" id="1_03xqq"]
 [ext_resource type="PackedScene" uid="uid://ch6cnf2uunkm" path="res://scenes/Decorations/Background/Background.tscn" id="1_hulg7"]
 [ext_resource type="PackedScene" uid="uid://c7sd6qn552jhl" path="res://scenes/Decorations/window.tscn" id="2_hinxj"]
 [ext_resource type="PackedScene" uid="uid://dl720oqmn61pt" path="res://scenes/Decorations/vendingmachine.tscn" id="3_xoyss"]
@@ -91,6 +92,7 @@ size = Vector2(70, 57)
 size = Vector2(75, 55)
 
 [node name="Node2D" type="Node2D" unique_id=1555842036]
+script = ExtResource("1_03xqq")
 
 [node name="Background" parent="." unique_id=812203954 instance=ExtResource("1_hulg7")]
 
