@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://d4b7asg36kte1"]
 
-[ext_resource type="Script" uid="uid://lojv48j0h100" path="res://scripts/Office/Characters/npc3.gd" id="1_00cio"]
 [ext_resource type="Texture2D" uid="uid://bv1kdl1rqjkl" path="res://assets/characters/NPCs/npc3.png" id="1_wovv8"]
+
+[sub_resource type="GDScript" id="GDScript_wovv8"]
+script/source = "extends CharacterBody2D
+
+@onready var animated_sprite = $AnimatedSprite2D
+
+func _ready():
+	animated_sprite.play(\"idle\")
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00cio"]
 atlas = ExtResource("1_wovv8")
@@ -43,13 +51,14 @@ radius = 19.0
 height = 38.0
 
 [node name="Npc3" type="CharacterBody2D" unique_id=1667016179]
-script = ExtResource("1_00cio")
+script = SubResource("GDScript_wovv8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=934031644]
 position = Vector2(5.4999995, 9.000001)
 scale = Vector2(2.6190474, 2.952381)
 sprite_frames = SubResource("SpriteFrames_dkmns")
 animation = &"idle"
+autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925737274]

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://by8litgjhvmnw"]
 
 [ext_resource type="Texture2D" uid="uid://c0m5q2eovey80" path="res://assets/characters/Boss/Boss.png" id="1_gnqgx"]
-[ext_resource type="Script" uid="uid://c2fn7ylp5ghlq" path="res://scenes/Characters/boss.gd" id="1_u4dqf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u4dqf"]
 atlas = ExtResource("1_gnqgx")
@@ -68,13 +67,13 @@ radius = 17.0
 height = 54.0
 
 [node name="Boss" type="CharacterBody2D" unique_id=517115427]
-script = ExtResource("1_u4dqf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148106859]
 position = Vector2(4.9999995, 4.499997)
 scale = Vector2(1.6875002, 1.59375)
 sprite_frames = SubResource("SpriteFrames_6114g")
 animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1229864372]
 position = Vector2(2, 6)

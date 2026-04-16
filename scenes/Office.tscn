@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://by8litgjhvmnw" path="res://scenes/Characters/Boss.tscn" id="27_3v58c"]
 [ext_resource type="PackedScene" uid="uid://d4b7asg36kte1" path="res://scenes/Decorations/npc3.tscn" id="27_4pfcd"]
 [ext_resource type="AudioStream" uid="uid://64dsrxiiisux" path="res://assets/sounds/The Office.mp3" id="29_ilhca"]
+[ext_resource type="PackedScene" uid="uid://w4dvsjmf3etr" path="res://scenes/Decorations/npc4.tscn" id="29_qnjnv"]
+[ext_resource type="PackedScene" uid="uid://c3en34uyoo1wl" path="res://scenes/Decorations/npc5.tscn" id="30_q4t1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -96,6 +98,15 @@ size = Vector2(70, 57)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q4t1w"]
 size = Vector2(75, 55)
 
+[sub_resource type="GDScript" id="GDScript_q4t1w"]
+script/source = "extends CharacterBody2D
+
+@onready var animated_sprite = $AnimatedSprite2D
+
+func _ready():
+	animated_sprite.play(\"idle\")
+"
+
 [node name="Node2D" type="Node2D" unique_id=1555842036]
 script = ExtResource("1_03xqq")
 
@@ -103,7 +114,7 @@ script = ExtResource("1_03xqq")
 
 [node name="MainCharacter" parent="." unique_id=1146026713 instance=ExtResource("21_1tact")]
 z_index = 50
-position = Vector2(609, 314)
+position = Vector2(609, 306)
 
 [node name="Desks" type="Node2D" parent="." unique_id=1633152779]
 
@@ -486,6 +497,13 @@ position = Vector2(158, 447)
 
 [node name="Boss" parent="NPCs" unique_id=517115427 instance=ExtResource("27_3v58c")]
 position = Vector2(606, 240)
+script = SubResource("GDScript_q4t1w")
+
+[node name="Npc4" parent="NPCs" unique_id=316756141 instance=ExtResource("29_qnjnv")]
+position = Vector2(1023, 442)
+
+[node name="Npc5" parent="NPCs" unique_id=1620468303 instance=ExtResource("30_q4t1w")]
+position = Vector2(707, 603)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=919103940]
 stream = ExtResource("29_ilhca")
