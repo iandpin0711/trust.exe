@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bca1h5ywcpt1e"]
 
+[ext_resource type="Texture2D" uid="uid://b67iwp88srioy" path="res://assets/technology-pc/WinXp/Wallpapers/Bliss.png" id="1_jebox"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_ud7gy"]
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_vly74"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_lpa0d"]
@@ -7,6 +8,10 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_oe11b"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_wb3bd"]
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="6_ctsco"]
+[ext_resource type="AudioStream" uid="uid://dqso1453yoeih" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Critical Stop.wav" id="8_0wa73"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="9_327b5"]
+[ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="10_327b5"]
+[ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="11_h7bbo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_ud7gy")
@@ -80,13 +85,63 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("1_ud7gy")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld3hx"]
+atlas = ExtResource("3_awk8o")
+region = Rect2(351.79788, 638.4365, 32.765106, 33.02173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4haug"]
+atlas = ExtResource("3_awk8o")
+region = Rect2(31.416294, 191.51817, 32.73216, 33.601166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cobbc"]
+atlas = ExtResource("11_h7bbo")
+region = Rect2(241.85583, 485.78336, 44.337494, 38.93985)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ah0y"]
+atlas = ExtResource("11_h7bbo")
+region = Rect2(239.75638, 486.70364, 46.184357, 37.7872)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsfn4"]
+atlas = ExtResource("11_h7bbo")
+region = Rect2(192.14331, 1.2968369, 47.926422, 42.769943)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54xsn"]
+atlas = ExtResource("11_h7bbo")
+region = Rect2(396.8165, 191.63995, 23.963196, 49.769745)
+
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
+
+[node name="Bliss-Background" type="Sprite2D" parent="." unique_id=1670115511]
+position = Vector2(576, 324)
+scale = Vector2(1.44, 1.08)
+texture = ExtResource("1_jebox")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_vly74")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
-offset_right = 1154.0
-offset_bottom = 652.0
+offset_left = 304.0
+offset_top = 285.0
+offset_right = 840.0
+offset_bottom = 399.0
+color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=764654923]
+position = Vector2(49, 54)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_awk8o")
+region_enabled = true
+region_rect = Rect2(287.29077, 222.52977, 32.534668, 33.13768)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=768106676]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 43.0
+offset_right = 506.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_wb3bd")
+theme_override_font_sizes/font_size = 17
+text = "Are you trying to play games meanwhile you're working?"
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
@@ -198,45 +253,89 @@ script = ExtResource("6_ctsco")
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
 
 [node name="Sprite2D" type="Sprite2D" parent="WindowBar" unique_id=2010802655]
-position = Vector2(578, 12)
-scale = Vector2(23.160002, 1)
+position = Vector2(572, 271)
+scale = Vector2(10.719999, 1)
 texture = SubResource("AtlasTexture_5etjd")
 
 [node name="TextureButton" type="TextureButton" parent="WindowBar" unique_id=1047254224]
-offset_left = 1131.0
-offset_top = 2.0
-offset_right = 1152.0
-offset_bottom = 23.0
+offset_left = 815.0
+offset_top = 262.0
+offset_right = 836.0
+offset_bottom = 283.0
 texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
+script = ExtResource("9_327b5")
 
 [node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
-offset_left = 1108.0
-offset_top = 2.0
-offset_right = 1129.0
-offset_bottom = 23.0
+offset_left = 792.0
+offset_top = 262.0
+offset_right = 813.0
+offset_bottom = 283.0
 texture_normal = SubResource("AtlasTexture_n8swj")
 texture_pressed = SubResource("AtlasTexture_p66qp")
 texture_hover = SubResource("AtlasTexture_yhhkc")
 
 [node name="TextureButton3" type="TextureButton" parent="WindowBar" unique_id=633222835]
-offset_left = 1084.0
-offset_top = 1.0
-offset_right = 1105.0
-offset_bottom = 24.0
+offset_left = 768.0
+offset_top = 261.0
+offset_right = 789.0
+offset_bottom = 284.0
 texture_normal = SubResource("AtlasTexture_1f7qi")
 texture_pressed = SubResource("AtlasTexture_uifyf")
 texture_hover = SubResource("AtlasTexture_4un80")
 
 [node name="WindowLabel" type="Label" parent="." unique_id=669523475]
-offset_left = 32.0
-offset_right = 166.0
-offset_bottom = 23.0
+offset_left = 330.0
+offset_top = 261.0
+offset_right = 384.0
+offset_bottom = 284.0
 text = "Games"
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=450616332]
-position = Vector2(15.25, 12.5)
+position = Vector2(320, 272)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1212373479]
+stream = ExtResource("8_0wa73")
+autoplay = true
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=2123757221]
+offset_left = 10.0
+offset_right = 90.0
+offset_bottom = 308.0
+
+[node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "Recycle Bin"
+icon_image = SubResource("AtlasTexture_ld3hx")
+
+[node name="Icon2" parent="GridContainer" unique_id=466904408 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "Browser"
+icon_image = SubResource("AtlasTexture_4haug")
+
+[node name="Icon3" parent="GridContainer" unique_id=106593308 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "Games"
+icon_image = SubResource("AtlasTexture_cobbc")
+
+[node name="Icon4" parent="GridContainer" unique_id=122467968 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "Wallpapers"
+icon_image = SubResource("AtlasTexture_5ah0y")
+
+[node name="Icon5" parent="GridContainer" unique_id=185632137 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "\"Contacts\""
+icon_image = SubResource("AtlasTexture_tsfn4")
+
+[node name="Icon6" parent="GridContainer" unique_id=308213049 instance=ExtResource("10_327b5")]
+layout_mode = 2
+program_name = "Calls"
+icon_image = SubResource("AtlasTexture_54xsn")
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="WindowBar/TextureButton" method="_on_texture_button_pressed"]

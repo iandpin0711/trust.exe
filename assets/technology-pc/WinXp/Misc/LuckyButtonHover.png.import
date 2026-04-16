@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3n8b7gqxih0g"
-path="res://.godot/imported/TextboxPc.png-37b409076442d7ff20434f2a952e3f80.ctex"
+uid="uid://dxet84ohpbx4e"
+path="res://.godot/imported/LuckyButtonHover.png-73c65bf98c4f27d5b6b4f96ad0f3beba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/technology-pc/TextboxPc.png"
-dest_files=["res://.godot/imported/TextboxPc.png-37b409076442d7ff20434f2a952e3f80.ctex"]
+source_file="res://assets/technology-pc/WinXp/Misc/LuckyButtonHover.png"
+dest_files=["res://.godot/imported/LuckyButtonHover.png-73c65bf98c4f27d5b6b4f96ad0f3beba.ctex"]
 
 [params]
 

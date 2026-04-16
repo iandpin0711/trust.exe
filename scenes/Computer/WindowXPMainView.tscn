@@ -83,7 +83,7 @@ texture = ExtResource("1_xd4lq")
 
 [node name="WindowsXpStartup" type="AudioStreamPlayer" parent="." unique_id=1351936708]
 stream = ExtResource("2_5hxee")
-volume_db = 10.0
+volume_db = -10.0
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=5696686]
 texture_filter = 1
