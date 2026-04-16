@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://014vefx1mf1k"]
+
+[ext_resource type="Texture2D" uid="uid://bsi7e8jd4j008" path="res://assets/characters/NPCs/npc1.png" id="1_v4wx3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exej3"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpuog"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6xm"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eevqs"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6suc"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cty0p"]
+atlas = ExtResource("1_v4wx3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mnvc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exej3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpuog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eevqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6suc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cty0p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4wx3"]
+radius = 30.413813
+
+[node name="Npc1" type="CharacterBody2D" unique_id=667261507]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=795907761]
+position = Vector2(-0.99999905, -21)
+scale = Vector2(3.3671875, 3.3046875)
+sprite_frames = SubResource("SpriteFrames_5mnvc")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1248005463]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_v4wx3")

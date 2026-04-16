@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://rovwkp8n0pr4"]
+
+[ext_resource type="Texture2D" uid="uid://bhoav3ggax6mh" path="res://assets/characters/NPCs/npc2.png" id="1_k6oc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00550"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7n7c"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0e75"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1lew"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wu4u"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86gdp"]
+atlas = ExtResource("1_k6oc2")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_im3hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00550")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7n7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0e75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1lew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wu4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86gdp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k6oc2"]
+radius = 29.15476
+
+[node name="Npc2" type="CharacterBody2D" unique_id=1051664475]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1007221302]
+position = Vector2(14.500011, -16.75)
+scale = Vector2(3.8437502, 3.109375)
+sprite_frames = SubResource("SpriteFrames_im3hp")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=134398170]
+position = Vector2(15, 5)
+shape = SubResource("CircleShape2D_k6oc2")
