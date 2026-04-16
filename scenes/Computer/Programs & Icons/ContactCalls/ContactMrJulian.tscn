@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="10_cplht"]
 [ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/Computer/Elements/Taskbar/TimerLabel.gd" id="11_8a328"]
 [ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="12_egjor"]
+[ext_resource type="AudioStream" uid="uid://0ur5vi118jhj" path="res://assets/sounds/StartCall.wav" id="16_fn58u"]
+[ext_resource type="AudioStream" uid="uid://2rtea47pwv2u" path="res://assets/sounds/EndCallGame.wav" id="17_naxbc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("5_fn58u")
@@ -283,5 +285,13 @@ offset_left = -316.0
 offset_top = 13.0
 offset_right = -316.0
 offset_bottom = 13.0
+
+[node name="StartSound" type="AudioStreamPlayer2D" parent="." unique_id=1361564052]
+position = Vector2(0, 1)
+stream = ExtResource("16_fn58u")
+autoplay = true
+
+[node name="ExitSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=763792281]
+stream = ExtResource("17_naxbc")
 
 [connection signal="pressed" from="WindowBar/TextureButton" to="." method="_on_texture_button_pressed"]

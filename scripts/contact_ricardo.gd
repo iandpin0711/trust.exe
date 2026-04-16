@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var trust_meter = $ProgressBar 
 @onready var timer_label = $TimerLabel 
+@onready var exit_sound_player = $ExitSoundPlayer
 
 @export var my_dialogue_resource: DialogueResource 
 @export var dialogue_start_point: String = "start"
@@ -38,6 +39,10 @@ func get_neutral_result() -> int:
 	return randi_range(1, 2)
 
 func _end_scene():
+	if exit_sound_player:
+		exit_sound_player.play()
+		await exit_sound_player.finished
+	
 	var time_text = timer_label.text 
 	var final_trust = trust 
 	var is_victory = final_trust >= 70.0 
