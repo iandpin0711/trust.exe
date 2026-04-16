@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" path="res://scenes/Decorations/npc1.tscn" id="25_tncm5"]
 [ext_resource type="PackedScene" path="res://scenes/Decorations/npc2.tscn" id="26_3v58c"]
 [ext_resource type="PackedScene" uid="uid://by8litgjhvmnw" path="res://scenes/Characters/Boss.tscn" id="27_3v58c"]
+[ext_resource type="PackedScene" uid="uid://d4b7asg36kte1" path="res://scenes/Decorations/npc3.tscn" id="27_4pfcd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -478,6 +479,9 @@ position = Vector2(980, 261)
 
 [node name="Npc2" parent="NPCs" unique_id=1051664475 instance=ExtResource("26_3v58c")]
 position = Vector2(898, 256)
+
+[node name="Npc3" parent="NPCs" unique_id=1667016179 instance=ExtResource("27_4pfcd")]
+position = Vector2(149, 254)
 
 [node name="Boss" parent="NPCs" unique_id=517115427 instance=ExtResource("27_3v58c")]
 position = Vector2(606, 240)
