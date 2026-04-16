@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="2_wyged"]
 [ext_resource type="PackedScene" uid="uid://bphboju0npaps" path="res://dialogues/dialogues_balloon/balloon.tscn" id="3_h7tk8"]
 [ext_resource type="Texture2D" uid="uid://cnq7nea8mgcuv" path="res://assets/technology-pc/WinXp/Wallpapers/Ripple.png" id="3_k2yky"]
+[ext_resource type="AudioStream" uid="uid://bvgqfd8ondjjs" path="res://assets/sounds/bankMan2.wav" id="4_h7tk8"]
 [ext_resource type="Texture2D" uid="uid://4vsmg465f1hl" path="res://assets/characters/Victims/BankMan.png" id="4_k2yky"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="5_fn58u"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="6_naxbc"]
@@ -91,6 +92,7 @@ region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 script = ExtResource("1_k2yky")
 my_dialogue_resource = ExtResource("2_limn2")
 custom_balloon_scene = ExtResource("3_h7tk8")
+voice_sound = ExtResource("4_h7tk8")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("2_wyged")]
 

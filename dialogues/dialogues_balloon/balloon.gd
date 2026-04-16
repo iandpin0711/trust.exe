@@ -70,10 +70,19 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+# --- Variables de voz ---
+var custom_voice_stream: AudioStream
+var base_pitch: float = 1.0
+var sound_frequency: int = 1
+var letter_counter: int = 0
+
 
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
+	
+	# Conectamos la señal de escribir letra
+	dialogue_label.spoke.connect(_on_dialogue_label_spoke)
 
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():
@@ -138,6 +147,9 @@ func apply_dialogue_line() -> void:
 
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
+
+	# Reset counter al empezar linea nueva
+	letter_counter = 0
 
 	# Show our balloon
 	balloon.show()
@@ -215,3 +227,17 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+func setup_voice(sound: AudioStream, pitch: float, frequency: int = 1) -> void:
+	custom_voice_stream = sound
+	base_pitch = pitch
+	sound_frequency = frequency
+
+func _on_dialogue_label_spoke(letter: String, _index: int, _speed: float) -> void:
+	if letter != " " and letter != "\n" and custom_voice_stream:
+		# Solo suena si el contador coincide con la frecuencia
+		if letter_counter % sound_frequency == 0:
+			audio_stream_player.stream = custom_voice_stream
+			audio_stream_player.pitch_scale = base_pitch + randf_range(-0.1, 0.1)
+			audio_stream_player.play()
+		letter_counter += 1

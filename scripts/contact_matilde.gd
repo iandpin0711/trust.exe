@@ -7,15 +7,26 @@ extends Node2D
 @export var dialogue_start_point: String = "start"
 @export var custom_balloon_scene: PackedScene
 
+@export var voice_sound: AudioStream
+@export var voice_pitch: float = 1.0
+@export var voice_speed: int = 5
+
 var trust: float = 50.0
 var dice_roll: int = 0 
 
 func _ready():
 	trust_meter.set_trust_value(trust)
-	var balloon = custom_balloon_scene.instantiate()
-	get_tree().current_scene.add_child(balloon)
-	balloon.start(my_dialogue_resource, dialogue_start_point)
-
+	
+	if custom_balloon_scene:
+		var balloon = custom_balloon_scene.instantiate()
+		get_tree().current_scene.add_child(balloon)
+		
+		if balloon.has_method("setup_voice"):
+			balloon.setup_voice(voice_sound, voice_pitch, voice_speed)
+			
+		balloon.start(my_dialogue_resource, dialogue_start_point)
+	else:
+		DialogueManager.show_example_dialogue_balloon(my_dialogue_resource, dialogue_start_point)
 
 func update_trust(amount: float):
 	trust += amount

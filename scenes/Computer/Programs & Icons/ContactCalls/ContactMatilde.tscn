@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d1y6ey8laalhr" path="res://assets/characters/Victims/548043.png" id="3_3s3xm"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="3_lenea"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="4_3s3xm"]
+[ext_resource type="AudioStream" uid="uid://cvlmkoqkxuukk" path="res://assets/sounds/abuelaVoice.wav" id="4_a04dk"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="5_semsy"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="6_vkdwp"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="7_1qfdy"]
@@ -91,6 +92,7 @@ region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 script = ExtResource("1_semsy")
 my_dialogue_resource = ExtResource("2_vkdwp")
 custom_balloon_scene = ExtResource("3_1qfdy")
+voice_sound = ExtResource("4_a04dk")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_86jne")]
 
