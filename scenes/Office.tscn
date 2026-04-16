@@ -22,12 +22,13 @@
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/Characters/MainCharacter.tscn" id="21_1tact"]
-[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/detectPlayer.gd" id="22_4rawq"]
+[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/DetectPlayer.gd" id="22_4rawq"]
 [ext_resource type="PackedScene" uid="uid://cad814nh8htai" path="res://scenes/textbox.tscn" id="23_siqwn"]
 [ext_resource type="PackedScene" uid="uid://014vefx1mf1k" path="res://scenes/Decorations/npc1.tscn" id="25_tncm5"]
 [ext_resource type="PackedScene" uid="uid://rovwkp8n0pr4" path="res://scenes/Decorations/npc2.tscn" id="26_3v58c"]
 [ext_resource type="PackedScene" uid="uid://by8litgjhvmnw" path="res://scenes/Characters/Boss.tscn" id="27_3v58c"]
 [ext_resource type="PackedScene" uid="uid://d4b7asg36kte1" path="res://scenes/Decorations/npc3.tscn" id="27_4pfcd"]
+[ext_resource type="AudioStream" uid="uid://64dsrxiiisux" path="res://assets/sounds/The Office.mp3" id="29_ilhca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -481,10 +482,15 @@ position = Vector2(980, 252)
 position = Vector2(897, 249)
 
 [node name="Npc3" parent="NPCs" unique_id=1667016179 instance=ExtResource("27_4pfcd")]
-position = Vector2(149, 254)
+position = Vector2(158, 447)
 
 [node name="Boss" parent="NPCs" unique_id=517115427 instance=ExtResource("27_3v58c")]
 position = Vector2(606, 240)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=919103940]
+stream = ExtResource("29_ilhca")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
