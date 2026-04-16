@@ -15,13 +15,14 @@
 [ext_resource type="PackedScene" uid="uid://1wrwuv3myl7i" path="res://scenes/Computer/CursorArea.tscn" id="12_8y6gp"]
 [ext_resource type="PackedScene" uid="uid://4ibp27eag7k8" path="res://scenes/Computer/Programs & Icons/Browser.tscn" id="13_va5y0"]
 [ext_resource type="PackedScene" uid="uid://bca1h5ywcpt1e" path="res://scenes/Computer/Programs & Icons/Games.tscn" id="14_aj47l"]
-[ext_resource type="PackedScene" uid="uid://e23oc2j0evhl" path="res://scenes/Computer/Programs & Icons/Wallpapers.tscn" id="15_q1aat"]
+[ext_resource type="PackedScene" uid="uid://cw0md7g0q1w4l" path="res://scenes/Computer/Programs & Icons/Wallpapers.tscn" id="15_q1aat"]
 [ext_resource type="PackedScene" uid="uid://bbgiosko7cd56" path="res://scenes/Computer/Contact.tscn" id="16_rcsfp"]
 [ext_resource type="PackedScene" uid="uid://dmno8x1d4b7ws" path="res://scenes/Computer/Programs & Icons/Calls.tscn" id="17_rcsfp"]
 [ext_resource type="Script" uid="uid://dy5g3mperq5mx" path="res://scripts/Computer/Elements/Desktop/IconArea.gd" id="18_aj47l"]
 [ext_resource type="PackedScene" uid="uid://i1jtu86a4d0h" path="res://scenes/Computer/Programs & Icons/SoundIcon.tscn" id="19_rcsfp"]
 [ext_resource type="PackedScene" uid="uid://n7yia8nxdqbw" path="res://scenes/Computer/Programs & Icons/InfoIcon.tscn" id="20_y5npb"]
 [ext_resource type="PackedScene" uid="uid://y3a73hg08dov" path="res://scenes/Computer/Programs & Icons/InternetIcon.tscn" id="21_vc2cr"]
+[ext_resource type="PackedScene" uid="uid://bjiavxhut67r1" path="res://scenes/Computer/Programs & Icons/Notes.tscn" id="22_y5npb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxfxs"]
 atlas = ExtResource("3_t27n7")
@@ -49,7 +50,7 @@ region = Rect2(576.4327, 639.29584, 31.655151, 32.309204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwvbt"]
 atlas = ExtResource("6_8y6gp")
-region = Rect2(351.79788, 638.4365, 32.765106, 33.02173)
+region = Rect2(643.70593, 415.56735, 26.3609, 32.598938)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t27n7"]
 atlas = ExtResource("6_8y6gp")
@@ -189,7 +190,7 @@ offset_bottom = 308.0
 
 [node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("9_t27n7")]
 layout_mode = 2
-program_name = "Recycle Bin"
+program_name = "How to play"
 icon_image = SubResource("AtlasTexture_pwvbt")
 
 [node name="Icon2" parent="GridContainer" unique_id=785688384 instance=ExtResource("9_t27n7")]
@@ -265,3 +266,9 @@ position = Vector2(1081, 632)
 scale = Vector2(1.3984209, 1.3953217)
 script = ExtResource("18_aj47l")
 target_scene = ExtResource("21_vc2cr")
+
+[node name="Notes" parent="CursorAreas" unique_id=31097601 instance=ExtResource("12_8y6gp")]
+position = Vector2(54.000004, 63.99994)
+scale = Vector2(1.3984209, 1.3953217)
+script = ExtResource("18_aj47l")
+target_scene = ExtResource("22_y5npb")

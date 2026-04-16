@@ -87,7 +87,7 @@ region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i1vun"]
 atlas = ExtResource("3_i8k1q")
-region = Rect2(351.79788, 638.4365, 32.765106, 33.02173)
+region = Rect2(643.5844, 415.96432, 26.043701, 32.806427)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3myr"]
 atlas = ExtResource("3_i8k1q")
@@ -371,7 +371,7 @@ offset_bottom = 619.0
 
 [node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("11_37bdy")]
 layout_mode = 2
-program_name = "Recycle Bin"
+program_name = "How to play"
 icon_image = SubResource("AtlasTexture_i1vun")
 
 [node name="Icon2" parent="GridContainer" unique_id=870731959 instance=ExtResource("11_37bdy")]

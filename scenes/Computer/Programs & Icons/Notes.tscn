@@ -1,112 +1,112 @@
-[gd_scene format=3 uid="uid://cw0md7g0q1w4l"]
+[gd_scene format=3 uid="uid://bjiavxhut67r1"]
 
-[ext_resource type="Texture2D" uid="uid://b67iwp88srioy" path="res://assets/technology-pc/WinXp/Wallpapers/Bliss.png" id="1_8g0p8"]
-[ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_hwn5a"]
-[ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_qikac"]
-[ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_pwh4p"]
-[ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="3_uy0l2"]
-[ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_ld8gi"]
-[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_vb8d4"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="6_hen6g"]
-[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="9_rohkd"]
-[ext_resource type="AudioStream" uid="uid://brlgmmgp2og60" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Balloon.wav" id="10_8g0p8"]
-[ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="11_7dqku"]
-[ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="12_uayu7"]
+[ext_resource type="Texture2D" uid="uid://b67iwp88srioy" path="res://assets/technology-pc/WinXp/Wallpapers/Bliss.png" id="1_ky3cx"]
+[ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="2_d1koi"]
+[ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="3_h0tjg"]
+[ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="4_s7o4o"]
+[ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="5_l4fes"]
+[ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="6_b7r4k"]
+[ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="7_nainp"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="8_pud0r"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="9_i0at7"]
+[ext_resource type="AudioStream" uid="uid://brlgmmgp2og60" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Balloon.wav" id="10_ky3cx"]
+[ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="11_1v4g5"]
+[ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="12_dbn7a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(496.17645, 36.79135, 98.39087, 32.575043)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35wju"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(496.05823, 102.10449, 98.9021, 33.510956)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnqyl"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(496.57813, 69.69997, 95.801025, 31.791283)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5vfd"]
-atlas = ExtResource("3_uy0l2")
-region = Rect2(289.98203, 322.21655, 29.569061, 26.765106)
+atlas = ExtResource("6_b7r4k")
+region = Rect2(643.6632, 415.53983, 26.763123, 32.950256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg7wb"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(232.55016, 398.75702, 43.395615, 4.132904)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_km30f"]
-atlas = ExtResource("3_uy0l2")
+atlas = ExtResource("6_b7r4k")
 region = Rect2(32.13768, 33.08717, 32.17434, 30.259197)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjf26"]
-atlas = ExtResource("3_uy0l2")
+atlas = ExtResource("6_b7r4k")
 region = Rect2(255.58942, 672.23596, 31.863129, 32.118042)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbs3a"]
-atlas = ExtResource("3_uy0l2")
+atlas = ExtResource("6_b7r4k")
 region = Rect2(576.4327, 639.29584, 31.655151, 32.309204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5etjd"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(375.11093, 519.70386, 50.074066, 26.962952)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4jiv"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(446.98572, 236.14546, 21.307495, 21.586563)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i647j"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(447.40723, 467.2594, 20.444458, 21.333313)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jucq4"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(447.11093, 445.62976, 21.333344, 21.925934)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n8swj"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(471.11093, 424.889, 21.629639, 21.333344)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p66qp"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(471.11093, 466.96307, 21.333344, 21.925934)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhhkc"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(471.70352, 446.22235, 20.740753, 21.629639)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f7qi"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(374.88895, 423.56033, 21.333344, 23.111115)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uifyf"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4un80"]
-atlas = ExtResource("1_qikac")
+atlas = ExtResource("4_s7o4o")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ld3hx"]
-atlas = ExtResource("3_uy0l2")
-region = Rect2(643.1941, 415.11334, 27.231628, 33.1774)
+atlas = ExtResource("6_b7r4k")
+region = Rect2(643.37537, 415.16592, 26.906982, 32.763214)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4haug"]
-atlas = ExtResource("3_uy0l2")
+atlas = ExtResource("6_b7r4k")
 region = Rect2(31.416294, 191.51817, 32.73216, 33.601166)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cobbc"]
-atlas = ExtResource("12_uayu7")
+atlas = ExtResource("12_dbn7a")
 region = Rect2(241.85583, 485.78336, 44.337494, 38.93985)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ah0y"]
-atlas = ExtResource("12_uayu7")
+atlas = ExtResource("12_dbn7a")
 region = Rect2(239.75638, 486.70364, 46.184357, 37.7872)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsfn4"]
-atlas = ExtResource("12_uayu7")
+atlas = ExtResource("12_dbn7a")
 region = Rect2(192.14331, 1.2968369, 47.926422, 42.769943)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54xsn"]
-atlas = ExtResource("12_uayu7")
+atlas = ExtResource("12_dbn7a")
 region = Rect2(396.8165, 191.63995, 23.963196, 49.769745)
 
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
@@ -114,33 +114,64 @@ region = Rect2(396.8165, 191.63995, 23.963196, 49.769745)
 [node name="Bliss-Background" type="Sprite2D" parent="." unique_id=1670115511]
 position = Vector2(576, 324)
 scale = Vector2(1.44, 1.08)
-texture = ExtResource("1_8g0p8")
+texture = ExtResource("1_ky3cx")
 
-[node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_hwn5a")]
+[node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("2_d1koi")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
-offset_left = 403.0
-offset_top = 276.0
-offset_right = 683.0
-offset_bottom = 419.0
+offset_left = 266.0
+offset_top = 38.0
+offset_right = 940.0
+offset_bottom = 609.0
 color = Color(0.8089983, 0.8089983, 0.8089982, 1)
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=768106676]
+[node name="Label" type="Label" parent="ColorRect" unique_id=7016023]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 54.0
-offset_right = 245.0
-offset_bottom = 82.0
-theme_override_colors/font_color = Color(0.46929657, 0.46929651, 0.46929651, 1)
-theme_override_fonts/font = ExtResource("5_vb8d4")
-theme_override_font_sizes/font_size = 22
-text = "This folder is empty..."
+offset_left = 4.0
+offset_top = -2.0
+offset_right = 662.0
+offset_bottom = 567.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Welcome to the system. Your goal is simple: extract wealth through digital deception.
+Run surveillance on potential targets by navigating the database.
+Infiltrate the Contacts app to find and select your next victim.
+Target vulnerabilities to execute successful hacks or social engineering scams.
+Every piece of data you find increases your chances of a massive payout.
+Dive deep into their personal history to make your scams more believable.
+Inspect the Calls app to open and review their recent call logs.
+Analyze who they talk to; knowing their inner circle is the key to a perfect sting.
+Remember: information is the most valuable currency on this desktop.
+You are the ghost in the machine—stay sharp and stay undetected.
+					
+
+
+Operations can be expanded beyond just the basic communication tools.
+Never hesitate to explore; every icon on this screen serves a purpose.
+Be curious and test the other applications available on the system.
+Research every corner of the OS, as hidden data can lead to bigger scores.
+Observe how different apps interact to find new ways to exploit the victims.
+Watch for clues in files, notes, or system settings that others might overlook.
+Seize every opportunity to drain accounts before the security protocols kick in.
+Exploit the system to its full potential and dominate the digital underworld.
+Reap the rewards of your technical prowess and leave no trace behind."
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=1585186868]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 259.0
+offset_right = 613.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1. Open Contacts to identify a high-value target for your next operation.
+					2. Cross-reference their activity by checking the Calls logs for patterns.
+					3. Execute the hack or scam once you have gathered enough leverage."
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
 position = Vector2(499.00003, 630.5)
 scale = Vector2(19.8, 1.2500005)
-texture = ExtResource("1_qikac")
+texture = ExtResource("4_s7o4o")
 region_enabled = true
 region_rect = Rect2(375.2, 518.8, 50.399994, 28)
 
@@ -169,7 +200,7 @@ stretch_mode = 0
 texture_filter = 1
 position = Vector2(-23.912567, 3.0517578e-05)
 scale = Vector2(0.057708874, 1.0799997)
-texture = ExtResource("2_pwh4p")
+texture = ExtResource("5_l4fes")
 
 [node name="Icon" type="Sprite2D" parent="GreenZoneBottonBar" unique_id=393601509]
 position = Vector2(-17.850998, -3.5999756)
@@ -187,7 +218,7 @@ offset_left = 43.0
 offset_top = 614.0
 offset_right = 103.0
 offset_bottom = 649.0
-theme_override_fonts/font = ExtResource("4_ld8gi")
+theme_override_fonts/font = ExtResource("7_nainp")
 theme_override_font_sizes/font_size = 27
 text = "start"
 horizontal_alignment = 1
@@ -197,7 +228,7 @@ horizontal_alignment = 1
 [node name="UiTheme" type="Sprite2D" parent="BlueZoneBottonBar" unique_id=1200527089]
 position = Vector2(1069, 631)
 scale = Vector2(2.5937505, 1.2142854)
-texture = ExtResource("1_qikac")
+texture = ExtResource("4_s7o4o")
 region_enabled = true
 region_rect = Rect2(152.56757, 422.73477, 64.65314, 28.50299)
 
@@ -240,60 +271,60 @@ offset_right = 1146.0
 offset_bottom = 643.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("5_vb8d4")
-script = ExtResource("6_hen6g")
+theme_override_fonts/font = ExtResource("3_h0tjg")
+script = ExtResource("8_pud0r")
 
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
 
 [node name="Sprite2D" type="Sprite2D" parent="WindowBar" unique_id=2010802655]
-position = Vector2(543, 262)
-scale = Vector2(5.6, 1)
+position = Vector2(603.875, 24)
+scale = Vector2(13.525, 1.0769231)
 texture = SubResource("AtlasTexture_5etjd")
 
 [node name="TextureButton" type="TextureButton" parent="WindowBar" unique_id=1047254224]
-offset_left = 657.0
-offset_top = 253.0
-offset_right = 678.0
-offset_bottom = 274.0
+offset_left = 912.0
+offset_top = 15.0
+offset_right = 933.0
+offset_bottom = 36.0
 texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
-script = ExtResource("9_rohkd")
+script = ExtResource("9_i0at7")
 
 [node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
-offset_left = 634.0
-offset_top = 253.0
-offset_right = 655.0
-offset_bottom = 274.0
+offset_left = 888.0
+offset_top = 15.0
+offset_right = 909.0
+offset_bottom = 36.0
 texture_normal = SubResource("AtlasTexture_n8swj")
 texture_pressed = SubResource("AtlasTexture_p66qp")
 texture_hover = SubResource("AtlasTexture_yhhkc")
 
 [node name="TextureButton3" type="TextureButton" parent="WindowBar" unique_id=633222835]
-offset_left = 611.0
-offset_top = 251.0
-offset_right = 632.0
-offset_bottom = 274.0
+offset_left = 863.0
+offset_top = 13.0
+offset_right = 884.0
+offset_bottom = 36.0
 texture_normal = SubResource("AtlasTexture_1f7qi")
 texture_pressed = SubResource("AtlasTexture_uifyf")
 texture_hover = SubResource("AtlasTexture_4un80")
 
 [node name="WindowLabel" type="Label" parent="." unique_id=669523475]
-offset_left = 429.0
-offset_top = 252.0
-offset_right = 516.0
-offset_bottom = 275.0
-text = "Wallpapers"
+offset_left = 299.0
+offset_top = 13.0
+offset_right = 391.0
+offset_bottom = 36.0
+text = "How to play"
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=450616332]
-position = Vector2(419, 263)
+position = Vector2(284, 23.999998)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1212373479]
-stream = ExtResource("10_8g0p8")
+stream = ExtResource("10_ky3cx")
 autoplay = true
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=2123757221]
@@ -301,32 +332,32 @@ offset_left = 10.0
 offset_right = 90.0
 offset_bottom = 308.0
 
-[node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("11_7dqku")]
+[node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "How to play"
 icon_image = SubResource("AtlasTexture_ld3hx")
 
-[node name="Icon2" parent="GridContainer" unique_id=466904408 instance=ExtResource("11_7dqku")]
+[node name="Icon2" parent="GridContainer" unique_id=466904408 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "Browser"
 icon_image = SubResource("AtlasTexture_4haug")
 
-[node name="Icon3" parent="GridContainer" unique_id=106593308 instance=ExtResource("11_7dqku")]
+[node name="Icon3" parent="GridContainer" unique_id=106593308 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "Games"
 icon_image = SubResource("AtlasTexture_cobbc")
 
-[node name="Icon4" parent="GridContainer" unique_id=122467968 instance=ExtResource("11_7dqku")]
+[node name="Icon4" parent="GridContainer" unique_id=122467968 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "Wallpapers"
 icon_image = SubResource("AtlasTexture_5ah0y")
 
-[node name="Icon5" parent="GridContainer" unique_id=185632137 instance=ExtResource("11_7dqku")]
+[node name="Icon5" parent="GridContainer" unique_id=185632137 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "\"Contacts\""
 icon_image = SubResource("AtlasTexture_tsfn4")
 
-[node name="Icon6" parent="GridContainer" unique_id=308213049 instance=ExtResource("11_7dqku")]
+[node name="Icon6" parent="GridContainer" unique_id=308213049 instance=ExtResource("11_1v4g5")]
 layout_mode = 2
 program_name = "Calls"
 icon_image = SubResource("AtlasTexture_54xsn")
