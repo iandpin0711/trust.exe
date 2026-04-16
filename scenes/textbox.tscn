@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cad814nh8htai"]
 
 [ext_resource type="Script" uid="uid://bh7dml7637i3o" path="res://scripts/Office/TextBox/textbox.gd" id="1_nyk3b"]
-[ext_resource type="Texture2D" uid="uid://bkdxdwmkxhiix" path="res://assets/txtbox.png" id="2_3xmdk"]
+[ext_resource type="Texture2D" uid="uid://bkdxdwmkxhiix" path="res://assets/Ui/txtbox.png" id="2_3xmdk"]
 [ext_resource type="FontFile" uid="uid://cufyeslr4e0hm" path="res://assets/fonts/JetBrains_Mono/static/JetBrainsMono-Medium.ttf" id="3_g5d5p"]
 
 [node name="Textbox" type="CanvasLayer" unique_id=1726410088]

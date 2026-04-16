@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dl3ejgo0lp8fj" path="res://scenes/Decorations/sofa1.tscn" id="18_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
-[ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
+[ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/Characters/MainCharacter.tscn" id="21_1tact"]
 [ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/DetectPlayer.gd" id="22_4rawq"]
 [ext_resource type="PackedScene" uid="uid://cad814nh8htai" path="res://scenes/textbox.tscn" id="23_siqwn"]
 
@@ -98,7 +98,7 @@ script = ExtResource("1_03xqq")
 
 [node name="MainCharacter" parent="." unique_id=1146026713 instance=ExtResource("21_1tact")]
 z_index = 50
-position = Vector2(605, 270)
+position = Vector2(609, 307)
 
 [node name="Desks" type="Node2D" parent="." unique_id=1633152779]
 
