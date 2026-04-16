@@ -22,10 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/Characters/MainCharacter.tscn" id="21_1tact"]
-[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/DetectPlayer.gd" id="22_4rawq"]
+[ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/detectPlayer.gd" id="22_4rawq"]
 [ext_resource type="PackedScene" uid="uid://cad814nh8htai" path="res://scenes/textbox.tscn" id="23_siqwn"]
-[ext_resource type="PackedScene" path="res://scenes/Decorations/npc1.tscn" id="25_tncm5"]
-[ext_resource type="PackedScene" path="res://scenes/Decorations/npc2.tscn" id="26_3v58c"]
+[ext_resource type="PackedScene" uid="uid://014vefx1mf1k" path="res://scenes/Decorations/npc1.tscn" id="25_tncm5"]
+[ext_resource type="PackedScene" uid="uid://rovwkp8n0pr4" path="res://scenes/Decorations/npc2.tscn" id="26_3v58c"]
 [ext_resource type="PackedScene" uid="uid://by8litgjhvmnw" path="res://scenes/Characters/Boss.tscn" id="27_3v58c"]
 [ext_resource type="PackedScene" uid="uid://d4b7asg36kte1" path="res://scenes/Decorations/npc3.tscn" id="27_4pfcd"]
 
@@ -475,10 +475,10 @@ transform = Transform2D(1, 0, 0, 1, 270, 250)
 [node name="NPCs" type="Node2D" parent="." unique_id=331096148]
 
 [node name="Npc1" parent="NPCs" unique_id=667261507 instance=ExtResource("25_tncm5")]
-position = Vector2(980, 261)
+position = Vector2(980, 252)
 
 [node name="Npc2" parent="NPCs" unique_id=1051664475 instance=ExtResource("26_3v58c")]
-position = Vector2(898, 256)
+position = Vector2(897, 249)
 
 [node name="Npc3" parent="NPCs" unique_id=1667016179 instance=ExtResource("27_4pfcd")]
 position = Vector2(149, 254)

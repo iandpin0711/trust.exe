@@ -53,7 +53,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v4wx3"]
-radius = 30.413813
+radius = 20.22375
 
 [node name="Npc1" type="CharacterBody2D" unique_id=667261507]
 
@@ -66,5 +66,5 @@ autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1248005463]
-position = Vector2(0, 5)
+position = Vector2(-3, -1)
 shape = SubResource("CircleShape2D_v4wx3")
