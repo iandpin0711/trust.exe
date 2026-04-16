@@ -21,9 +21,11 @@
 [ext_resource type="PackedScene" uid="uid://dl3ejgo0lp8fj" path="res://scenes/Decorations/sofa1.tscn" id="18_gt8ql"]
 [ext_resource type="PackedScene" uid="uid://p5m2j0jq2im" path="res://scenes/Decorations/Calendar.tscn" id="19_1tact"]
 [ext_resource type="PackedScene" uid="uid://cypnmnioxblbs" path="res://scenes/Decorations/Flag1.tscn" id="20_gt8ql"]
-[ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/Characters/MainCharacter.tscn" id="21_1tact"]
+[ext_resource type="PackedScene" uid="uid://bw35f1ohdye8n" path="res://scenes/MainCharacter.tscn" id="21_1tact"]
 [ext_resource type="Script" uid="uid://54arqrapihto" path="res://scripts/Office/Player/DetectPlayer.gd" id="22_4rawq"]
 [ext_resource type="PackedScene" uid="uid://cad814nh8htai" path="res://scenes/textbox.tscn" id="23_siqwn"]
+[ext_resource type="PackedScene" uid="uid://014vefx1mf1k" path="res://scenes/Decorations/npc1.tscn" id="25_tncm5"]
+[ext_resource type="PackedScene" uid="uid://rovwkp8n0pr4" path="res://scenes/Decorations/npc2.tscn" id="26_3v58c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4pfcd"]
 size = Vector2(33, 14.666664)
@@ -467,6 +469,14 @@ shape = SubResource("RectangleShape2D_q4t1w")
 [node name="Textbox" parent="." unique_id=1726410088 instance=ExtResource("23_siqwn")]
 offset = Vector2(270, 250)
 transform = Transform2D(1, 0, 0, 1, 270, 250)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=331096148]
+
+[node name="Npc1" parent="NPCs" unique_id=667261507 instance=ExtResource("25_tncm5")]
+position = Vector2(980, 261)
+
+[node name="Npc2" parent="NPCs" unique_id=1051664475 instance=ExtResource("26_3v58c")]
+position = Vector2(898, 256)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
