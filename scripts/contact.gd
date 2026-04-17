@@ -18,7 +18,7 @@ var profiles = [
 		"situation": "Situation: Microsoft Technical Support",
 		"description": "Description: Retired and devoted grandmother. Her computer is her only bridge to her family living far away. She doesn't understand technology, but she has an almost sacred respect for digital 'authorities'.",
 		"vulnerability": "Vulnerability: Fear of emotional loss. She fears losing her grandchildren's photos more than the money itself.",
-		"difficulty": "Difficulty Level: ⭐",
+		"difficulty": "Difficulty Level: 1/5",
 		"hint": "Hint: She is extremely polite. If you use a professional and calm tone, she will trust blindly."
 	},
 	{
@@ -27,7 +27,7 @@ var profiles = [
 		"situation": "Situation: The Son in Trouble (AI Cloning)",
 		"description": "Description: Works under a lot of stress and is always watching out for his children. He is impulsive and acts before thinking when it comes to family emergencies.",
 		"vulnerability": "Vulnerability: Protective instinct. Urgency blocks his logical reasoning capacity.",
-		"difficulty": "Difficulty Level: ⭐⭐⭐",
+		"difficulty": "Difficulty Level: 3/5",
 		"hint": "Hint: He is skeptical by nature, but his weak point is his son. The key here is speed. If you give him time to think or verify data, you are lost. Success depends on a quick strike."
 	},
 	{
@@ -36,7 +36,7 @@ var profiles = [
 		"situation": "Situation: The Fake Bank Manager",
 		"description": "Description: Former accountant, very meticulous with his savings. Reads the financial newspaper and believes he knows how banks work, making him feel falsely secure.",
 		"vulnerability": "Vulnerability: Fear of financial theft. His savings are his life's work, and any threat to his 'wealth' destabilizes him.",
-		"difficulty": "Difficulty Level: ⭐⭐⭐⭐⭐",
+		"difficulty": "Difficulty Level: 5/5",
 		"hint": "Hint: Detects inconsistencies quickly. Knows the basic rules to defend against cybercriminals. You must use very precise banking terminology to make him believe you are the expert."
 	}
 ]
