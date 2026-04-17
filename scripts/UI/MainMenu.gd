@@ -1,0 +1,20 @@
+extends Control
+
+func _ready() -> void:
+	if not AudioManager.music.playing:
+		AudioManager.music.play()
+	
+func _on_start_pressed() -> void:
+	$Click.play()
+	await $Click.finished
+	get_tree().change_scene_to_file("res://scenes/Office.tscn")
+
+func _on_controls_pressed() -> void:
+	$Click.play()
+	await $Click.finished
+	get_tree().change_scene_to_file("res://scenes/Ui/Controls.tscn")
+
+func _on_exit_pressed() -> void:
+	$Click.play()
+	await $Click.finished
+	get_tree().quit()

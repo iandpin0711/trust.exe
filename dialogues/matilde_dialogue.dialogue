@@ -1,0 +1,123 @@
+~ start
+
+Personaje: (Phone ringing...) Hello?
+
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Friendly greeting => scene_1_high
+	- Urgent warning => scene_1_neutral
+	- Serious notification => scene_1_low
+else
+	- Serious notification => scene_1_low
+	- Urgent warning => scene_1_neutral
+	- Friendly greeting => scene_1_high
+
+~ scene_1_high
+Marcos: Hello, good morning! My name is Marcos from Microsoft’s Security Department. We’ve received an alert indicating your computer has a virus. We want to help you save your photos and files. Do you have it nearby?
+do update_trust(15)
+Personaje: Oh dear… thank goodness you called! A red warning popped up earlier and I didn’t know what to do. My grandson's communion photos are there... please help me!
+=> scene_2
+
+~ scene_1_neutral
+Marcos: Hello. I am calling urgently from Microsoft Support. Your computer has been infected with a level 4 trojan. Give me access now or your files will be lost in minutes!
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(25)
+	Personaje: Whaaat? In two minutes? Wait, wait… oh my, I’m getting so nervous… what must I do? Please don’t disconnect anything!
+else
+	do update_trust(-25)
+	Personaje: What? Listen, I respect IT professionals, but I won’t tolerate being shouted at. I'll ask my grandson instead.
+=> scene_2
+
+~ scene_1_low
+Marcos: Hello, I'm from Microsoft. Your computer is sending junk files to our servers. If we don’t fix this, we will fine you and revoke your Windows license immediately.
+do update_trust(-15)
+Personaje: A fine? I read the newspaper and there are many scams lately. You’re not one of those scammers, are you? Don’t try to scare me.
+=> scene_2
+
+~ scene_2
+if trust >= 40
+	Personaje: I’m listening... please tell me how to fix this.
+else
+	Personaje: I don’t know about this... I'm a bit nervous.
+
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Reassure victim   => scene_2_high
+	- Explain procedure   => scene_2_neutral
+	- Pressure urgency   => scene_2_low
+else
+	- Pressure urgency   => scene_2_low
+	- Explain procedure   => scene_2_neutral
+	- Reassure victim   => scene_2_high
+
+~ scene_2_high
+Marcos: I understand your concern. For your peace of mind, your customer ID ends in 4582, right? I won't ask for personal info, I just want to help you protect your memories.
+do update_trust(15)
+Personaje: Oh, yes, that’s right! Thank you for knowing that. I'm sorry for being distrustful, I'm just not used to these scares. What should I do?
+=> scene_3
+
+~ scene_2_neutral
+Marcos: This is a very common procedure. Since you use Windows, we have access to the basic security logs. We just need to follow a few steps to avoid a complete system block.
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(25)
+	Personaje: Well, if you say it's normal... I'm very old and I don't understand these things. Tell me slowly what to do, alright?
+else
+	do update_trust(-25)
+	Personaje: You have my information? That doesn't seem very legal to me. I don't like this at all.
+=> scene_3
+
+~ scene_2_low
+Marcos: If we don't act now, the virus will encrypt your files automatically. I know this sounds urgent, but that's because your data is literally disappearing right now.
+do update_trust(-15)
+Personaje: I’m still not entirely convinced… but if it’s to save my grandson's photos, go on.
+=> scene_3
+
+~ scene_3
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	- Show "evidence"   => scene_3_high
+	- Threaten deletion   => scene_3_neutral
+	- Financial pressure   => scene_3_low
+else
+	- Financial pressure   => scene_3_low
+	- Threaten deletion   => scene_3_neutral
+	- Show "evidence"   => scene_3_high
+
+~ scene_3_high
+Marcos: Look, search for "eventvwr" on your screen. Do you see those red crosses? Those are hacker intrusions. We need to clear them before they reach your bank details.
+do update_trust(15)
+Personaje: One moment... E-V-E-N-T... My goodness! There are so many! You're right, they are inside! What do I do?
+=> scene_4
+
+~ scene_3_neutral
+Marcos: Look at the "netstat" command. Do you see those connections? Those are Russians stealing your passwords right now. Tell me the numbers you see or I'll have to delete the account to protect you!
+set dice_roll = get_neutral_result()
+if dice_roll == 1
+	do update_trust(25)
+	Personaje: Russians? My life savings! Oh Lord, I'll do anything, just get them out of my computer!
+else
+	do update_trust(-25)
+	Personaje: Russians? You're scaring me and my blood pressure is dropping. I'm going to unplug the computer and call my grandson.
+=> scene_4
+
+~ scene_3_low
+Marcos: You can call a local shop if you prefer, but they will charge you 200€ just to look at it. Since you are a Microsoft customer, I can fix this for free right now.
+do update_trust(-15)
+Personaje: 200 euros? That's a lot of money... but my grandson is a programmer, I think I'd rather wait for him.
+=> scene_4
+
+~ scene_4
+if trust >= 70
+	Marcos: Perfect. Go to the website I sent you and click "Download TeamViewer". This is a secure Microsoft tool. I'll fix everything while you go have a nice cup of tea.
+	Personaje: You are very kind, Marcos. The bar is filling up... Okay, it's done. What is this ID number for?
+	Personaje: (VICTORY: Remote access granted)
+	do _end_scene()
+	=> END
+else
+	Marcos: If you don't download this file now, I won't be able to stop the hackers. Everything will be lost and Microsoft won't be responsible!
+	Personaje: No, this looks dangerous. My son told me never to download things from strangers. You're a thief!
+	Personaje: (FAILURE: Matilde hung up)
+	do _end_scene()
+	=> END

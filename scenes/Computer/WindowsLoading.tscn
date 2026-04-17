@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byxc0g45kc80k"]
 
-[ext_resource type="Script" uid="uid://dvr1q2h21or42" path="res://scripts/windows_loading.gd" id="1_pgprm"]
+[ext_resource type="Script" uid="uid://dvr1q2h21or42" path="res://scripts/Computer/WindowsXP Screens/windows_loading.gd" id="1_pgprm"]
 [ext_resource type="Texture2D" uid="uid://fnh7yqefvq3m" path="res://assets/technology-pc/WinXp/Logo/db6dw1k-47c4d90d-f5b5-4b31-a06e-2c2c0dc30501-ezgif.com-gif-to-sprite-converter.png" id="2_pgprm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hc2l3"]

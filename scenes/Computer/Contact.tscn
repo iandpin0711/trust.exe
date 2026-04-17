@@ -7,8 +7,8 @@
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="3_n8swj"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="4_5etjd"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_jucq4"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_i647j"]
-[ext_resource type="Script" path="res://scripts/window_function.gd" id="8_n8swj"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="6_i647j"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="8_n8swj"]
 
 [sub_resource type="Theme" id="Theme_n8swj"]
 default_font = ExtResource("5_jucq4")

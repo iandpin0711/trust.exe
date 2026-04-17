@@ -1,11 +1,5 @@
 extends Control
 
-const DialogueSystemP = preload("res://scenes/DialogueSystem.tscn")
-
-@export var dialogue_matilde: Array[DE]
-@export var dialogue_ricardo: Array[DE]
-@export var dialogue_julian: Array[DE]
-
 # References
 @onready var contact_list = $HBoxContainer/ItemList
 @onready var lbl_name = $HBoxContainer/ProfilePanel/VBoxContainer/NameLabel
@@ -51,14 +45,33 @@ var profiles = [
 var current_selected_contact = null
 
 func _ready():
-	# Put the names of the contacts in the itemlist
+	refresh_contact_list()
+	
+func refresh_contact_list():
+	contact_list.clear()
+	
+	var available_profiles = []
+	
+	for profile in profiles:
+		if not GlobalData.victims_hacked.has(profile["name"]):
+			available_profiles.append(profile)
+	
+	profiles = available_profiles
+	
 	for profile in profiles:
 		contact_list.add_item(profile["name"])
 	
-	# Put the first profile by default when you enter the app
 	if profiles.size() > 0:
 		contact_list.select(0)
 		_on_item_list_item_selected(0)
+	else:
+		lbl_name.text = "No more targets"
+		lbl_situation.text = ""
+		lbl_description.text = "You have successfully hacked all available contacts."
+		lbl_vulnerability.text = ""
+		lbl_difficulty.text = ""
+		lbl_hint.text = ""
+		btn_call.disabled = true
 
 # Function called when you click a name on the left list
 func _on_item_list_item_selected(index: int):
@@ -74,19 +87,14 @@ func _on_item_list_item_selected(index: int):
 	lbl_hint.text = profile["hint"]
 
 func _on_call_button_pressed():
-	if not current_selected_contact:
-		return
-
-	var new_dialogue = DialogueSystemP.instantiate()
-
 	match current_selected_contact["name"]:
 		"Matilde":
-			new_dialogue.dialogue = dialogue_matilde
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMatilde.tscn")
+			
 			
 		"Ricardo":
-			new_dialogue.dialogue = dialogue_ricardo
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactRicardo.tscn")
+			
 			
 		"Don Julián":
-			new_dialogue.dialogue = dialogue_julian
-
-	add_child(new_dialogue)
+			get_tree().change_scene_to_file("res://scenes/Computer/Programs & Icons/ContactCalls/ContactMrJulian.tscn")

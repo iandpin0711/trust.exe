@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://gjbfwc74sgkb"
+path="res://.godot/imported/matilde_dialogue.dialogue-5fb047fc850d62b41c7e8e74e301875e.tres"
+
+[deps]
+
+source_file="res://dialogues/matilde_dialogue.dialogue"
+dest_files=["res://.godot/imported/matilde_dialogue.dialogue-5fb047fc850d62b41c7e8e74e301875e.tres"]
+
+[params]
+
+defaults=true

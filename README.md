@@ -8,7 +8,7 @@
 ---
 
 ## 👁️ Project Overview
-**The Social Engineer** is a 2D strategy and simulation game built in **Godot**. Unlike traditional technical hacking games, here the code is not the main character, but **Social Engineering**.
+**Trust.exe** is a 2D strategy and simulation game built in **Godot**. Unlike traditional technical hacking games, here the code is not the main character, but **Social Engineering**.
 
 You must manipulate your victims through tense dialogues and fraudulent emails to extract credentials without raising suspicion.
 
@@ -37,7 +37,8 @@ To breach your target's security, you must master these two pillars:
 | Action | Input (Keyboard/Mouse) |
 | :--- | :--- |
 | **Select Dialogue Option** | `Left Click` / Keys `1-4` |
-| **Send Phishing Link** | UI Button (PC Terminal) |
+| **Interact with PC** | `E`|
+| **Stop Music** | `P` |
 | **Access Mission List** | "Wanted" Contact Menu |
 | **Skip / Speed Up Text** | `Spacebar` |
 
@@ -53,5 +54,5 @@ To breach your target's security, you must master these two pillars:
 ## ⚙️ Tech Specs
 * **Engine:** Godot Engine.
 * **Art Style:** Stylized 2D / Terminal-based User Interface.
-* **Developed by:** *Santiago, Irene, Pablo y Alejandro*
+* **Developed by:** *Santiago, Irene, Pablo, Alejandro, Pepe and Fernando*
 

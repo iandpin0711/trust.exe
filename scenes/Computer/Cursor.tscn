@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clbsy363bylc7"]
 
-[ext_resource type="Script" uid="uid://vdk4ppbkhns" path="res://scripts/Cursor.gd" id="1_x37x6"]
+[ext_resource type="Script" uid="uid://vdk4ppbkhns" path="res://scripts/Computer/Elements/Cursor/Cursor.gd" id="1_x37x6"]
 [ext_resource type="Texture2D" uid="uid://dwwhyfgpxoi6u" path="res://assets/technology-pc/WinXp/Cursor/black_cursor.png" id="2_x37x6"]
 [ext_resource type="Texture2D" uid="uid://b4agqdhijg1ln" path="res://assets/technology-pc/WinXp/Cursor/lwait.png" id="3_e7wlk"]
 [ext_resource type="Texture2D" uid="uid://ev0cehsp17ig" path="res://assets/technology-pc/WinXp/Cursor/llink.png" id="4_auchj"]

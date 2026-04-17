@@ -2,11 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_5fe2y"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_h421q"]
+[ext_resource type="Script" uid="uid://d1uy8g8b2opa7" path="res://scripts/browser.gd" id="1_qxl2r"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_6owbw"]
+[ext_resource type="Texture2D" uid="uid://kcj22uv0q6n1" path="res://assets/technology-pc/WinXp/Logo/Gemini_Generated_Image_1u3dzb1u3dzb1u3d-Photoroom(1).png" id="2_v2ij1"]
+[ext_resource type="Texture2D" uid="uid://4vmonb74hag1" path="res://assets/technology-pc/WinXp/Misc/SearchButton.png" id="3_0qipt"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="3_46283"]
+[ext_resource type="Texture2D" uid="uid://br3yj7it0ebtt" path="res://assets/technology-pc/WinXp/Misc/SearchButtonPressed.png" id="4_2qxnn"]
+[ext_resource type="Texture2D" uid="uid://dqvx550xl245m" path="res://assets/technology-pc/WinXp/Misc/LuckyButton.png" id="4_5pndf"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_b8syw"]
+[ext_resource type="Texture2D" uid="uid://dlyvd7guei4pn" path="res://assets/technology-pc/WinXp/Misc/SearchbuttonHover.png" id="5_1nf14"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_ib20f"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_pu6fa"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="6_pu6fa"]
+[ext_resource type="Texture2D" uid="uid://byor7nvn0nra2" path="res://assets/technology-pc/WinXp/Misc/LuckyButtonPressed.png" id="7_1nf14"]
+[ext_resource type="Texture2D" uid="uid://dxet84ohpbx4e" path="res://assets/technology-pc/WinXp/Misc/LuckyButtonHover.png" id="8_wyoxj"]
+[ext_resource type="Script" uid="uid://bolust677p33r" path="res://scripts/Computer/WindowsXP Screens/lucky_button_script.gd" id="10_e23ta"]
+[ext_resource type="Texture2D" uid="uid://cpkxlrdexjoke" path="res://assets/characters/NPCs/profile-picture.png" id="12_qxl2r"]
+[ext_resource type="Texture2D" uid="uid://dd4dkg8p3fnmj" path="res://assets/technology-pc/WinXp/Misc/GreenCircle.png" id="14_rkfqg"]
+[ext_resource type="Texture2D" uid="uid://4ee3kjandnqe" path="res://assets/technology-pc/WinXp/Misc/Nav_Icons.png" id="15_06q3d"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="15_wyoxj"]
+[ext_resource type="AudioStream" uid="uid://c4l81hyucttnd" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Error.wav" id="19_d7tvq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_h421q")
@@ -80,13 +94,99 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("1_h421q")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="BaseWindow" type="Node2D" unique_id=857654890]
+[node name="Browser" type="Node2D" unique_id=857654890]
+script = ExtResource("1_qxl2r")
+error_sound = ExtResource("19_d7tvq")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_5fe2y")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
 offset_right = 1154.0
 offset_bottom = 652.0
+color = Color(0.94369775, 0.9436977, 0.94369763, 1)
+
+[node name="PlayerText" type="Label" parent="ColorRect" unique_id=5910023]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 50.0
+offset_right = 1041.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ib20f")
+theme_override_font_sizes/font_size = 32
+text = "Player"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=1799521045]
+position = Vector2(549, 236)
+texture = ExtResource("2_v2ij1")
+
+[node name="LineEdit" type="LineEdit" parent="ColorRect" unique_id=1009726774]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 333.0
+offset_right = 876.0
+offset_bottom = 370.0
+
+[node name="SearchButton" type="TextureButton" parent="ColorRect" unique_id=1296876286]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 380.0
+offset_right = 476.0
+offset_bottom = 433.0
+texture_normal = ExtResource("3_0qipt")
+texture_pressed = ExtResource("4_2qxnn")
+texture_hover = ExtResource("5_1nf14")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LuckyButton" type="TextureButton" parent="ColorRect" unique_id=1668133429]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 380.0
+offset_right = 816.0
+offset_bottom = 433.0
+texture_normal = ExtResource("4_5pndf")
+texture_pressed = ExtResource("7_1nf14")
+texture_hover = ExtResource("8_wyoxj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_e23ta")
+
+[node name="iconPlayer" type="Sprite2D" parent="ColorRect" unique_id=1778497034]
+position = Vector2(1098.9999, 84.99999)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("12_qxl2r")
+
+[node name="ErrorMessage" type="Label" parent="ColorRect" unique_id=401253513]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 302.0
+offset_right = 814.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0.9366221, 0.023020169, 0, 1)
+theme_override_fonts/font = ExtResource("5_ib20f")
+theme_override_font_sizes/font_size = 24
+text = "There are no results for this request..."
+
+[node name="IP" type="Label" parent="ColorRect" unique_id=1028516996]
+layout_mode = 0
+offset_left = 937.0
+offset_top = 87.0
+offset_right = 1097.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ib20f")
+theme_override_font_sizes/font_size = 20
+text = "Status: Online"
+
+[node name="GreenCircle" type="Sprite2D" parent="ColorRect" unique_id=2127177641]
+position = Vector2(920, 99.99999)
+scale = Vector2(0.08, 0.082)
+texture = ExtResource("14_rkfqg")
+
+[node name="NavIcons" type="Sprite2D" parent="ColorRect" unique_id=612838271]
+position = Vector2(554, 515)
+texture = ExtResource("15_06q3d")
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
@@ -210,6 +310,7 @@ offset_bottom = 23.0
 texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
+script = ExtResource("15_wyoxj")
 
 [node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
 offset_left = 1108.0
@@ -240,3 +341,11 @@ vertical_alignment = 1
 position = Vector2(15.25, 12.5)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="ErrorSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1591692856]
+stream = ExtResource("19_d7tvq")
+
+[connection signal="text_submitted" from="ColorRect/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="ColorRect/SearchButton" to="." method="_on_search_button_pressed"]
+[connection signal="pressed" from="ColorRect/LuckyButton" to="ColorRect/LuckyButton" method="_on_pressed"]
+[connection signal="pressed" from="WindowBar/TextureButton" to="WindowBar/TextureButton" method="_on_texture_button_pressed"]

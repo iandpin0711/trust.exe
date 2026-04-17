@@ -1,12 +1,17 @@
-[gd_scene format=3 uid="uid://e23oc2j0evhl"]
+[gd_scene format=3 uid="uid://cw0md7g0q1w4l"]
 
+[ext_resource type="Texture2D" uid="uid://b67iwp88srioy" path="res://assets/technology-pc/WinXp/Wallpapers/Bliss.png" id="1_8g0p8"]
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_hwn5a"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="1_qikac"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="2_pwh4p"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="3_uy0l2"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="4_ld8gi"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="5_vb8d4"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="6_hen6g"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="6_hen6g"]
+[ext_resource type="Script" uid="uid://dv8y57evdqrx5" path="res://scripts/Computer/Screens/window_function.gd" id="9_rohkd"]
+[ext_resource type="AudioStream" uid="uid://brlgmmgp2og60" path="res://assets/technology-pc/WinXp/Sounds/Windows XP Balloon.wav" id="10_8g0p8"]
+[ext_resource type="PackedScene" uid="uid://bji88bkupmlob" path="res://scenes/Computer/IconBase.tscn" id="11_7dqku"]
+[ext_resource type="Texture2D" uid="uid://do41d0mbnvlem" path="res://assets/technology-pc/WinXp/Icons/WinIcons_48.png" id="12_uayu7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("1_qikac")
@@ -22,7 +27,7 @@ region = Rect2(496.57813, 69.69997, 95.801025, 31.791283)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5vfd"]
 atlas = ExtResource("3_uy0l2")
-region = Rect2(288.0337, 321.82043, 31.552887, 28.160126)
+region = Rect2(289.98203, 322.21655, 29.569061, 26.765106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg7wb"]
 atlas = ExtResource("1_qikac")
@@ -80,13 +85,56 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("1_qikac")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld3hx"]
+atlas = ExtResource("3_uy0l2")
+region = Rect2(643.1941, 415.11334, 27.231628, 33.1774)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4haug"]
+atlas = ExtResource("3_uy0l2")
+region = Rect2(31.416294, 191.51817, 32.73216, 33.601166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cobbc"]
+atlas = ExtResource("12_uayu7")
+region = Rect2(241.85583, 485.78336, 44.337494, 38.93985)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ah0y"]
+atlas = ExtResource("12_uayu7")
+region = Rect2(239.75638, 486.70364, 46.184357, 37.7872)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsfn4"]
+atlas = ExtResource("12_uayu7")
+region = Rect2(192.14331, 1.2968369, 47.926422, 42.769943)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54xsn"]
+atlas = ExtResource("12_uayu7")
+region = Rect2(396.8165, 191.63995, 23.963196, 49.769745)
+
 [node name="BaseWindow" type="Node2D" unique_id=857654890]
+
+[node name="Bliss-Background" type="Sprite2D" parent="." unique_id=1670115511]
+position = Vector2(576, 324)
+scale = Vector2(1.44, 1.08)
+texture = ExtResource("1_8g0p8")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_hwn5a")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1828503042]
-offset_right = 1154.0
-offset_bottom = 652.0
+offset_left = 403.0
+offset_top = 276.0
+offset_right = 683.0
+offset_bottom = 419.0
+color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=768106676]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 54.0
+offset_right = 245.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0.46929657, 0.46929651, 0.46929651, 1)
+theme_override_fonts/font = ExtResource("5_vb8d4")
+theme_override_font_sizes/font_size = 22
+text = "This folder is empty..."
 
 [node name="UiThemeDarkBlue" type="Sprite2D" parent="." unique_id=1825266678]
 texture_filter = 1
@@ -198,45 +246,89 @@ script = ExtResource("6_hen6g")
 [node name="WindowBar" type="Node2D" parent="." unique_id=89611732]
 
 [node name="Sprite2D" type="Sprite2D" parent="WindowBar" unique_id=2010802655]
-position = Vector2(578, 12)
-scale = Vector2(23.160002, 1)
+position = Vector2(543, 262)
+scale = Vector2(5.6, 1)
 texture = SubResource("AtlasTexture_5etjd")
 
 [node name="TextureButton" type="TextureButton" parent="WindowBar" unique_id=1047254224]
-offset_left = 1131.0
-offset_top = 2.0
-offset_right = 1152.0
-offset_bottom = 23.0
+offset_left = 657.0
+offset_top = 253.0
+offset_right = 678.0
+offset_bottom = 274.0
 texture_normal = SubResource("AtlasTexture_w4jiv")
 texture_pressed = SubResource("AtlasTexture_i647j")
 texture_hover = SubResource("AtlasTexture_jucq4")
+script = ExtResource("9_rohkd")
 
 [node name="TextureButton2" type="TextureButton" parent="WindowBar" unique_id=1605576645]
-offset_left = 1108.0
-offset_top = 2.0
-offset_right = 1129.0
-offset_bottom = 23.0
+offset_left = 634.0
+offset_top = 253.0
+offset_right = 655.0
+offset_bottom = 274.0
 texture_normal = SubResource("AtlasTexture_n8swj")
 texture_pressed = SubResource("AtlasTexture_p66qp")
 texture_hover = SubResource("AtlasTexture_yhhkc")
 
 [node name="TextureButton3" type="TextureButton" parent="WindowBar" unique_id=633222835]
-offset_left = 1084.0
-offset_top = 1.0
-offset_right = 1105.0
-offset_bottom = 24.0
+offset_left = 611.0
+offset_top = 251.0
+offset_right = 632.0
+offset_bottom = 274.0
 texture_normal = SubResource("AtlasTexture_1f7qi")
 texture_pressed = SubResource("AtlasTexture_uifyf")
 texture_hover = SubResource("AtlasTexture_4un80")
 
 [node name="WindowLabel" type="Label" parent="." unique_id=669523475]
-offset_left = 32.0
-offset_right = 166.0
-offset_bottom = 23.0
+offset_left = 429.0
+offset_top = 252.0
+offset_right = 516.0
+offset_bottom = 275.0
 text = "Wallpapers"
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=450616332]
-position = Vector2(15.25, 12.5)
+position = Vector2(419, 263)
 scale = Vector2(0.6515151, 0.7)
 texture = SubResource("AtlasTexture_s5vfd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1212373479]
+stream = ExtResource("10_8g0p8")
+autoplay = true
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=2123757221]
+offset_left = 10.0
+offset_right = 90.0
+offset_bottom = 308.0
+
+[node name="Icon" parent="GridContainer" unique_id=1059612207 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "How to play"
+icon_image = SubResource("AtlasTexture_ld3hx")
+
+[node name="Icon2" parent="GridContainer" unique_id=466904408 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "Browser"
+icon_image = SubResource("AtlasTexture_4haug")
+
+[node name="Icon3" parent="GridContainer" unique_id=106593308 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "Games"
+icon_image = SubResource("AtlasTexture_cobbc")
+
+[node name="Icon4" parent="GridContainer" unique_id=122467968 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "Wallpapers"
+icon_image = SubResource("AtlasTexture_5ah0y")
+
+[node name="Icon5" parent="GridContainer" unique_id=185632137 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "\"Contacts\""
+icon_image = SubResource("AtlasTexture_tsfn4")
+
+[node name="Icon6" parent="GridContainer" unique_id=308213049 instance=ExtResource("11_7dqku")]
+layout_mode = 2
+program_name = "Calls"
+icon_image = SubResource("AtlasTexture_54xsn")
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="WindowBar/TextureButton" method="_on_texture_button_pressed"]

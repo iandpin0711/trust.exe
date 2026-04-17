@@ -3,15 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://clbsy363bylc7" path="res://scenes/Computer/Cursor.tscn" id="1_86jne"]
 [ext_resource type="Script" uid="uid://c2vk42ij7uh6f" path="res://scripts/contact_matilde.gd" id="1_semsy"]
 [ext_resource type="Texture2D" uid="uid://kjfja1h3ewa1" path="res://assets/technology-pc/WinXp/Wallpapers/Home.png" id="2_r5578"]
+[ext_resource type="Resource" uid="uid://gjbfwc74sgkb" path="res://dialogues/matilde_dialogue.dialogue" id="2_vkdwp"]
+[ext_resource type="PackedScene" uid="uid://bphboju0npaps" path="res://dialogues/dialogues_balloon/balloon.tscn" id="3_1qfdy"]
 [ext_resource type="Texture2D" uid="uid://d1y6ey8laalhr" path="res://assets/characters/Victims/548043.png" id="3_3s3xm"]
 [ext_resource type="Texture2D" uid="uid://ddhcuq5u6mntx" path="res://assets/technology-pc/WinXp/Frame/UI Theme.png" id="3_lenea"]
 [ext_resource type="Texture2D" uid="uid://hwmmeoww8rf" path="res://assets/technology-pc/WinXp/Logo/WindowsLogo-small.png" id="4_3s3xm"]
+[ext_resource type="AudioStream" uid="uid://cvlmkoqkxuukk" path="res://assets/sounds/abuelaVoice.wav" id="4_a04dk"]
 [ext_resource type="Texture2D" uid="uid://dao831ofdsrnx" path="res://assets/technology-pc/WinXp/Icons/WinIcons_32.png" id="5_semsy"]
 [ext_resource type="FontFile" uid="uid://hipuv57nr773" path="res://assets/technology-pc/WinXp/Fonts/framdit.ttf" id="6_vkdwp"]
 [ext_resource type="FontFile" uid="uid://c5rql5cn6et7i" path="res://assets/technology-pc/WinXp/Fonts/tahoma.ttf" id="7_1qfdy"]
-[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/clock_label.gd" id="8_a04dk"]
-[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/TimerLabel.gd" id="10_semsy"]
+[ext_resource type="Script" uid="uid://cvm02bp2iwwlu" path="res://scripts/Computer/Elements/Taskbar/clock_label.gd" id="8_a04dk"]
+[ext_resource type="Script" uid="uid://bs7g8iqd47ukq" path="res://scripts/Computer/Elements/Taskbar/TimerLabel.gd" id="10_semsy"]
 [ext_resource type="PackedScene" uid="uid://ikyfr1updu1h" path="res://scenes/Computer/TrustProgressBar.tscn" id="11_3s3xm"]
+[ext_resource type="AudioStream" uid="uid://0ur5vi118jhj" path="res://assets/sounds/StartCall.wav" id="16_fqvq3"]
+[ext_resource type="AudioStream" uid="uid://2rtea47pwv2u" path="res://assets/sounds/EndCallGame.wav" id="17_fg7rr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r0yu"]
 atlas = ExtResource("3_lenea")
@@ -85,8 +90,11 @@ region = Rect2(375.40723, 467.2594, 20.444458, 20.148132)
 atlas = ExtResource("3_lenea")
 region = Rect2(375.11093, 445.92606, 21.629639, 21.333344)
 
-[node name="ContactMatilde" type="Node2D" unique_id=857654890]
+[node name="ContactMatilde" type="Node2D" unique_id=46187545]
 script = ExtResource("1_semsy")
+my_dialogue_resource = ExtResource("2_vkdwp")
+custom_balloon_scene = ExtResource("3_1qfdy")
+voice_sound = ExtResource("4_a04dk")
 
 [node name="Cursor" parent="." unique_id=1404510570 instance=ExtResource("1_86jne")]
 
@@ -277,3 +285,12 @@ offset_left = -316.0
 offset_top = 13.0
 offset_right = -316.0
 offset_bottom = 13.0
+
+[node name="StartSound" type="AudioStreamPlayer2D" parent="." unique_id=610618289]
+stream = ExtResource("16_fqvq3")
+autoplay = true
+
+[node name="ExitSoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1769666093]
+stream = ExtResource("17_fg7rr")
+
+[connection signal="pressed" from="WindowBar/TextureButton" to="." method="_on_texture_button_pressed"]

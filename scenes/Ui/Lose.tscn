@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://cy8tyecleleb6"]
+
+[ext_resource type="Script" uid="uid://sllho8d811tk" path="res://scripts/UI/Lose.gd" id="1_0ivy7"]
+[ext_resource type="Texture2D" uid="uid://bo0h6p5etva14" path="res://assets/Ui/screen.png" id="1_xoxsu"]
+[ext_resource type="FontFile" uid="uid://cdcv2ndq6ecnl" path="res://assets/fonts/JetBrains_Mono/static/JetBrainsMono-Bold.ttf" id="2_0ivy7"]
+[ext_resource type="FontFile" uid="uid://djbsh5he5dsl2" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="3_csncr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wug1m"]
+bg_color = Color(0.05490196, 0.14901961, 0.15686275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.5882353, 0.62352943, 0.5882353, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhq28"]
+bg_color = Color(0.047058824, 0.14117648, 0.15686275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us4r6"]
+bg_color = Color(0.047058824, 0.14117648, 0.15686275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.64705884, 0.8980392, 0.58431375, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Lose" type="Control" unique_id=97597173]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ivy7")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1888320062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xoxsu")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1187783601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34509805, 0, 0.019607844, 0.6862745)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1979807216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0, 0, 0.05882353)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1906357586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=478605962]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LabelTitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=332290758]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.23137255, 0.23137255, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_0ivy7")
+theme_override_font_sizes/font_size = 64
+text = "CALL
+TERMINATED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelSubtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1280752360]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_fonts/font = ExtResource("2_0ivy7")
+theme_override_font_sizes/font_size = 24
+text = "The target has detected suspicious behavior"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1645817911]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99215686, 0.9843137, 0.93333334, 1)
+theme_override_fonts/font = ExtResource("3_csncr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wug1m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fhq28")
+theme_override_styles/hover = SubResource("StyleBoxFlat_us4r6")
+text = "RETRY"
+
+[node name="MainMenu" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1060984012]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99215686, 0.9843137, 0.93333334, 1)
+theme_override_fonts/font = ExtResource("3_csncr")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wug1m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fhq28")
+theme_override_styles/hover = SubResource("StyleBoxFlat_us4r6")
+text = "MAIN MENU"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Retry" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

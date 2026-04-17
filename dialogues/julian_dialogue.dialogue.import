@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://chq8kqyqrafkw"
+path="res://.godot/imported/julian_dialogue.dialogue-5aec0478d1ee6aa7b2d838b03eddf566.tres"
+
+[deps]
+
+source_file="res://dialogues/julian_dialogue.dialogue"
+dest_files=["res://.godot/imported/julian_dialogue.dialogue-5aec0478d1ee6aa7b2d838b03eddf566.tres"]
+
+[params]
+
+defaults=true

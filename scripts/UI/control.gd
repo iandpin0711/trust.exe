@@ -1,0 +1,6 @@
+extends Control
+
+func _on_texture_button_pressed():
+	$Click.play()
+	await $Click.finished
+	get_tree().change_scene_to_file("res://scenes/Ui/MainMenu.tscn")
